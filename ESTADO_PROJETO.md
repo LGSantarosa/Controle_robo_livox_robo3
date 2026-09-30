@@ -47,6 +47,32 @@
 
 ---
 
+## ⏭️ 30-09, FIM DO DIA — PASSAGEM DE BASTÃO PARA O LAB
+
+O dono vai ao lab querendo pôr o código no robô 3 real. O que está escrito aqui
+e decide o que dá para fazer:
+
+1. 🔴 **A pilha RECUSA `robo:=3 sim:=false`** (`pilha.launch.py`, `_recusa_robo`,
+   trava da etapa 6). Tudo de 30-09 foi Gazebo. Nunca subiram juntos no robô 3:
+   Livox, FAST-LIO, `/scan`, hoverboard e a pilha.
+2. 🔴 **A 057 bloqueia hardware** (061 §2.3.2, regra do dono de 28-09). O SIGSEGV
+   do `collision_monitor` no teardown apareceu em DUAS sessões em 30-09
+   (`150543`, `153636`).
+3. 🔴 **O notebook do robô aponta para o repo ANTIGO** (`Controle_robo_livox`).
+   Antes do deploy: `git remote set-url origin
+   git@github.com:LGSantarosa/Controle_robo_livox_robo3.git`, e só então
+   `git fetch && git reset --hard origin/main` e `colcon build`.
+
+Seguro sem decisão nova: trocar o remoto e compilar; subir pelo `bin/sobe-robo3`
+(robô físico, Xbox/MEGA) e dirigir no controle, conferindo motores, Livox e
+`/scan`. **Navegação autônoma no real exige que o dono libere EXPLICITAMENTE as
+travas 1 e 2, com plano mínimo escrito antes.**
+
+Pendente no dev: a `arena_galpao` do robô 1 (proposta feita, não autorizada) e o
+EMPERRADO falso (próximo alvo de código).
+
+---
+
 ## 🟢 30-09 — O ROBÔ 3 SOBE PELO WEB; O GATILHO RÁPIDO DA 063 NUNCA DISPAROU (DÍVIDA HERDADA ENTRE OBJETIVOS)
 
 📌 **REGRA DO DONO (30-09): o robô 3 sobe SEMPRE com o web, sem RViz.**
