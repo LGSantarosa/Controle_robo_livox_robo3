@@ -46,6 +46,12 @@ come 99 % de uma thread já só com a localização, e entrega `/livox/pontos` a
 7,2 Hz com 0,69 s de atraso (entrada 10 Hz, 20 064 pontos). A interface
 gráfica gasta ~45 % parada. Conserto aprovado: vetorizar o nó com numpy.
 
+**Conserto (`ec88d29`, 066 §6)**: o perfil mostrou que o grosso era o rclpy
+desserializando (83,5 ms/nuvem), não o laço (11,7 ms). O nó passou a assinar
+cru (`raw=True`) e ler o CDR com numpy. Contra o CDR real do rclpy no
+notebook: saída idêntica byte a byte, **92,3 → 1,0 ms por nuvem**. Implantado
+e compilado no notebook; **não medido com o lidar ainda**.
+
 **Método**: o dono não relatou console nenhum; tudo saiu de log e de
 `pidstat`/`topic hz` puxados por ssh.
 

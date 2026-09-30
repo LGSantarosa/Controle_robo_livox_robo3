@@ -53,7 +53,7 @@ Tudo desligado no fim. Detalhe no `DIARIO.md` (entrada do topo).
 
 | o quê | estado |
 |---|---|
-| notebook `ubuntu@10.233.141.150` (**IP novo** na rede do lab) | ✅ `origin` = repo `_robo3`, em `01f81a2`; volta: `backup/pre-robo3-fba6d39` |
+| notebook `ubuntu@10.233.141.150` (**IP novo** na rede do lab) | ✅ `origin` = repo `_robo3`, em `ec88d29`; volta: `backup/pre-robo3-fba6d39` |
 | build | ✅ do zero, 8 pacotes — **só passa com** `--cmake-args -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble` |
 | ROS no notebook | ✅ `apt full-upgrade` (30-09): Nav2 1.3.13, casado com o `diagnostic_updater` 4.2.7 |
 | 058 (`setup_livox.sh --perfil notebook`) | ✅ **provada em hardware**: sensor `.169`, host `.5`; rede `livox` do NM sobe sozinha |
@@ -62,9 +62,10 @@ Tudo desligado no fim. Detalhe no `DIARIO.md` (entrada do topo).
 | Nav2 real | 🔴 **não navegou**: costmaps expiram, `lifecycle_manager` derruba a pilha; robô não andou |
 | causa | ✅ medida: **`nuvem_pontos` satura 1 thread** (99 %), `/livox/pontos` 7,2 Hz com 0,69 s de atraso |
 
-**Próximo (066, aprovado pelo dono):** vetorizar o `passo()` do `nuvem_pontos`
-com numpy → provar offline (saída idêntica, tempo) → deploy → repetir a
-medição na mesa (`/livox/pontos` 10 Hz) → Nav2 parado → Nav2 no chão. Depois,
+**Próximo (066):** ✅ `nuvem_pontos` lendo o CDR cru com numpy (`ec88d29`:
+saída idêntica, 92 → 1 ms/nuvem, **já implantado no notebook**) → ⏭️ **robô na
+mesa, só lidar: repetir a medição** (`/livox/pontos` 10 Hz, atraso ~0,02 s,
+e a E3 sem o `lifecycle_manager` derrubar nada) → Nav2 no chão. Depois,
 um por vez: sessão gráfica (~45 % parada) e o `bag --all-topics` da pilha.
 
 **Como subir no robô real hoje** (o `sobe-robo3-web` é SÓ Gazebo): quatro
