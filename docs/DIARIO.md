@@ -37,6 +37,38 @@ overlay do `Controle_robo_web`; a suíte só coleta depois de
 `colcon build --base-paths ros2_packages --symlink-install` numa shell limpa
 (`env -i`, só `/opt/ros/jazzy`): 6 pacotes, 28,5 s.
 
+### Tarde: duas corridas, o web no lugar do RViz, e um launcher
+
+**Corrida da 2ª leva (RViz).** Ida e volta limpas, zero nuvem velha do Livox.
+Esta máquina aguenta o simulador e a de 29-09 não. O reflexo só cintilou, e o
+gatilho não teve o que medir. Avaliação do dono: *"não emperrou, teve os stops e
+soltou sozinho, isso tmb é vitória"*.
+
+**Corrida pelo web.** A pilha subiu com `rviz:=false` e o `app.py` num venv novo.
+O dono criou a rota no navegador, ida e volta. Na ombreira da porta, o STOP
+sustentado virou escape em **1,71 s**, a primeira medida do critério da 063.
+Nas duas corridas apareceu o mesmo escape falso logo depois da meia-volta, e ele
+ficou como achado aberto no `ESTADO_PROJETO.md`.
+
+**Regra nova do dono:** o robô 3 sobe sempre pelo web. Daí o `bin/sobe-robo3-web`
+(decisão 064).
+
+### Fracasso útil: o teste achou três defeitos do launcher antes do Gazebo
+
+O mais sério: com o console fechado, o wrapper **começava** o teardown, mandava
+SIGINT aos grupos e morria de SIGPIPE na primeira escrita. O SHM e o registro
+ficavam para trás. Apareceu porque um teste meu estourou o prazo e abandonou o
+processo, e as sobras dele envenenaram as rodadas seguintes: dois `dorme.py`
+vivos fizeram os outros testes recusarem por "marca de rodada". Lição dupla. O
+harness de teste também precisa de teardown (fixture que reprova sobra). E
+mutação feita por "primeira ocorrência" pode acertar o comentário do cabeçalho
+e não o código: minha primeira mutação do `rviz:=false` "passou" por isso.
+
+SHM: nas duas sessões o teardown deixou órfãos (73 e 96 segmentos). Os dois
+foram recuperados pela 061, e a recontagem deu zero. Na primeira sessão o
+"antes" era um `ls -la`. Virou `shm_antes_reconstruido.tsv`, só com o conjunto
+de nomes medido. Na segunda, o "antes" foi tirado de verdade antes de subir.
+
 ## 2026-09-29, tarde (dev, robô e lidar DESLIGADOS) — O GATILHO DA RETOMADA, EM DUAS LEVAS: UMA CORRIDA E UM DEFEITO ACHADO NELA
 
 Pedido do dono: fazer o robô 3 decidir mais rápido depois de ser parado pelo

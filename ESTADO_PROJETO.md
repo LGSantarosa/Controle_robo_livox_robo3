@@ -3,6 +3,7 @@
 > Documento vivo. Resumo do que está acontecendo, BOs abertos, avanços e o que falta.
 > **30-09: este é o repositório `Controle_robo_livox_robo3`, só do robô 3**
 > (cópia de `d54d05a`); R1 dispensado e R2 revertido com teste (ver 063).
+> **Sobe SEMPRE pelo web, sem RViz: `bin/sobe-robo3-web` (decisão 064).**
 >
 > Atualizado em **2026-09-29, tarde** (PC de dev, robô e lidar desligados; duas
 > pilhas de Gazebo subidas e derrubadas na sessão — a 2ª deixou 22 órfãos que
@@ -43,6 +44,51 @@
 | `main` (`1851ffb`) | etapa 5, notebook sincronizado, prova parada do Mid-360 | **não** tem etapa 6, 058 nem 059 |
 | `livox-config-maquina-sensor` (`279f408`) | só a 058 | já incorporada aqui por cherry-pick; não é mais base de nada |
 | `backup/etapa6-pre-merge-main` (`d52b5da`, local) | etapa 6 antes do merge | ponto de volta se a integração precisar ser desfeita |
+
+---
+
+## 🟢 30-09 — O ROBÔ 3 SOBE PELO WEB; O GATILHO DA 063 MEDIU 1,71 s
+
+📌 **REGRA DO DONO (30-09): o robô 3 sobe SEMPRE com o web, sem RViz.**
+*"agora sempre iremos subir usando a web, sem mais rviz nesse robô"*. O
+comando é **`bin/sobe-robo3-web`** (decisão **064**): sobe Gazebo, pilha e web,
+e para derrubar usa Ctrl+C ou `bin/sobe-robo3-web --mata`. Objetivo e rota se
+mandam por `http://localhost:5000`. Pré-requisito por máquina: o venv
+`controle_web/.venv` (064 §3). O web escuta em `0.0.0.0:5000`, então fica
+acessível pela rede local enquanto estiver no ar.
+
+**Duas corridas no Gazebo** (máquina `rbe-luis-20429`, hash `7a6e589`, RTF 0,89,
+**zero** nuvem do Livox velha, contra 81 avisos na outra máquina em 29-09):
+
+| corrida | como | ida | volta | reflexo |
+|---|---|---|---|---|
+| `20260930_gatilho-2a-leva` | RViz | 51,5 s ✅ | 56,3 s ✅ | 3 cintilações de STOP, soltou sozinho |
+| `20260930_web-robo3` | rota do web, 2 pontos, sem loop | 52,7 s ✅ | 59,7 s ✅ | STOP sustentado na ombreira → **escape em 1,71 s** |
+
+🟢 **O critério da 063 §4 foi medido pela primeira vez:** do `STOP:PolygonStop`
+sustentado à manobra, **1,71 s** (em 29-09, na mesma porta: 6,84 s). O log diz
+"frente livre (5,65 m)": quem prendia o robô era a ombreira ao lado, que é o
+caso do `near_mapped`. Ressalva: é tempo de parede, sem o `/clock` gravado nessa
+corrida.
+
+🔴 **Achado aberto: "EMPERRADO" falso depois da meia-volta, 2 de 2 corridas.**
+Logo depois do giro de ~172° no começo da volta, com o robô já andando a
+~0,25 m/s, o seguidor declara emperrado e dá um escape reto de 0,20 m. Hipótese
+**não confirmada**: o progresso é medido em distância reta até o objetivo, que
+SOBE enquanto o caminho vai para a porta. Numa corrida o 2º escape veio 2,4 s
+depois do 1º, abaixo do rearme de 4 s, o que precisa ser explicado.
+
+⬜ **Próximo, na ordem do dono:**
+1. primeira subida real pelo `bin/sobe-robo3-web`, e ele cria rotas mais difíceis;
+2. o desenho do robô no `map.js`: hoje é um quadrado de 0,5 m centrado; o robô 3
+   tem 0,374 × 0,380 m e vai de +0,0825 a −0,2913 em x (`geometria_robo3.yaml`);
+3. investigar o EMPERRADO falso;
+4. o escalonamento para o giro depois de duas rés (063 §7, pedido do dono).
+
+Evidência: `~/sessao-robo3/20260930_gatilho-2a-leva/` e
+`~/sessao-robo3/20260930_web-robo3/`, nesta máquina e fora do git. As duas
+sessões têm `teardown_anomalo=1` e `limpeza_manual_recuperada=1` (SHM
+recuperado pela 061, recontagem zero).
 
 ---
 

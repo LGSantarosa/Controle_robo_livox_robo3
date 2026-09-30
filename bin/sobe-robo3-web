@@ -1,0 +1,267 @@
+#!/usr/bin/env bash
+# Robô 3 no Gazebo com o serviço web — decisão 064. Sem RViz: objetivo e rota
+# se mandam pelo navegador (regra do dono, 30-09).
+#
+#   bin/sobe-robo3-web            sobe Gazebo + pilha + web e fica em primeiro plano
+#                                 (Ctrl+C derruba tudo)
+#   bin/sobe-robo3-web --mata     derruba a sessão que está no ar, de outro terminal
+#
+# Contrato (064 §2): `robo:=3 sim:=true rviz:=false localizacao:=fixa
+# freio_linear:=false bag:=false`; web com ROBOT_MODE=nav2 ROBOT_SIM=true
+# WEB_TELEOP=off; domínio 50, descoberta só localhost, GZ_PARTITION exclusiva;
+# shell limpa (Jazzy + install/ DESTE clone + controle_web/.venv).
+#
+# Recusa, sem matar nada, se já houver processo ROS/Gazebo/web, qualquer marca
+# de rodada, segmento Fast DDS em /dev/shm, porta 5000 ocupada, sessão anterior
+# registrada ou árvore com mudança não commitada. Pasta nova por sessão em
+# ~/sessao-robo3/<carimbo>-web/ (hash, árvore, ambiente, comandos, logs, SHM).
+#
+# Teardown pelo `tools/valida_etapa6/lib.sh` (o mesmo do `bin/subidas-robo3`):
+# grupos registrados com (PGID, STARTTIME), SIGINT, espera de 20 s, SIGKILL só
+# nos sobreviventes, nunca por nome. Depois, o SHM pela decisão 061 §2.3.2.
+#
+# ⚠️ O web escuta em 0.0.0.0:5000 (fixo no app.py): enquanto a sessão estiver
+# no ar, ele é acessível pela REDE LOCAL.
+#
+# Teste offline: tools/sobe_robo3_web/test_sobe_robo3_web.py, com os comandos
+# calçados por SOBE_WEB_CALCOS (re-prefixado no PATH depois de CADA `source`),
+# SOBE_WEB_RAIZ_SAIDA, SOBE_WEB_DOMINIO, SOBE_WEB_SHM, SOBE_WEB_ROS_SETUP,
+# SOBE_WEB_ESTADO e SOBE_WEB_PRAZO. Fora do teste, nenhum deles existe.
+set +u
+
+# ── shell limpa: só o que a sessão precisa, nada herdado de outro workspace ──
+if [ -z "$SOBE_WEB_AMBIENTE_LIMPO" ]; then
+  passa=(HOME="$HOME" PATH=/usr/local/bin:/usr/bin:/bin SOBE_WEB_AMBIENTE_LIMPO=1)
+  for v in USER LOGNAME TERM LANG DISPLAY WAYLAND_DISPLAY XAUTHORITY XDG_RUNTIME_DIR \
+           SOBE_WEB_CALCOS SOBE_WEB_RAIZ_SAIDA SOBE_WEB_DOMINIO SOBE_WEB_SHM \
+           SOBE_WEB_ROS_SETUP SOBE_WEB_ESTADO SOBE_WEB_PRAZO; do
+    [ -n "${!v}" ] && passa+=("$v=${!v}")
+  done
+  exec env -i "${passa[@]}" bash "$0" "$@"
+fi
+
+# Terminal fechado ou `tee` morto não podem matar o wrapper no MEIO do
+# teardown: medido no teste (30-09), a escrita no pipe quebrado derrubava o
+# wrapper por SIGPIPE com os grupos sinalizados e o SHM e o registro pendentes.
+trap '' PIPE
+R="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+V="$R/tools/valida_etapa6"
+RS="$R/tools/subidas_robo3/shm_recupera.py"
+DOMINIO="${SOBE_WEB_DOMINIO:-50}"
+SHM="${SOBE_WEB_SHM:-/dev/shm}"
+PRAZO_PRONTO="${SOBE_WEB_PRAZO:-300}"      # s de parede até Nav2 + TF + web
+PORTA=5000                                  # fixa no app.py
+ESTADO_DIR="${SOBE_WEB_ESTADO:-$HOME/.local/state/sobe-robo3-web}"
+ESTADO="$ESTADO_DIR/sessao"                 # "PID STARTTIME PASTA" do wrapper vivo
+ROS_SETUP="${SOBE_WEB_ROS_SETUP:-/opt/ros/jazzy/setup.bash}"
+PY_WEB="$R/controle_web/.venv/bin/python"
+NOS_ATIVOS="/bt_navigator /planner_server /controller_server"
+calcos() { [ -n "$SOBE_WEB_CALCOS" ] && export PATH="$SOBE_WEB_CALCOS:$PATH"; }
+calcos
+export ROS_DOMAIN_ID="$DOMINIO"
+export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
+DOMINIOS_USADOS="$DOMINIO"
+
+carrega_ros() {   # o `ros2` só existe depois disto; o código do source é conferido
+  source "$ROS_SETUP" || { echo "   🔴 o source de $ROS_SETUP falhou"; return 1; }
+  source "$R/install/setup.bash" || { echo "   🔴 o source de $R/install/setup.bash falhou"; return 1; }
+  calcos
+}
+conta_shm() { ls "$SHM" 2>/dev/null | grep -ciE 'fastrtps|fast_datasharing'; }
+starttime_de() { local s; s="$(stat_de "$1")" || return 1; echo "${s##* }"; }
+
+# ── o SHM depois do teardown: decisão 061 §2.3.2, com o ANTES desta sessão ──
+recupera_shm() {   # grava shm.env; devolve 1 se sobrou segmento
+  local n anomalo=0 manual=0 final
+  n="$(conta_shm)"
+  if [ "$n" -gt 0 ]; then
+    anomalo=1
+    python3 "$RS" inventaria "$SHM" "$SAIDA/shm_depois.tsv"
+    if ! python3 "$RS" confere "$SHM" > "$SAIDA/shm_confere.txt" 2>&1; then
+      echo "   🔴 algo vivo antes da limpeza do SHM — nada removido (shm_confere.txt)"
+    else
+      registra_cmd "fastdds shm clean > shm_fastdds_clean.txt"
+      fastdds shm clean > "$SAIDA/shm_fastdds_clean.txt" 2>&1
+      if [ "$(conta_shm)" -gt 0 ]; then
+        registra_cmd "shm_recupera.py remove $SHM shm_antes.tsv shm_depois.tsv"
+        python3 "$RS" remove "$SHM" "$SAIDA/shm_antes.tsv" "$SAIDA/shm_depois.tsv" \
+          > "$SAIDA/shm_remove.txt" 2>&1 && manual=1
+      fi
+    fi
+  fi
+  python3 "$RS" inventaria "$SHM" "$SAIDA/shm_final.tsv"
+  final="$(conta_shm)"
+  printf 'shm_fast_dds_depois_do_teardown=%s\nteardown_anomalo=%s\nlimpeza_manual_recuperada=%s\nshm_fast_dds_final=%s\n' \
+    "$n" "$anomalo" "$manual" "$final" > "$SAIDA/shm.env"
+  if [ "$final" -ne 0 ]; then
+    echo "   🔴 sobraram $final segmento(s) Fast DDS em $SHM"; return 1
+  fi
+  [ "$n" -gt 0 ] && echo "   🟠 $n segmento(s) Fast DDS recuperados (teardown_anomalo=1; shm.env)"
+  return 0
+}
+
+sinais_do_launch() {   # conta SIGSEGV e códigos de saída do launch.log
+  local l="$SAIDA/launch.log"
+  [ -f "$l" ] || return 0
+  sed -E 's/\x1b\[[0-9;]*m//g' "$l" | grep -oE '\[[A-Za-z0-9_]+-[0-9]+\]: process has died \[pid [0-9]+, exit code -?[0-9]+' \
+    | sed -E 's/\]: process has died \[pid [0-9]+, exit code / /; s/^\[//' > "$SAIDA/saidas_dos_nos.txt"
+  SEGV="$(awk '$2==-11' "$SAIDA/saidas_dos_nos.txt" | wc -l)"
+}
+
+# ── a finalização: roda em TODA saída depois que algo subiu ─────────────────
+FIM=0
+fim() {
+  local rc=$?
+  [ "$FIM" -eq 1 ] && return; FIM=1
+  trap '' INT TERM HUP
+  echo; echo "== derrubando a sessão =="
+  limpa
+  local lok=1 shmok=1
+  grep -qE '^limpeza: nada marcado, domínios vazios +APROVADO' "$RESULTADO" || lok=0
+  recupera_shm || shmok=0
+  SEGV=0; sinais_do_launch
+  printf 'pronto=%s\nlimpeza_ok=%s\nshm_ok=%s\nsigsegv=%s\n' "$PRONTO" "$lok" "$shmok" "$SEGV" \
+    > "$SAIDA/teardown.env"
+  [ "$SEGV" -gt 0 ] && echo "   🔴 SIGSEGV em $SEGV nó(s) (saidas_dos_nos.txt)"
+  [ -n "$(awk '$2!=-2 && $2!=0' "$SAIDA/saidas_dos_nos.txt" 2>/dev/null)" ] \
+    && echo "   ⚪ saídas diferentes de -2: $(awk '$2!=-2 && $2!=0{printf "%s(%s) ", $1, $2}' "$SAIDA/saidas_dos_nos.txt")"
+  # O registro de sessão só sai se for DESTE wrapper.
+  [ "$(cut -d' ' -f1 "$ESTADO" 2>/dev/null)" = "${DONO_ESTADO:-$$}" ] && rm -f "$ESTADO"
+  if [ "$PRONTO" -eq 1 ] && [ "$lok" -eq 1 ] && [ "$shmok" -eq 1 ] && [ "$SEGV" -eq 0 ]; then
+    echo "   🟢 sessão encerrada limpa — pasta: $SAIDA"; exit 0
+  fi
+  echo "   🔴 sessão encerrada com problema (rc de entrada $rc) — pasta: $SAIDA"; exit 1
+}
+
+# ── --mata: derruba de outro terminal ───────────────────────────────────────
+if [ "$1" = "--mata" ]; then
+  [ -f "$ESTADO" ] || { echo "nada para derrubar (sem $ESTADO)"; exit 0; }
+  read -r W_PID W_START W_BASE < "$ESTADO"
+  source "$V/lib.sh"
+  if [ "$(starttime_de "$W_PID")" = "$W_START" ]; then
+    echo "sinalizando o sobe-robo3-web (PID $W_PID) — ele derruba a própria sessão"
+    kill -INT "$W_PID"
+    for i in $(seq 1 120); do [ -f "$ESTADO" ] || break; sleep 0.5; done
+    if [ -f "$ESTADO" ]; then echo "🔴 a sessão não terminou em 60 s — $W_BASE"; exit 1; fi
+    grep -hE '^(pronto|limpeza_ok|shm_ok|sigsegv)=' "$W_BASE/teardown.env" 2>/dev/null
+    exit 0
+  fi
+  # O wrapper morreu sem derrubar (terminal fechado, SIGKILL): a limpeza é
+  # feita daqui, com os grupos e a marca que ELE registrou.
+  echo "o sobe-robo3-web $W_PID não está vivo — derrubando os grupos de $W_BASE"
+  carrega_ros || exit 1
+  SAIDA="$W_BASE"; GRUPOS="$W_BASE/grupos.txt"; RESULTADO="$W_BASE/resultado.txt"
+  export VALIDA_ETAPA4_MARCA="$W_BASE"
+  PRONTO=0; FIM=0; DONO_ESTADO="$W_PID"
+  trap fim EXIT
+  exit 1
+fi
+[ -z "$1" ] || { echo "uso: bin/sobe-robo3-web [--mata]"; exit 2; }
+
+# ── pré-condições: recusar, nunca matar ─────────────────────────────────────
+if [ -f "$ESTADO" ]; then
+  echo "   🔴 há sessão registrada em $ESTADO ($(cat "$ESTADO")) — bin/sobe-robo3-web --mata"
+  echo "   nada foi subido; nada foi derrubado."; exit 1
+fi
+CARIMBO="$(date +%Y%m%d_%H%M%S)"
+BASE="${SOBE_WEB_RAIZ_SAIDA:-$HOME/sessao-robo3}/${CARIMBO}-web"
+[ -e "$BASE" ] && { echo "🔴 $BASE já existe — não reaproveito pasta"; exit 1; }
+mkdir -p "$BASE" "$ESTADO_DIR" || exit 1
+exec > >(tee -a "$BASE/console.txt") 2>&1
+echo "== robô 3 + web · $CARIMBO · domínio $DOMINIO · pasta $BASE =="
+
+recusa() { echo "   🔴 $*"; echo "   nada foi subido; nada foi derrubado."; exit 1; }
+{ echo "commit: $(git -C "$R" rev-parse HEAD)"; git -C "$R" log -1 --format='%h %ad %s' --date=iso
+  echo "status --porcelain (vazio = limpo):"; git -C "$R" status --porcelain; } > "$BASE/git.txt"
+[ -n "$(git -C "$R" status --porcelain)" ] && recusa "árvore com mudança não commitada (git.txt)"
+[ -x "$PY_WEB" ] || recusa "sem $PY_WEB — crie o venv (decisão 064 §3)"
+pre="$(ps -eo pid,user,args \
+  | grep -E '(^|[ /])(ros2|gz|rviz2|_ros2_daemon)( |$)|/opt/ros/[a-z]+/lib/|/install/[a-z_]+/lib/|ros2cli\.daemon|(^|[ /])app\.py( |$)' \
+  | grep -vE 'grep -E|sobe-robo3-web')"
+marcas="$(grep -lsa 'VALIDA_ETAPA4_MARCA=' /proc/[0-9]*/environ 2>/dev/null)"
+shm="$(ls "$SHM" 2>/dev/null | grep -iE 'fastrtps|fast_datasharing')"
+porta="$(ss -Hltn "sport = :$PORTA" 2>/dev/null)"
+{ echo "processos ROS/Gazebo/web:"; echo "${pre:-   (nenhum)}"
+  echo "processos com marca:"; echo "${marcas:-   (nenhum)}"
+  echo "segmentos Fast DDS em $SHM:"; echo "${shm:-   (nenhum)}"
+  echo "porta $PORTA:"; echo "${porta:-   (livre)}"; } > "$BASE/residuo_inicial.txt"
+[ -n "$pre$marcas" ] && { sed 's/^/      /' "$BASE/residuo_inicial.txt"; recusa "já há processo ROS/Gazebo/web ou marca neste PC"; }
+[ -n "$shm" ] && recusa "há segmento Fast DDS em $SHM de antes — limpe pela decisão 061 (residuo_inicial.txt)"
+[ -n "$porta" ] && recusa "a porta $PORTA está ocupada"
+
+# ── daqui em diante a sessão é nossa: registro, marca, finalização ──────────
+SAIDA="$BASE"; GRUPOS="$BASE/grupos.txt"; : > "$GRUPOS"
+RESULTADO="$BASE/resultado.txt"; : > "$RESULTADO"
+source "$V/lib.sh"
+carrega_ros || exit 1
+echo "$$ $(starttime_de $$) $BASE" > "$ESTADO"
+PRONTO=0
+trap fim EXIT
+trap 'echo; echo "   interrompido"; exit 130' INT TERM HUP
+python3 "$RS" inventaria "$SHM" "$BASE/shm_antes.tsv"
+export VALIDA_ETAPA4_MARCA="$BASE"
+export GZ_PARTITION="sobe_robo3_web_$CARIMBO"
+export ROS_LOG_DIR="$BASE/ros_logs"
+env | sort > "$BASE/ambiente.txt"
+
+cd "$R" || exit 1
+sobe_grupo pilha "$BASE/launch.log" \
+  ros2 launch robot_motion pilha.launch.py robo:=3 sim:=true gui:=true rviz:=false \
+    localizacao:=fixa freio_linear:=false bag:=false log_dir:="$BASE" || exit 1
+
+# ── prontidão da pilha: Nav2 ativo, a ação, a TF ────────────────────────────
+T0=$(date +%s); pilha_ok=0
+while [ $(( $(date +%s) - T0 )) -lt "$PRAZO_PRONTO" ]; do
+  todos=1
+  for no in $NOS_ATIVOS; do
+    estado="$(timeout 10 ros2 lifecycle get "$no" 2>/dev/null | head -1)"
+    [ "${estado%% *}" = active ] || todos=0
+  done
+  if [ "$todos" -eq 1 ] && timeout 10 ros2 action list 2>/dev/null | grep -qx '/navigate_to_pose'; then
+    timeout 5 ros2 run tf2_ros tf2_echo map base_link > "$BASE/tf_inicial.txt" 2>&1
+    grep -q 'Translation' "$BASE/tf_inicial.txt" && { pilha_ok=1; break; }
+  fi
+  sleep 1
+done
+if [ "$pilha_ok" -ne 1 ]; then
+  anota "pilha: Nav2 ativo + /navigate_to_pose + TF map→base_link" REPROVADO "(prazo de ${PRAZO_PRONTO} s)"
+  exit 1
+fi
+anota "pilha: Nav2 ativo + /navigate_to_pose + TF map→base_link" APROVADO "($(( $(date +%s) - T0 )) s)"
+
+# ── o web, DEPOIS do mapa estar no ar ───────────────────────────────────────
+sobe_grupo web "$BASE/web.log" \
+  env -C "$R/controle_web" ROBOT_MODE=nav2 ROBOT_SIM=true WEB_TELEOP=off \
+      ROBOT_MAPS_DIR="$R/maps" ROS_LOG_DIR="$BASE/ros_logs_web" PYTHONUNBUFFERED=1 \
+      "$PY_WEB" app.py || exit 1
+T0=$(date +%s); web_ok=0; codigo=""
+while [ $(( $(date +%s) - T0 )) -lt 60 ]; do
+  codigo="$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:$PORTA/")"
+  [ "$codigo" = 200 ] && grep -qF '[ROS2Controller]' "$BASE/web.log" && { web_ok=1; break; }
+  sleep 1
+done
+echo "$codigo" > "$BASE/http.txt"
+if grep -q 'EchoController' "$BASE/web.log"; then
+  anota "web: sem fallback para EchoController" REPROVADO "(web.log)"; exit 1
+fi
+if [ "$web_ok" -ne 1 ]; then
+  anota "web: HTTP 200 com ROS2Controller" REPROVADO "(HTTP ${codigo:-nenhum})"; exit 1
+fi
+anota "web: HTTP 200 com ROS2Controller, sem EchoController" APROVADO
+PRONTO=1
+
+echo
+echo "   🟢 PRONTO — abra http://localhost:$PORTA  (objetivo e rota pelo navegador)"
+echo "   ⚠️  o web escuta em 0.0.0.0:$PORTA: acessível pela rede local enquanto no ar"
+echo "   derrubar: Ctrl+C aqui, ou  bin/sobe-robo3-web --mata  de outro terminal"
+
+# ── em pé até alguém derrubar, ou até um dos dois cair ──────────────────────
+while :; do
+  while read -r g_pid g_start papel; do
+    if ! python3 "$V/processos.py" vivo "$g_pid" "$g_start"; then
+      echo "   🔴 o grupo '$papel' (PID $g_pid) caiu sozinho"; PRONTO=0; exit 1
+    fi
+  done < "$GRUPOS"
+  # Sem marca (não é sobra da sessão) e sem o console (não segura o `tee`).
+  env -u VALIDA_ETAPA4_MARCA sleep 2 > /dev/null 2>&1 < /dev/null & wait $!
+done
