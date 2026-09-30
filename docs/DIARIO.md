@@ -64,6 +64,10 @@ harness de teste também precisa de teardown (fixture que reprova sobra). E
 mutação feita por "primeira ocorrência" pode acertar o comentário do cabeçalho
 e não o código: minha primeira mutação do `rviz:=false` "passou" por isso.
 
+E a 1ª subida real morreu calada: o `calcos()` devolvia 1 sem calço, e isso
+derrubava o `carrega_ros`. É o único ramo que os testes calçados não exercitam,
+e era justamente o do uso real (064 §5, item 4).
+
 SHM: nas duas sessões o teardown deixou órfãos (73 e 96 segmentos). Os dois
 foram recuperados pela 061, e a recontagem deu zero. Na primeira sessão o
 "antes" era um `ls -la`. Virou `shm_antes_reconstruido.tsv`, só com o conjunto

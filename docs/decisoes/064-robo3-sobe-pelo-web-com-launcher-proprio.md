@@ -1,7 +1,7 @@
 # 064 — O robô 3 sobe pelo web, com launcher próprio, e o RViz sai de cena
 
 **Data**: 2026-09-30 (PC de dev `rbe-luis-20429`; robô e lidar DESLIGADOS, Gazebo)
-**Status**: aplicada. Launcher testado offline (15 testes, mutações conferidas);
+**Status**: aplicada. Launcher testado offline (17 testes, mutações conferidas);
 a primeira subida real por ele vem logo depois do commit
 **Toca**: `bin/sobe-robo3-web` (novo), `tools/sobe_robo3_web/test_sobe_robo3_web.py`
 (novo), `pytest.ini` (coleta)
@@ -94,6 +94,14 @@ defeitos no próprio launcher antes de qualquer subida:
    linha exata `[ROS2Controller]`, além da trava explícita do `EchoController`.
 3. **Sessão viva era recusada pela trava errada.** A trava de sessão vinha depois
    da criação da pasta. Ela subiu para antes.
+4. **A 1ª subida REAL morreu calada** (`20260930_140121-web`, nada subido).
+   `calcos()` era `[ -n "$SOBE_WEB_CALCOS" ] && export …`: sem calço, que é o
+   uso real, a função devolvia 1. Como último comando do `carrega_ros`, fazia
+   `carrega_ros || exit 1` sair sem mensagem. Os testes calçados nunca passam
+   por esse caminho. Conserto: `return 0`. Travado por
+   `test_calcos_devolve_zero_com_e_sem_calco`, que reprova no código antigo.
+   **Lição:** teste só calçado não cobre o ramo "sem calço", e esse ramo é o
+   produto.
 
 Mutações conferidas, cada uma reprova um teste específico: RViz ligado, freio
 ligado, sem trava do EchoController, sem a remoção controlada da 061, sem trava

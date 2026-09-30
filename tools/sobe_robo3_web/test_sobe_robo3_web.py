@@ -442,3 +442,16 @@ def test_terminal_fechado_ainda_derruba_ate_o_fim(tmp_path, como):
     _confere_derrubado(b)
     assert 'shm_fast_dds_final=0' in (b.pasta() / 'shm.env').read_text()
     assert (b.pasta() / 'teardown.env').exists()
+
+
+@pytest.mark.parametrize('calcos', ['', '/tmp/x'])
+def test_calcos_devolve_zero_com_e_sem_calco(calcos):
+    """1ª subida real (30-09): sem calço, o `calcos` devolvia 1 e, como último
+    comando do `carrega_ros`, derrubava o wrapper sem mensagem. Os testes
+    calçados nunca passavam por aí — este passa, e não sobe nada."""
+    with open(WRAPPER) as f:
+        (linha,) = [l for l in f if l.startswith('calcos()')]
+    r = subprocess.run(['bash', '-c', linha + 'calcos; echo "rc=$?"'],
+                       env={'PATH': '/usr/bin:/bin', 'SOBE_WEB_CALCOS': calcos},
+                       capture_output=True, text=True)
+    assert r.stdout.strip() == 'rc=0', r.stdout + r.stderr

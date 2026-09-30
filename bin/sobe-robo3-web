@@ -56,7 +56,9 @@ ESTADO="$ESTADO_DIR/sessao"                 # "PID STARTTIME PASTA" do wrapper v
 ROS_SETUP="${SOBE_WEB_ROS_SETUP:-/opt/ros/jazzy/setup.bash}"
 PY_WEB="$R/controle_web/.venv/bin/python"
 NOS_ATIVOS="/bt_navigator /planner_server /controller_server"
-calcos() { [ -n "$SOBE_WEB_CALCOS" ] && export PATH="$SOBE_WEB_CALCOS:$PATH"; }
+# Devolve 0 SEMPRE: sem calço (o uso real) o `[ -n ]` dava 1, e como último
+# comando do `carrega_ros` derrubava o wrapper calado (1ª subida real, 30-09).
+calcos() { [ -n "$SOBE_WEB_CALCOS" ] && export PATH="$SOBE_WEB_CALCOS:$PATH"; return 0; }
 calcos
 export ROS_DOMAIN_ID="$DOMINIO"
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
