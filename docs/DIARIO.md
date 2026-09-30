@@ -103,6 +103,15 @@ processo meu, uma shell cuja linha de comando citava padrões ROS no `grep`, e
 não descende do wrapper. O launcher fez certo. Concluí à mão pela 061, com
 recontagem zero.
 
+### A 057 apareceu no teardown (sessão `20260930_150543-web`)
+
+`collision_monitor` com **SIGSEGV depois do SIGINT**, destruindo a fonte
+`livox` ("Destroying PointCloud" e, logo em seguida, a queda). É a 057
+intermitente. A sessão rodava o `main` anterior ao conserto da dívida. O
+launcher marcou código 1, como deve, e o SHM foi recuperado pela 061 (37 → 0).
+Primeira ocorrência nas 5 sessões de hoje. Hardware continua bloqueado por ela
+(061).
+
 ### A dívida das rés: por que o gatilho de 2 s nunca disparou
 
 Pedido do dono depois do loop: *"tenta encontrar uma maneira de saber o pq ele
