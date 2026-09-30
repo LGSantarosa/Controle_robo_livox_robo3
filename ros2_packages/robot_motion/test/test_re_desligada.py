@@ -307,3 +307,29 @@ def test_terminada_a_re_o_seguidor_VOLTA_A_SEGUIR():
     assert seg.desencalhe[-1] == 0.0, (
         'sair da manobra sem zerar o canal deixa ré órfã até o timeout do mux')
     assert seg.progresso.reiniciado == 1
+
+
+@pytest.mark.parametrize('vao,frase', [
+    (0.0, 'o vão escolhido fechou'),
+    (None, 'perdi a medida do /scan'),
+])
+def test_aborto_no_meio_da_re_reinicia_o_relogio_nos_dois_casos(vao, frase):
+    """Revisão da 063, R2 (30-09): os dois abortos da ré no meio da manobra
+    reiniciam o relógio de progresso. A 063 tinha feito o aborto por medida
+    perdida NÃO reiniciar, sem pedido do dono e sem teste; foi revertido, e
+    este teste trava o comportamento de antes do `4124c78`."""
+    seg = SeguidorFalso()
+    seg.estado = 're'
+    seg.re_sentido = -1
+    seg.re_origem = (0.0, 0.0)
+    seg.re_desde = 0.0
+    seg.vao_traseiro = lambda: vao
+    publicado = []
+    seg.publica_desencalhe = lambda v, wz=0.0: publicado.append((v, wz))
+
+    PathFollower.passo_de_re(seg, t=1.0, x=-0.05, y=0.0, rumo=0.0, dist=2.0)
+
+    assert publicado == [(0.0, 0.0)], 'aborto tem de zerar o canal na hora'
+    assert seg.estado == 'seguindo'
+    assert frase in seg.logger.avisos[-1]
+    assert seg.progresso.reiniciado == 1

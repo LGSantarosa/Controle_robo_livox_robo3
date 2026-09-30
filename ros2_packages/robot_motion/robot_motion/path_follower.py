@@ -1686,24 +1686,7 @@ class PathFollower(Node):
                 ('o vão escolhido fechou' if vao is not None
                  else 'perdi a medida do /scan'))
             self.estado = 'seguindo'
-            # 🔴 PERDER O SENSOR NÃO É PROGRESSO, E NÃO PODE CUSTAR UM CICLO
-            # NOVO (29-09). Os dois abortos têm a mesma frase no log e causas
-            # opostas:
-            #
-            #   o vão FECHOU        o mundo respondeu: esta manobra não existe
-            #                       mais. Zerar o relógio está certo — insistir
-            #                       na hora seria ré contra coisa que chegou.
-            #   perdi a MEDIDA      o mundo não disse nada; quem falhou foi o
-            #                       `/scan`. Zerar aqui cobra do robô 4 s por
-            #                       um soluço do sensor.
-            #
-            # Medido na salinha em 29-09: a primeira recuperação foi abortada
-            # por `/scan` velho e o segundo `PolygonStop` esperou mais 7,73 s —
-            # com o robô parado na porta o tempo todo. `entra_na_re` já trata
-            # medida ausente sem recuar às cegas (avisa e volta), então manter o
-            # relógio só faz a tentativa voltar no primeiro quadro fresco.
-            if vao is not None:
-                self.progresso.reinicia()
+            self.progresso.reinicia()
             return
 
         if sentido < 0:

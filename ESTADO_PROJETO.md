@@ -1,6 +1,9 @@
 # Estado do Projeto — Controle_robo_livox (PIBIT)
 
 > Documento vivo. Resumo do que está acontecendo, BOs abertos, avanços e o que falta.
+> **30-09: este é o repositório `Controle_robo_livox_robo3`, só do robô 3**
+> (cópia de `d54d05a`); R1 dispensado e R2 revertido com teste (ver 063).
+>
 > Atualizado em **2026-09-29, tarde** (PC de dev, robô e lidar desligados; duas
 > pilhas de Gazebo subidas e derrubadas na sessão — a 2ª deixou 22 órfãos que
 > foram mortos por PID). Esta é a
@@ -88,13 +91,12 @@ e o perfil do robô 2 não sobrescreve `path_follower` (`perfil.py:59`). A frase
 passou a ser só do robô 3 e não protege mais o robô 2; para o robô 3 o valor
 efetivo (2,0 s) é o mesmo. Risco aceito neste fork, não correção.
 **R2** — a mudança do `/scan` (não zerar o relógio ao perder a medida) **não foi
-autorizada e não tem teste**, e o racional dela não vale com `res_seguidas > 0`.
+autorizada e não tem teste** — ✅ **30-09: REVERTIDA, com teste** (suíte 1847/0), e o racional dela não vale com `res_seguidas > 0`.
 A revisão confirmou o que presta: no mapa real, nas poses (8,582; 3,481) e
 (8,724; 3,475), o portão novo acha a ombreira dentro dos 0,6 m.
 
 ⬜ **Próximo desta frente, na ordem:**
-0. **o conserto R2 da revisão (reverter com teste), antes de qualquer corrida**
-   — o R1 foi dispensado em 30-09 (ver acima);
+0. ~~os consertos da revisão~~ — ✅ 30-09: R1 dispensado, R2 revertido com teste;
 1. **correr a 2ª leva** — a volta pela porta 2, medindo no log o tempo entre
    `STOP:PolygonStop` e a manobra (critério na 063 §4);
 2. **o escalonamento para o giro** depois de duas rés — pedido literal do dono

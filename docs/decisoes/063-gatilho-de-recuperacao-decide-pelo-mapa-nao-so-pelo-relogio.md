@@ -3,10 +3,12 @@
 **Data**: 2026-09-29 (PC de dev; robô e lidar DESLIGADOS, Gazebo com RViz)
 **Status**: aplicada na branch `etapa6-pilha-robo3`. A 1ª leva **foi corrida e
 reprovou parcialmente** (§4); a 2ª leva (o portão `near_mapped`) está
-**implementada e testada, mas ainda NÃO corrida**
+**implementada e testada, mas ainda NÃO corrida**. Em 30-09 o aborto do
+desencalhe por medida perdida foi **revertido** (achado R2, ver §6 item 5)
 **Toca**: `lei_de_seguimento.py` (`ProgressoDeAvanco.atualiza` ganha teto por
 chamada; função nova `mapa_ocupado`), `path_follower.py` (dois métodos novos,
-cinco parâmetros novos, o aborto do desencalhe), `perfil_robo3.yaml` e
+cinco parâmetros novos; ~~o aborto do desencalhe~~ — revertido em 30-09, R2),
+`perfil_robo3.yaml` e
 `test_perfil_robo3.py` (classificação), `test_lei_de_seguimento.py` e
 `test_gatilho_rapido.py` (18 testes novos)
 **Não toca**: o `collision_monitor` e seus polígonos, as manobras em si (ré,
@@ -140,7 +142,13 @@ frente do robô, está do lado dele.**
    medida**. 🔴 **ABERTO (achado R2):** esta mudança não foi pedida pelo dono,
    **nenhum dos 18 testes a cobre**, e o racional "retenta no primeiro quadro
    fresco" não vale sempre — com `res_seguidas > 0` o teto volta a exigir 4 s.
-   Reverter ou separar. Os dois abortos tinham a mesma frase de log e causas opostas: vão
+   Reverter ou separar. ✅ **REVERTIDO em 30-09**: voltou o `reinicia()`
+   incondicional de antes do `4124c78`, travado por
+   `test_aborto_no_meio_da_re_reinicia_o_relogio_nos_dois_casos`
+   (`test_re_desligada.py`), que reprovava no caso `None` antes da reversão.
+   O racional abaixo fica como registro histórico do que foi tentado; se o
+   comportamento voltar, volta com pedido do dono e teste próprio.
+   Os dois abortos tinham a mesma frase de log e causas opostas: vão
    que FECHOU é o mundo dizendo que a manobra não existe mais (zerar está
    certo); perder o `/scan` é o sensor falhando, e cobrar 4 s do robô por um
    soluço do sensor foi o que custou 7,73 s na corrida da manhã.

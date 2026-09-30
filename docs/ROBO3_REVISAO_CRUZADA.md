@@ -1233,6 +1233,13 @@ Perder a medida do `/scan` deixou de reiniciar o relógio
 
 **Conserto pedido:** reverter ou separar a mudança do `/scan` do resto.
 
+✅ **FECHADO POR REVERSÃO, COM TESTE, em 30-09.** Teste escrito primeiro
+(`test_re_desligada.py::test_aborto_no_meio_da_re_reinicia_o_relogio_nos_dois_casos`,
+parametrizado em vão `0.0` e `None`): antes da reversão, o caso `0.0` passou e
+o `None` reprovou só no `reinicia`. O `path_follower.py` voltou ao
+`self.progresso.reinicia()` incondicional, trecho idêntico ao de `4124c78^`.
+Suíte **1847/0** (1845 + os 2 casos).
+
 ### Veredito da revisão
 
 > *"A solução central faz sentido, mas eu pediria um commit corretivo pequeno
@@ -1254,5 +1261,5 @@ contra isso, e foi violada de novo na mesma sessão em que ele a escreveu.
 sessão, **antes** de correr a 2ª leva.
 
 ⬜ **Estado em 30-09:** R1 **dispensado** (defeito ainda existente para
-`robo:=2`, risco aceito neste fork do robô 3); R2 **ainda aberto** — reverter
-com teste antes da corrida.
+`robo:=2`, risco aceito neste fork do robô 3); R2 **fechado por reversão, com
+teste** (ver acima). Nenhum bloqueador aberto para a corrida da 2ª leva.

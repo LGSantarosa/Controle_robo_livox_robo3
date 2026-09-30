@@ -4,6 +4,39 @@
 > o que falhou E POR QUÊ. Fracasso documentado é resultado — vai pro artigo.
 > Decisões formais têm registro próprio em `docs/decisoes/`.
 
+## 2026-09-30 (dev, robô e lidar DESLIGADOS) — REPOSITÓRIO SÓ DO ROBÔ 3; R1 DISPENSADO, R2 REVERTIDO COM TESTE
+
+O robô 3 passou a viver em `Controle_robo_livox_robo3` (cópia de `d54d05a`, a
+ponta da `etapa6-pilha-robo3`). Decisão do dono: aqui não se protege mais o
+robô 2. Os dois bloqueadores da revisão da 063 foram tratados antes de qualquer
+corrida, cada um num commit.
+
+- **R1 dispensado** (`e2b9c62`, só documentação): o conserto já escrito dava
+  ao robô 3 o mesmo valor efetivo (2,0 s) e só servia para o robô 2. Foi
+  descartado sem commit, preservado em `~/sessao-robo3/r1-robo3.patch`.
+  Terminologia exigida na revisão: **dispensado, defeito ainda existente para
+  `robo:=2`** — não "corrigido".
+- **R2 revertido com teste**: o teste dos dois abortos da ré no meio da manobra
+  foi escrito primeiro e reprovou só no caso "perdi a medida do /scan", como
+  previsto. Depois da reversão, suíte **1847/0**.
+
+### Tropeço de método: 13 falsas reprovações que eram minha shell
+
+As duas primeiras rodadas da suíte deram **13 falhas** em
+`tools/subidas_robo3`, com o wrapper parando na varredura de resíduo. A árvore
+sem o diff passou inteira (1845/0) e a com diff, rodada de novo, também
+(1847/0). Causa confirmada por reprodução: a varredura do `bin/subidas-robo3`
+olha **todos os processos da máquina** e casa a palavra `ros2` em qualquer
+linha de comando; a minha shell-pai continha `ros2 daemon stop` e ficou viva
+durante o pytest. Com `echo ros2` no lugar, os mesmos 13 reprovam. **Regra
+prática:** a suíte roda de uma shell cuja linha de comando não cite `ros2`, `gz`
+nem `rviz2` — parar o daemon é um comando SEPARADO, antes.
+
+Também: este clone novo não tinha `install/` e o shell do usuário carrega o
+overlay do `Controle_robo_web`; a suíte só coleta depois de
+`colcon build --base-paths ros2_packages --symlink-install` numa shell limpa
+(`env -i`, só `/opt/ros/jazzy`): 6 pacotes, 28,5 s.
+
 ## 2026-09-29, tarde (dev, robô e lidar DESLIGADOS) — O GATILHO DA RETOMADA, EM DUAS LEVAS: UMA CORRIDA E UM DEFEITO ACHADO NELA
 
 Pedido do dono: fazer o robô 3 decidir mais rápido depois de ser parado pelo
@@ -60,6 +93,11 @@ desencalhe deixou de zerar o relógio quando o que falhou foi a MEDIDA — perde
 o `/scan` é soluço de sensor, não progresso, e cobrar 4 s por isso foi o que
 custou 7,73 s na manhã. 18 testes novos, suíte **1845/0**, quatro mutações
 conferidas.
+
+> 🔴 **ERRATA (30-09):** a mudança do aborto por medida perdida **não estava
+> coberta por nenhum dos 18 testes**, ao contrário do que o parágrafo acima dá a
+> entender, e não tinha sido pedida pelo dono (achado R2 da revisão cruzada).
+> Foi **revertida** em 30-09, com teste — ver a entrada daquele dia.
 
 Ficou de fora, declarado como dívida: **o escalonamento para o giro** depois de
 duas rés — o pedido literal do dono, e o `escalate_after` do robô 1. É o próximo
