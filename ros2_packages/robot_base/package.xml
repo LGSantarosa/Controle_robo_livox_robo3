@@ -20,6 +20,8 @@
        funciona hoje por vir de carona no ambiente, e quebra em build limpo. -->
   <depend>std_msgs</depend>
   <depend>tf2_ros</depend>
+  <!-- `nuvem_pontos` lê o CustomMsg cru e empacota com numpy (decisão 066). -->
+  <exec_depend>python3-numpy</exec_depend>
 
   <!-- Tração: interface ros2_control da placa hover + controlador diferencial -->
   <exec_depend>hoverboard_driver</exec_depend>

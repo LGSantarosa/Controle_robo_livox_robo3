@@ -122,3 +122,79 @@ def test_a_origem_exata_sai_mesmo_com_raio_zero():
     assert not ponto_valido(0.0, 0.0, 0.0, 0.0)
     _, n, fora = empacota([(0.0, 0.0, 0.0, 0.0)], raio_cego=0.0)
     assert (n, fora) == (0, 1)
+
+
+# ── decisão 066: a leitura CRUA do CustomMsg, vetorizada ────────────────────
+
+def _cdr(pontos, frame='livox_frame', seg=1790801684, nseg=838874289):
+    """CustomMsg em CDR montado à mão, independente do parser. Sem o byte de
+    preenchimento do último ponto, como o rclpy serializa (401 327 bytes
+    medidos no robô para 20 064 pontos)."""
+    b = bytearray(b'\x00\x01\x00\x00')
+    f = frame.encode() + b'\x00'
+    b += struct.pack('<iII', seg, nseg, len(f)) + f
+    while (len(b) - 4) % 8:
+        b += b'\x00'
+    b += struct.pack('<QIB3s', 123, len(pontos), 0, b'\x00\x00\x00')
+    while (len(b) - 4) % 4:
+        b += b'\x00'
+    b += struct.pack('<I', len(pontos))
+    for k, (x, y, z, r) in enumerate(pontos):
+        b += struct.pack('<IfffBBB', k, x, y, z, r, 0, k % 4) + b'\x00'
+    return bytes(b[:-1]) if pontos else bytes(b)
+
+
+def _nuvem_de_teste(n=2000):
+    import random
+    rnd = random.Random(66)
+    pts = [(rnd.uniform(-8, 8), rnd.uniform(-8, 8), rnd.uniform(-1, 2),
+            rnd.randrange(256)) for _ in range(n)]
+    # os casos que o filtro decide: origem, eixo, borda do raio, zero num eixo
+    pts += [(0.0, 0.0, 0.0, 7), (0.04, 0.09, 0.02, 9), (0.05, 0.05, -2.0, 1),
+            (0.15, 0.0, 0.3, 2), (0.0, -0.26, 0.1, 3), (0.2, 0.0, 0.0, 4)]
+    return pts
+
+
+def _f32(pts):
+    """Os mesmos pontos depois de passar por float32, como chegam do sensor."""
+    return [struct.unpack('<fff', struct.pack('<fff', x, y, z)) + (float(r),)
+            for x, y, z, r in pts]
+
+
+def test_066_o_cabecalho_sai_do_cdr():
+    from nuvem import custommsg_cru
+    seg, nseg, frame, pontos = custommsg_cru(_cdr(_nuvem_de_teste(3)))
+    assert (seg, nseg, frame) == (1790801684, 838874289, 'livox_frame')
+    assert len(pontos) == 9
+
+
+def test_066_mesmos_bytes_que_o_caminho_antigo():
+    """A vetorização não pode mudar a nuvem: com e sem o raio cego da 027."""
+    from nuvem import custommsg_cru, empacota_np
+    pts = _nuvem_de_teste()
+    _, _, _, arr = custommsg_cru(_cdr(pts))
+    for raio in (0.0, 0.15):
+        assert empacota_np(arr, raio) == empacota(_f32(pts), raio)
+
+
+def test_066_nuvem_vazia():
+    from nuvem import custommsg_cru, empacota_np
+    _, _, _, arr = custommsg_cru(_cdr([]))
+    assert empacota_np(arr, 0.15) == (b'', 0, 0)
+
+
+def test_066_frame_de_tamanho_qualquer_nao_desalinha():
+    """O alinhamento de 8 do timebase depende do tamanho do frame_id."""
+    from nuvem import custommsg_cru, empacota_np
+    pts = _nuvem_de_teste(5)
+    for frame in ('', 'a', 'livox', 'livox_frame_x', 'x' * 30):
+        _, _, f, arr = custommsg_cru(_cdr(pts, frame=frame))
+        assert f == frame
+        assert empacota_np(arr, 0.15) == empacota(_f32(pts), 0.15)
+
+
+def test_066_cdr_big_endian_e_recusado():
+    import pytest
+    from nuvem import custommsg_cru
+    with pytest.raises(ValueError):
+        custommsg_cru(b'\x00\x00\x00\x00' + _cdr([])[4:])

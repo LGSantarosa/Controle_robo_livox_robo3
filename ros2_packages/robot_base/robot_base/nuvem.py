@@ -99,6 +99,96 @@ def empacota(pontos, raio_cego=0.0):
     return bytes(buf), n, fora
 
 
+def custommsg_cru(raw):
+    """Bytes CDR de um `livox_ros_driver2/CustomMsg` -> (seg, nseg, frame, pontos).
+
+    `pontos` é um array estruturado do numpy que APONTA para `raw` (sem cópia),
+    com os campos do `CustomPoint`. Existe por causa da decisão 066, medido no
+    notebook do robô 3 em 30-09: o rclpy leva **83,5 ms** para desserializar uma
+    nuvem de 20 064 pontos em objetos Python, com 100 ms de orçamento a 10 Hz.
+    O nó saturava uma thread e entregava 7,2 Hz com 0,69 s de atraso.
+
+    Layout CDR (little-endian, alinhamento contado a partir do fim dos 4 bytes
+    de encapsulamento):
+
+        int32 sec, uint32 nanosec, string frame_id (uint32 tamanho com o NUL),
+        [alinha 8] uint64 timebase, uint32 point_num, uint8 lidar_id,
+        uint8[3] rsvd, uint32 tamanho da sequência, e então os pontos:
+        uint32 offset_time, float32 x y z, uint8 reflectivity tag line
+        = 19 bytes + 1 de preenchimento (o próximo uint32 alinha em 4) = 20.
+    """
+    import numpy as np
+    if len(raw) < 4 or raw[0:2] != b'\x00\x01':
+        raise ValueError(
+            f'CDR não é little-endian (encapsulamento {bytes(raw[0:4])!r})')
+    base = 4
+
+    def alinha(o, n):
+        return base + ((o - base + n - 1) // n) * n
+
+    seg, nseg, tam = struct.unpack_from('<iII', raw, base)
+    o = base + 12
+    frame = bytes(raw[o:o + tam - 1]).decode('utf-8')
+    o = alinha(o + tam, 8) + 8               # timebase
+    o += 4 + 1 + 3                           # point_num, lidar_id, rsvd
+    o = alinha(o, 4)
+    (n,) = struct.unpack_from('<I', raw, o)
+    o += 4
+    if len(raw) < o + n * _PONTO_LIVOX.itemsize - 1:
+        raise ValueError(f'CDR curto: {n} pontos não cabem em {len(raw)} bytes')
+    # O ÚLTIMO ponto não leva o byte de preenchimento: a mensagem real acaba 1
+    # byte antes de n*20 (401 327 bytes medidos, não 401 328).
+    pontos = np.ndarray(shape=(n,), dtype=_PONTO_LIVOX,
+                        buffer=_completa(raw, o, n))
+    return seg, nseg, frame, pontos
+
+
+def _completa(raw, o, n):
+    """O trecho dos pontos com o preenchimento do último garantido."""
+    fim = o + n * 20
+    trecho = memoryview(raw)[o:fim]
+    if len(trecho) == n * 20:
+        return trecho
+    return bytes(trecho) + b'\x00' * (n * 20 - len(trecho))
+
+
+def empacota_np(pontos, raio_cego=0.0):
+    """Mesmo contrato de `empacota`, sobre o array de `custommsg_cru`.
+
+    Tem de dar os MESMOS bytes que `empacota` (o teste confere): o critério de
+    `ponto_valido` é refeito em float64, como o `math.hypot` faz com os float32
+    promovidos a float do Python.
+    """
+    import numpy as np
+    x = pontos['x'].astype(np.float64)
+    y = pontos['y'].astype(np.float64)
+    z = pontos['z'].astype(np.float64)
+    ok = ~((x == 0.0) & (y == 0.0) & (z == 0.0))
+    ok &= np.hypot(x, y) >= raio_cego
+    sai = np.empty((int(ok.sum()), 4), dtype='<f4')
+    sai[:, 0] = pontos['x'][ok]
+    sai[:, 1] = pontos['y'][ok]
+    sai[:, 2] = pontos['z'][ok]
+    sai[:, 3] = pontos['reflectivity'][ok]
+    return sai.tobytes(), len(sai), len(pontos) - len(sai)
+
+
+def _dtype_livox():
+    import numpy as np
+    return np.dtype({
+        'names': ['offset_time', 'x', 'y', 'z', 'reflectivity', 'tag', 'line'],
+        'formats': ['<u4', '<f4', '<f4', '<f4', 'u1', 'u1', 'u1'],
+        'offsets': [0, 4, 8, 12, 16, 17, 18],
+        'itemsize': 20,
+    })
+
+
+try:
+    _PONTO_LIVOX = _dtype_livox()
+except ImportError:  # sem numpy só a versão antiga funciona
+    _PONTO_LIVOX = None
+
+
 def desempacota(buf):
     """Volta de bytes para tuplas — existe para o teste conferir o que foi
     escrito, e para diagnóstico à mão."""

@@ -1,8 +1,8 @@
 # 066 — O `nuvem_pontos` é o gargalo do Nav2 no notebook do robô 3: vetorizar
 
 **Data**: 2026-09-30 (noite; lab, robô na mesa, só o lidar ligado)
-**Status**: causa **medida e confirmada** no robô; conserto **aprovado pelo
-dono, ainda não escrito**.
+**Status**: causa **medida e confirmada** no robô; conserto **escrito e
+provado offline** (§6). Falta repetir a medição no robô.
 **Toca**: `ros2_packages/robot_base/robot_base/nuvem_pontos.py` (só o laço de
 conversão) e o teste dele.
 **Não toca**: tópicos, campos, frame, raio cego (decisão 027), launch.
@@ -75,3 +75,20 @@ sessão gráfica (≈ 45 % parado), `ros2 bag record --all-topics` da pilha.
 2. Robô na mesa, só o lidar: repetir a tabela do §2 (`/livox/pontos` a
    10 Hz, atraso da ordem do `/Odometry`) e a E3.
 3. Só então Nav2 com rodas no chão.
+
+## 6. O que foi provado offline (30-09, noite)
+
+O perfil no notebook mudou o alvo: numa nuvem de 20 064 pontos, o rclpy leva
+**83,5 ms só para desserializar** o `CustomMsg` em objetos Python, e o
+`empacota` antigo 11,7 ms. Vetorizar só o laço não bastaria. Por isso o nó
+passou a assinar com `raw=True` e o `nuvem.py` ganhou `custommsg_cru` (lê o
+CDR direto num array estruturado do numpy) e `empacota_np`.
+
+- Suíte do `robot_base`: 132/0, com 5 testes novos (CDR montado à mão com
+  `struct`, frame de vários tamanhos, nuvem vazia, big-endian recusado,
+  mesmos bytes que o caminho antigo com raio 0 e 0,15).
+- No notebook, contra o CDR **do próprio rclpy** (401 327 bytes — o último
+  ponto vem sem o byte de preenchimento): saída **idêntica byte a byte** à
+  antiga com raio 0 e 0,15; `sec`, `nanosec` e `frame_id` iguais.
+- Tempo por nuvem, mesmo notebook: **92,3 ms → 1,0 ms** (92×).
+  (`docs/dados/2026-09-30-robo3-cpu/nuvem_pontos_066_offline.txt`)

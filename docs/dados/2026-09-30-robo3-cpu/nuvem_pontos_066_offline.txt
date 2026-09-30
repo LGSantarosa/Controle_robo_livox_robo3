@@ -1,0 +1,3 @@
+raio 0.0 iguais: True pontos 20064 fora 0 | frame 'livox_frame' True True
+raio 0.15 iguais: True pontos 20059 fora 5 | frame 'livox_frame' True True
+por nuvem: antigo 92.3 ms  novo 1.00 ms  (92x)

@@ -42,8 +42,9 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import PointCloud2, PointField
+from std_msgs.msg import Header
 
-from robot_base.nuvem import CAMPOS, PASSO_PONTO, empacota
+from robot_base.nuvem import CAMPOS, PASSO_PONTO, custommsg_cru, empacota_np
 
 
 class NuvemPontos(Node):
@@ -76,9 +77,12 @@ class NuvemPontos(Node):
 
         self.pub = self.create_publisher(
             PointCloud2, self.par['saida'], qos_profile_sensor_data)
+        # `raw=True`: chega o CDR em bytes, sem o rclpy montar 20 mil objetos
+        # Python por nuvem (83,5 ms medidos de 100 ms de orçamento — decisão
+        # 066). O tipo continua declarado para o DDS casar com o driver.
         self.create_subscription(
             CustomMsg, self.par['entrada'], self.passo,
-            qos_profile_sensor_data)
+            qos_profile_sensor_data, raw=True)
 
         self.campos = [PointField(name=n, offset=o, datatype=d, count=c)
                        for n, o, d, c in CAMPOS]
@@ -96,13 +100,15 @@ class NuvemPontos(Node):
             f"collision_monitor não recebem nuvem nenhuma no robô — medido em "
             f"10-08, com os dois costmaps em 0 células letais.")
 
-    def passo(self, msg):
-        dados, quantos, fora = empacota(
-            ((p.x, p.y, p.z, float(p.reflectivity)) for p in msg.points),
-            raio_cego=self.par['raio_cego'])
+    def passo(self, raw):
+        seg, nseg, frame, pontos = custommsg_cru(raw)
+        dados, quantos, fora = empacota_np(
+            pontos, raio_cego=self.par['raio_cego'])
 
         fora_msg = PointCloud2()
-        fora_msg.header = msg.header
+        fora_msg.header = Header(frame_id=frame)
+        fora_msg.header.stamp.sec = seg
+        fora_msg.header.stamp.nanosec = nseg
         fora_msg.height = 1
         fora_msg.width = quantos
         fora_msg.fields = self.campos
@@ -118,7 +124,7 @@ class NuvemPontos(Node):
             self.get_logger().warn(
                 f'primeira nuvem convertida: {quantos} pontos '
                 f'({fora} inválidos descartados), frame '
-                f'"{msg.header.frame_id}". Se o frame não for `livox_frame`, a '
+                f'"{frame}". Se o frame não for `livox_frame`, a '
                 f'nuvem inteira sai deslocada e a TF não conserta.')
         # Diagnóstico contínuo e barato: quadro que chega com muito ponto
         # zerado é sensor obstruído, e isso não pode virar silêncio.
