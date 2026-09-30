@@ -78,8 +78,15 @@ Logo depois do giro de ~172° no começo da volta, com o robô já andando a
 SOBE enquanto o caminho vai para a porta. Numa corrida o 2º escape veio 2,4 s
 depois do 1º, abaixo do rearme de 4 s, o que precisa ser explicado.
 
+🟢 **Web com edição de rota do robô 1** (30-09, fim da tarde; branch `arena-galpao`
+de lá): arrastar move o ponto, **← Antes / Depois →** reordena, **✕ Apagar
+ponto** tira um só. Fora de propósito: LED, passagem, yaw ignorado, pré-porta e
+o `d2e9eec` (runner que não desiste de ponto), que fica para decidir depois.
+🟡 Uma falha intermitente da suíte, não identificada (DIARIO 30-09).
+
 ⬜ **Próximo, na ordem do dono:**
-1. primeira subida real pelo `bin/sobe-robo3-web`, e ele cria rotas mais difíceis;
+1. subir pelo `bin/sobe-robo3-web` (a 1ª subida real já funcionou, sessão
+   `20260930_140735-web`), conferir a edição de rota nova e criar rotas mais difíceis;
 2. o desenho do robô no `map.js`: hoje é um quadrado de 0,5 m centrado; o robô 3
    tem 0,374 × 0,380 m e vai de +0,0825 a −0,2913 em x (`geometria_robo3.yaml`);
 3. investigar o EMPERRADO falso;

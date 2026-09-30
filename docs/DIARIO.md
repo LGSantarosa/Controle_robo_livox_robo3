@@ -73,6 +73,33 @@ foram recuperados pela 061, e a recontagem deu zero. Na primeira sessão o
 "antes" era um `ls -la`. Virou `shm_antes_reconstruido.tsv`, só com o conjunto
 de nomes medido. Na segunda, o "antes" foi tirado de verdade antes de subir.
 
+### Fim da tarde: a edição de rota do robô 1 chega ao web daqui
+
+Pedido do dono: trazer as melhorias de usabilidade do web do robô 1. Estavam na
+branch `arena-galpao` do `Controle_robo_web` (05 e 06-09), e não no `main` de
+lá. Vieram por cherry-pick, um commit por vez, com a referência de origem:
+arrastar ponto move o ponto (`8bd414c`), reordenar (`c0430b0`), apagar UM
+ponto (`663232c`) e o conserto do teste (`0c1b583`). Três deles deram conflito,
+porque o `map.js` daqui perdeu portas e trekking na demolição, e dois vinham
+misturados com o `b934e29` (LED, "passagem", yaw ignorado na chegada), que o
+dono não pediu. Resolvi à mão, ficando só a edição de rota. O yaw continua
+definido pelo arraste. Ficaram de fora, por decisão: a luz ao concluir, a
+pré-porta, o follow e `d2e9eec` ("o runner não desiste de ponto"), que é
+política de navegação e não usabilidade.
+
+Teste: o `test_ui_route_edit.py` roda a função real do `map.js` no `node`. A
+mutação que tira a trava de rota-rodando reprova. `controle_web` 64/0.
+
+🟡 **Falha intermitente sem identificação:** uma rodada da suíte deu 1871/1, e as
+duas seguintes deram 1872/0. Eu não guardei o nome do teste (rodei sem `-rf`).
+Suspeitos: os testes sensíveis a tempo, e os do launcher primeiro. Da próxima
+vez, sempre `-rf`.
+
+Teardown da sessão do launcher: o `confere` do SHM recusou por causa de UM
+processo meu, uma shell cuja linha de comando citava padrões ROS no `grep`, e
+não descende do wrapper. O launcher fez certo. Concluí à mão pela 061, com
+recontagem zero.
+
 ## 2026-09-29, tarde (dev, robô e lidar DESLIGADOS) — O GATILHO DA RETOMADA, EM DUAS LEVAS: UMA CORRIDA E UM DEFEITO ACHADO NELA
 
 Pedido do dono: fazer o robô 3 decidir mais rápido depois de ser parado pelo
