@@ -47,6 +47,27 @@
 
 ---
 
+## ⏭️ 01-10 — POR ONDE RECOMEÇAR (o dono parou 30-09 às 18h45)
+
+Robô e lidar desligados; notebook limpo, em `origin/main`. Nav2 real **ainda
+não moveu o robô**. Em ordem, uma coisa por vez (066 §8):
+
+1. **Reiniciar o notebook** e medir de novo só a localização, com o robô
+   parado (E1 da 066). Se voltar a 39/32/4 %, o pico de ontem era resíduo do
+   snap/docker. Se não, separar cenário (chão × mesa) de sessão gráfica.
+2. **Travar o snap**: `sudo snap refresh --hold` (o dono roda; ontem ele se
+   auto-atualizou no meio do teste e derrubou o FAST-LIO).
+3. **TF `odom→camera_init`** no roteiro do robô 3 (é o remendo do robô 2,
+   `static_transform_publisher --frame-id odom --child-frame-id camera_init`):
+   sem ela o `path_follower` recusa todo plano. Depois, conserto de verdade
+   (seguidor lê a pose por TF; o sensor está 9,3 cm atrás do `base_link`).
+4. **Heartbeat** do `lifecycle_manager` (3 quedas: `collision_monitor` ×2,
+   `planner_server` ×1) e o **STOP piscando** do `collision_monitor`.
+5. Só então Nav2 no chão: objetivo curto, LB pronto.
+
+⚠️ A checagem "placa responde" do `sobe-robo3` deu falso negativo sob carga
+(a placa estava ligada e andou no Xbox).
+
 ## 🟡 30-09, NOITE — ROBÔ 3 REAL: SLAM OK, NAV2 BARRADO PELA CPU (decisão 066)
 
 Tudo desligado no fim. Detalhe no `DIARIO.md` (entrada do topo).

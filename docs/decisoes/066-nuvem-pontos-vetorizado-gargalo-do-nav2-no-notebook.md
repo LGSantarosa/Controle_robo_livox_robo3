@@ -3,7 +3,8 @@
 **Data**: 2026-09-30 (noite; lab, robô na mesa, só o lidar ligado)
 **Status**: causa **medida e confirmada** no robô; conserto **escrito e
 provado offline** (§6) e **no robô** (§7): gargalo resolvido. Abertos: o
-heartbeat do `collision_monitor` e o STOP piscando (§7), que NÃO são CPU.
+heartbeat do `collision_monitor` e o STOP piscando (§7), que NÃO são CPU; e
+no chão (§8) a CPU voltou a estourar por causa ainda desconhecida.
 **Toca**: `ros2_packages/robot_base/robot_base/nuvem_pontos.py` (só o laço de
 conversão) e o teste dele.
 **Não toca**: tópicos, campos, frame, raio cego (decisão 027), launch.
@@ -116,3 +117,39 @@ CDR direto num array estruturado do numpy) e `empacota_np`.
    objetos a menos de 0,5 m), mas é o mesmo padrão do defeito de 12-08 que
    deu origem à 027 (peça do robô piscando dentro do polígono). Precisa ser
    olhado no chão, com a nuvem gravada.
+
+## 8. No chão, com a placa (30-09, 18h20–18h41) — o que ficou aberto
+
+Dados: `docs/dados/2026-09-30-robo3-nav2-chao/`.
+
+1. **O seguidor não dirige: falta a TF `odom→camera_init`.** Objetivo aceito,
+   plano feito e suavizado, e o `path_follower` descartou tudo com *"sem TF
+   camera_init<-map"*: ele lê a pose do `/Odometry` do FAST-LIO, cujo frame
+   é `camera_init`, e nada liga esse nome ao `odom`. **É o mesmo defeito do
+   robô 2 em 14-08** (`4467f9f`), remendado lá com uma
+   `static_transform_publisher --frame-id odom --child-frame-id camera_init`
+   dentro do `bin/sobe-robo` — nunca portado para o robô 3. A identidade é
+   exata (o `tf_odom` monta o `odom` a partir da própria pose do LIO). O que o
+   remendo NÃO conserta: o seguidor usa a pose do **sensor**, que no robô 3
+   fica **9,3 cm atrás** do `base_link` (URDF provisório: x −0,093, z 0,240;
+   no robô 2 era só z). Conserto de verdade: o seguidor ler a pose por TF.
+   **O remendo foi subido às 18h29 mas não chegou a ser testado** (item 3).
+2. **Heartbeat perdido pela 3ª vez**, agora do `planner_server` (18:26:12), e
+   desta vez a pilha **não** se reergueu. Causa desconhecida.
+3. **A CPU estourou de novo (load 40–48) e o FAST-LIO divergiu.** Às 18:28 o
+   snapd começou uma auto-atualização (core24, docker, snap-store — reiniciou
+   o serviço do docker às 18:31). Na subida seguinte (18:33) o load foi a 48,
+   o driver Livox a **150 %**, 34 % da CPU em modo kernel; as nuvens chegaram
+   ao FAST-LIO **11–15 s atrasadas** da IMU (*"IMU and LiDAR not Synced"*),
+   ele divergiu (*"No Effective Points"*, estouro de índice no VoxelGrid) e
+   `/Odometry`/`/scan` pararam. O Nav2 nem ativou; a web mostrou o mapa sem
+   robô e a pose inicial não pegava.
+4. **Mesmo só com a localização, depois de tudo derrubado** (18:40, robô no
+   chão, na tomada, 3,1 GHz, 63 °C — sem estrangulamento): FAST-LIO **95 %**,
+   driver Livox **73 %**, `nuvem_pontos` 10 %, gnome-shell 39 %,
+   systemd-logind 16 %, 19 % de kernel com o ROS parado. Uma hora antes, na
+   mesa, os mesmos nós davam 39 / 32 / 4 %. Hipóteses a separar, UMA por vez:
+   (a) o cenário do chão (21 mil pontos válidos contra 16 mil na mesa; o
+   FAST-LIO depende do que vê); (b) resíduo da atualização do snap/docker
+   (kernel em 19 % parado é anormal — medir de novo depois de reiniciar o
+   notebook); (c) a sessão gráfica.

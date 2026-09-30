@@ -1,0 +1,608 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-09-30-18-34-18-635786-ubuntu-Latitude-3490-1828239
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: perfil materializado: /home/ubuntu/sessao-robo3/nav2c_20260930_183306/pilha/corrida_2026-09-30_183419/perfil_nav2.yaml
+[INFO] [launch.user]: perfil materializado: /home/ubuntu/sessao-robo3/nav2c_20260930_183306/pilha/corrida_2026-09-30_183419/perfil_collision_monitor.yaml
+[INFO] [launch.user]: PILHA subindo — espere os servidores ativarem (o Smac leva ~16 s montando a heurística) e então clique "2D Goal Pose" no RViz.
+[INFO] [map_server-1]: process started with pid [1828423]
+[INFO] [planner_server-2]: process started with pid [1828424]
+[INFO] [smoother_server-3]: process started with pid [1828425]
+[INFO] [controller_server-4]: process started with pid [1828426]
+[INFO] [bt_navigator-5]: process started with pid [1828429]
+[INFO] [amcl-6]: process started with pid [1828430]
+[INFO] [lifecycle_manager-7]: process started with pid [1828431]
+[INFO] [heading_controller-8]: process started with pid [1828432]
+[INFO] [collision_monitor-9]: process started with pid [1828434]
+[INFO] [twist_mux-10]: process started with pid [1828445]
+[INFO] [compensador_rumo-11]: process started with pid [1828446]
+[INFO] [path_follower-12]: process started with pid [1828447]
+[INFO] [freeze_capture-13]: process started with pid [1828448]
+[INFO] [ros2-14]: process started with pid [1828449]
+[map_server-1] [INFO] [1790804069.131896932] [map_server]: 
+[map_server-1] 	map_server lifecycle node launched. 
+[map_server-1] 	Waiting on external lifecycle transitions to activate
+[map_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-1] [INFO] [1790804069.132328441] [map_server]: Creating
+[amcl-6] [INFO] [1790804069.642016463] [amcl]: 
+[amcl-6] 	amcl lifecycle node launched. 
+[amcl-6] 	Waiting on external lifecycle transitions to activate
+[amcl-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-6] [INFO] [1790804069.659991231] [amcl]: Creating
+[planner_server-2] [INFO] [1790804072.979784848] [planner_server]: 
+[planner_server-2] 	planner_server lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-7] [INFO] [1790804073.237480874] [lifecycle_manager_pilha]: Creating
+[planner_server-2] [INFO] [1790804073.249235589] [planner_server]: Creating
+[controller_server-4] [INFO] [1790804073.477262976] [controller_server]: 
+[controller_server-4] 	controller_server lifecycle node launched. 
+[controller_server-4] 	Waiting on external lifecycle transitions to activate
+[controller_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[twist_mux-10] [INFO] [1790804074.423242167] [twist_mux]: Topic handler 'topics.autonomia' subscribed to topic 'auto_vel': timeout = 0.500000s , priority = 10.
+[planner_server-2] [INFO] [1790804075.273576583] [global_costmap.global_costmap]: 
+[planner_server-2] 	global_costmap lifecycle node launched. 
+[planner_server-2] 	Waiting on external lifecycle transitions to activate
+[planner_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-4] [INFO] [1790804075.298994889] [controller_server]: Creating controller server
+[planner_server-2] [INFO] [1790804075.406522708] [global_costmap.global_costmap]: Creating Costmap
+[twist_mux-10] [INFO] [1790804075.550305560] [twist_mux]: Topic handler 'topics.desencalhe' subscribed to topic 'unstuck_vel': timeout = 0.500000s , priority = 30.
+[lifecycle_manager-7] [INFO] [1790804075.580323128] [lifecycle_manager_pilha]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[twist_mux-10] [INFO] [1790804075.990557545] [twist_mux]: Topic handler 'topics.direcional' subscribed to topic 'dpad_vel': timeout = 0.300000s , priority = 110.
+[twist_mux-10] [INFO] [1790804076.540299982] [twist_mux]: Topic handler 'topics.joystick' subscribed to topic 'joy_vel': timeout = 0.500000s , priority = 100.
+[collision_monitor-9] [INFO] [1790804076.697069591] [collision_monitor]: 
+[collision_monitor-9] 	collision_monitor lifecycle node launched. 
+[collision_monitor-9] 	Waiting on external lifecycle transitions to activate
+[collision_monitor-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-5] [INFO] [1790804078.557972516] [bt_navigator]: 
+[bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-5] [INFO] [1790804079.205078485] [bt_navigator]: Creating
+[lifecycle_manager-7] [INFO] [1790804079.632823968] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[lifecycle_manager-7] [INFO] [1790804081.781788534] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[smoother_server-3] [INFO] [1790804082.724078581] [smoother_server]: 
+[smoother_server-3] 	smoother_server lifecycle node launched. 
+[smoother_server-3] 	Waiting on external lifecycle transitions to activate
+[smoother_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-3] [INFO] [1790804083.414037393] [smoother_server]: Creating smoother server
+[lifecycle_manager-7] [INFO] [1790804083.791481751] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[lifecycle_manager-7] [INFO] [1790804085.832928231] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[heading_controller-8] [WARN] [1790804085.855938704] [heading_controller]: parâmetros NÃO MEDIDOS neste robô — a_dec=0.1 rad/s², zona_morta=0.0178 m/s, bitola=0.27 m. Rodar tools/banco/ e corrigir (BO-3).
+[heading_controller-8] [INFO] [1790804085.861509514] [heading_controller]: pivô DISPONÍVEL acima de 0.13 rad/s — o robô consegue virar no próprio eixo
+[heading_controller-8] [WARN] [1790804085.874557641] [heading_controller]: sem /Odometry
+[lifecycle_manager-7] [INFO] [1790804087.849183427] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[lifecycle_manager-7] [INFO] [1790804089.870769278] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[heading_controller-8] [WARN] [1790804090.881995596] [heading_controller]: sem /Odometry
+[lifecycle_manager-7] [INFO] [1790804091.874507179] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[lifecycle_manager-7] [INFO] [1790804093.878654560] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[lifecycle_manager-7] [INFO] [1790804095.899235514] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[ros2-14] stdin is not a terminal device. Keyboard handling disabled.[INFO] [1790804097.810477341] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[ros2-14] [INFO] [1790804097.812521345] [rosbag2_recorder]: Event publisher thread: Started
+[lifecycle_manager-7] [INFO] [1790804097.899645534] [lifecycle_manager_pilha]: Waiting for service map_server/get_state...
+[ros2-14] [INFO] [1790804099.633408469] [rosbag2_recorder]: Starting recording to '/home/ubuntu/sessao-robo3/nav2c_20260930_183306/pilha/corrida_2026-09-30_183419/bag'
+[ros2-14] [INFO] [1790804099.656795946] [rosbag2_recorder]: Listening for topics...
+[ros2-14] [INFO] [1790804099.656908247] [rosbag2_recorder]: Recording...
+[ros2-14] [INFO] [1790804099.659304410] [rosbag2_recorder]: Topics discovery started.
+[ros2-14] [INFO] [1790804099.677730392] [rosbag2_recorder]: use_sim_time set, waiting for /clock before starting recording...
+[heading_controller-8] [WARN] [1790804100.152350655] [heading_controller]: /Odometry parou de chegar
+[controller_server-4] [INFO] [1790804101.873549940] [local_costmap.local_costmap]: 
+[controller_server-4] 	local_costmap lifecycle node launched. 
+[controller_server-4] 	Waiting on external lifecycle transitions to activate
+[controller_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-4] [INFO] [1790804102.358921626] [local_costmap.local_costmap]: Creating Costmap
+[compensador_rumo-11] [WARN] [1790804102.699737246] [compensador_rumo]: compensador de rumo (decisão 011): ff +0.000 1/m frente, +0.000 ré; kp=0.25 ki=0.12, correção limitada a ±0.60 rad/s. Curva pedida (|wz|≥0.05) passa intocada.
+[compensador_rumo-11] [WARN] [1790804102.704083433] [compensador_rumo]: GANHO DA CADEIA 1,00 (não medido nesta máquina): o cancelamento do arco sai ATENUADO pelo que o atuador deixar de entregar. No Gazebo isso valeu −0,12 rad/s de arco sobrando, e era ele que comia a curva suave. Medir com `tools/banco/ganho_de_giro.py`.
+[compensador_rumo-11] [WARN] [1790804102.708452365] [compensador_rumo]: FREIO LINEAR DESLIGADO — nada de contra-torque: depois do corte quem para o robô é só a planta, e o que ela escorrega não está medido. É o DEFAULT do robô 3 (o contra-torque invertia a marcha: 9,6 cm de ré na chegada, 29-09). No robô 2 desligar é regressão: lá a placa segura 0,52 s e ele anda +0,10 m depois de zerar — foi a batida de 13-08.
+[compensador_rumo-11] [WARN] [1790804102.712894148] [compensador_rumo]: ⚠️ ff HERDADO: curv_frente +0.0000 NÃO foi medido nesta sessão. A planta muda ~13,5% entre dias (04-08: −0,8031 · 05-08: −0,9116, faixas que não se tocam), e o resíduo disso é maior que o critério de aceitação da 011. Protocolo (decisão 013): três corridas SEM compensador, `medir.py --resumo curvatura`, e subir a pilha com `curv_frente:=<média> curv_medido_em:=<data>`.
+[heading_controller-8] [WARN] [1790804105.502758764] [heading_controller]: /Odometry parou de chegar
+[lifecycle_manager-7] [INFO] [1790804111.861989042] [lifecycle_manager_pilha]: Waiting for service amcl/get_state...
+[lifecycle_manager-7] [INFO] [1790804113.866696694] [lifecycle_manager_pilha]: Waiting for service amcl/get_state...
+[lifecycle_manager-7] [INFO] [1790804115.867160314] [lifecycle_manager_pilha]: Waiting for service amcl/get_state...
+[lifecycle_manager-7] [INFO] [1790804117.913158675] [lifecycle_manager_pilha]: Waiting for service amcl/get_state...
+[heading_controller-8] [WARN] [1790804117.961970107] [heading_controller]: /Odometry parou de chegar
+[lifecycle_manager-7] [INFO] [1790804119.913890768] [lifecycle_manager_pilha]: Waiting for service amcl/get_state...
+[path_follower-12] [INFO] [1790804120.790702307] [path_follower]: log da corrida -> /home/ubuntu/sessao-robo3/nav2c_20260930_183306/pilha/seguidor_2026-09-30_183516.csv
+[path_follower-12] [INFO] [1790804120.799743453] [path_follower]: seguidor de pé — raio da máquina 0.37 m, mira 0.37 m em curva e 1.00 m em reta (040), piso de linear 0.203 m/s
+[path_follower-12] [INFO] [1790804120.808279251] [path_follower]: raio de chegada 0.25 m (mínimo viável 0.07 m)
+[freeze_capture-13] [INFO] [1790804121.083902008] [freeze_capture]: freeze_capture: chain=/home/ubuntu/sessao-robo3/nav2c_20260930_183306/pilha/freeze_capture.csv diag=/home/ubuntu/sessao-robo3/nav2c_20260930_183306/pilha/freeze_diag.csv
+[lifecycle_manager-7] [INFO] [1790804121.956975818] [lifecycle_manager_pilha]: Waiting for service amcl/get_state...
+[heading_controller-8] [WARN] [1790804123.192346588] [heading_controller]: /Odometry parou de chegar
+[heading_controller-8] [WARN] [1790804129.256302284] [heading_controller]: /Odometry parou de chegar
+[heading_controller-8] [WARN] [1790804134.300670117] [heading_controller]: /Odometry parou de chegar
+[lifecycle_manager-7] [INFO] [1790804137.939188597] [lifecycle_manager_pilha]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-7] [INFO] [1790804137.939366770] [lifecycle_manager_pilha]: [34m[1mConfiguring map_server[0m[0m
+[map_server-1] [INFO] [1790804137.946929739] [map_server]: Configuring
+[map_server-1] [INFO] [1790804137.947149896] [map_io]: Loading yaml file: /home/ubuntu/Workspace/Controle_robo_livox/maps/andar3_robo3/mapa_3_andar_completo.yaml
+[map_server-1] [INFO] [1790804138.022261335] [map_io]: resolution: 0.05
+[map_server-1] [INFO] [1790804138.022348455] [map_io]: origin[0]: -2.202
+[map_server-1] [INFO] [1790804138.022379402] [map_io]: origin[1]: -12.239
+[map_server-1] [INFO] [1790804138.022401136] [map_io]: origin[2]: 0
+[map_server-1] [INFO] [1790804138.023555925] [map_io]: free_thresh: 0.196
+[map_server-1] [INFO] [1790804138.023595160] [map_io]: occupied_thresh: 0.65
+[map_server-1] [INFO] [1790804138.023623026] [map_io]: mode: trinary
+[map_server-1] [INFO] [1790804138.023645507] [map_io]: negate: 0
+[map_server-1] [INFO] [1790804138.036843569] [map_io]: Loading image_file: /home/ubuntu/Workspace/Controle_robo_livox/maps/andar3_robo3/mapa_3_andar_completo.pgm
+[map_server-1] [INFO] [1790804138.159320204] [map_io]: Read map /home/ubuntu/Workspace/Controle_robo_livox/maps/andar3_robo3/mapa_3_andar_completo.pgm: 391 X 1158 map @ 0.05 m/cell
+[lifecycle_manager-7] [INFO] [1790804138.703112302] [lifecycle_manager_pilha]: [34m[1mConfiguring amcl[0m[0m
+[amcl-6] [INFO] [1790804138.727030193] [amcl]: Configuring
+[amcl-6] [INFO] [1790804138.887003512] [amcl]: initTransforms
+[amcl-6] [INFO] [1790804141.060818712] [amcl]: initPubSub
+[amcl-6] [INFO] [1790804143.108524566] [amcl]: Subscribed to map topic.
+[lifecycle_manager-7] [INFO] [1790804144.532602793] [lifecycle_manager_pilha]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-2] [INFO] [1790804144.609719242] [planner_server]: Configuring
+[planner_server-2] [INFO] [1790804144.609872891] [global_costmap.global_costmap]: Configuring
+[amcl-6] [INFO] [1790804145.328861523] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804141.380 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804147.792490096] [global_costmap.global_costmap]: Using plugin "static_layer"
+[amcl-6] [INFO] [1790804147.846295061] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804145.834 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804148.140937242] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-2] [INFO] [1790804148.169278350] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-2] [INFO] [1790804148.169441240] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-2] [INFO] [1790804148.188334724] [global_costmap.global_costmap]: Subscribed to Topics: livox
+[planner_server-2] [INFO] [1790804148.360271367] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-2] [INFO] [1790804148.360463749] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-2] [INFO] [1790804148.376757415] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-2] [INFO] [1790804148.720090884] [planner_server]: Created global planner plugin GridBased of type nav2_smac_planner::SmacPlanner2D
+[planner_server-2] [INFO] [1790804148.720279518] [planner_server]: Configuring GridBased of type SmacPlanner2D
+[planner_server-2] [ERROR] [1790804148.813326353] [planner_server]: Inflation layer either not found or inflation is not set sufficiently for optimized non-circular collision checking capabilities. It is HIGHLY recommended to set the inflation radius to be at MINIMUM half of the robot's largest cross-section. See github.com/ros-planning/navigation2/tree/main/nav2_smac_planner#potential-fields for full instructions. This will substantially impact run-time performance.
+[planner_server-2] [INFO] [1790804148.848699919] [planner_server]: Configured plugin GridBased of type SmacPlanner2D with tolerance 0.25, maximum iterations 1000000, max on approach iterations 1000, and not allowing unknown traversal.
+[planner_server-2] [INFO] [1790804148.848907091] [planner_server]: Planner Server has GridBased  planners available.
+[heading_controller-8] [WARN] [1790804148.870132225] [heading_controller]: /Odometry parou de chegar
+[lifecycle_manager-7] [INFO] [1790804149.939599233] [lifecycle_manager_pilha]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-3] [INFO] [1790804149.965735449] [smoother_server]: Configuring smoother server
+[smoother_server-3] [INFO] [1790804150.508879897] [smoother_server]: Created smoother : suave of type nav2_constrained_smoother/ConstrainedSmoother
+[smoother_server-3] [INFO] [1790804150.558711147] [smoother_server]: Created smoother : simples of type nav2_smoother::SimpleSmoother
+[smoother_server-3] [INFO] [1790804150.581197009] [smoother_server]: Created smoother : savgol of type nav2_smoother::SavitzkyGolaySmoother
+[smoother_server-3] [INFO] [1790804150.582141642] [smoother_server]: Smoother Server has suave simples savgol  smoothers available.
+[lifecycle_manager-7] [INFO] [1790804150.721962625] [lifecycle_manager_pilha]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-4] [INFO] [1790804150.724704612] [controller_server]: Configuring controller interface
+[controller_server-4] [INFO] [1790804150.724848071] [controller_server]: getting progress checker plugins..
+[controller_server-4] [INFO] [1790804150.772189100] [controller_server]: getting goal checker plugins..
+[controller_server-4] [INFO] [1790804150.773378217] [controller_server]: Controller frequency set to 5.0000Hz
+[controller_server-4] [INFO] [1790804150.774246390] [local_costmap.local_costmap]: Configuring
+[amcl-6] [INFO] [1790804150.788188226] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804147.782 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1790804151.222467251] [local_costmap.local_costmap]: Using plugin "static_layer"
+[controller_server-4] [INFO] [1790804151.272165295] [local_costmap.local_costmap]: Subscribing to the map topic (/map) with transient local durability
+[controller_server-4] [INFO] [1790804151.481186619] [local_costmap.local_costmap]: Initialized plugin "static_layer"
+[controller_server-4] [INFO] [1790804151.481346796] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[controller_server-4] [INFO] [1790804151.485240706] [local_costmap.local_costmap]: Subscribed to Topics: livox
+[controller_server-4] [INFO] [1790804151.675165861] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[controller_server-4] [INFO] [1790804151.675320321] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-4] [INFO] [1790804151.679276206] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-4] [INFO] [1790804154.782031042] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-4] [INFO] [1790804154.787036233] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[controller_server-4] [INFO] [1790804154.810934159] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-4] [INFO] [1790804154.824512744] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[controller_server-4] [INFO] [1790804155.113640078] [controller_server]: Created controller : FollowPath of type nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[heading_controller-8] [WARN] [1790804155.916802212] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804157.351082582] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804148.302 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1790804157.426881901] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-7] [INFO] [1790804158.178602927] [lifecycle_manager_pilha]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-5] [INFO] [1790804158.373039645] [bt_navigator]: Configuring
+[bt_navigator-5] [INFO] [1790804160.441290023] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-5] [WARN] [1790804160.775254316] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-5] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[heading_controller-8] [WARN] [1790804161.147101573] [heading_controller]: /Odometry parou de chegar
+[lifecycle_manager-7] [INFO] [1790804163.784583561] [lifecycle_manager_pilha]: [34m[1mConfiguring collision_monitor[0m[0m
+[collision_monitor-9] [INFO] [1790804163.812973422] [collision_monitor]: Configuring
+[collision_monitor-9] [INFO] [1790804164.286074035] [collision_monitor]: [livox]: Creating PointCloud
+[collision_monitor-9] [INFO] [1790804164.468382425] [collision_monitor]: [PolygonApproach]: Creating Polygon
+[collision_monitor-9] [INFO] [1790804165.131096045] [collision_monitor]: [PolygonStop]: Creating Polygon
+[lifecycle_manager-7] [INFO] [1790804165.997053819] [lifecycle_manager_pilha]: [34m[1mActivating map_server[0m[0m
+[map_server-1] [INFO] [1790804166.016992764] [map_server]: Activating
+[map_server-1] [INFO] [1790804166.130128185] [map_server]: Creating bond (map_server) to lifecycle manager.
+[amcl-6] [INFO] [1790804166.162526182] [amcl]: Received a 391 X 1158 map @ 0.050 m/pix
+[controller_server-4] [INFO] [1790804166.217018074] [local_costmap.local_costmap]: StaticLayer: Resizing static layer to 391 X 1158 at 0.050000 m/pix
+[planner_server-2] [INFO] [1790804166.313994989] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 391 X 1158 at 0.050000 m/pix
+[heading_controller-8] [WARN] [1790804166.676619290] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804166.983404799] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804157.627 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[lifecycle_manager-7] [INFO] [1790804167.049533229] [lifecycle_manager_pilha]: Server map_server connected with bond.
+[lifecycle_manager-7] [INFO] [1790804167.049648390] [lifecycle_manager_pilha]: [34m[1mActivating amcl[0m[0m
+[amcl-6] [INFO] [1790804167.061460568] [amcl]: Activating
+[amcl-6] [INFO] [1790804167.061564499] [amcl]: initialPoseReceived
+[amcl-6] [INFO] [1790804167.061806953] [amcl]: Setting pose (1790804167.061806): 0.000 0.000 0.000
+[amcl-6] [INFO] [1790804167.091694201] [amcl]: Creating bond (amcl) to lifecycle manager.
+[lifecycle_manager-7] [INFO] [1790804168.319480795] [lifecycle_manager_pilha]: Server amcl connected with bond.
+[lifecycle_manager-7] [INFO] [1790804168.319628038] [lifecycle_manager_pilha]: [34m[1mActivating planner_server[0m[0m
+[planner_server-2] [INFO] [1790804168.329929656] [planner_server]: Activating
+[planner_server-2] [INFO] [1790804168.330081952] [global_costmap.global_costmap]: Activating
+[planner_server-2] [INFO] [1790804168.330124421] [global_costmap.global_costmap]: Checking transform
+[planner_server-2] [INFO] [1790804168.331717667] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804168.830549790] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804169.417971092] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804169.830682987] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804170.281842978] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804166.752 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804170.338360053] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804170.830301652] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804171.343617607] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804171.830399062] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804172.337499781] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[heading_controller-8] [WARN] [1790804172.528074053] [heading_controller]: /Odometry parou de chegar
+[planner_server-2] [INFO] [1790804172.832537955] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804172.909178665] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804168.849 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804173.331253961] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804173.831673572] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804174.330308334] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804174.843309226] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804175.332501840] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804175.461918480] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804172.929 for reason 'discarding message because the queue is full'
+[planner_server-2] [INFO] [1790804175.830333561] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804176.332005502] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804176.854101965] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804177.330763920] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804177.830325276] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804178.025024941] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804175.027 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804178.331486902] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804178.842241706] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804179.330294335] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804179.830527406] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804180.335649947] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804180.648143398] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804177.819 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804180.830299918] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804181.337682358] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804181.830302634] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804182.330319216] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[heading_controller-8] [WARN] [1790804182.518457604] [heading_controller]: /Odometry parou de chegar
+[planner_server-2] [INFO] [1790804182.830303992] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804183.155718563] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804180.727 for reason 'discarding message because the queue is full'
+[planner_server-2] [INFO] [1790804183.330305427] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804183.832620744] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804184.330320065] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804184.830301277] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804185.331192462] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804185.681594384] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804184.429 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804185.862970234] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804186.331754557] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804186.832684105] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804187.345567581] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[heading_controller-8] [WARN] [1790804187.691906344] [heading_controller]: /Odometry parou de chegar
+[planner_server-2] [INFO] [1790804187.830568992] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804188.247475699] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804187.028 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804188.330318643] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804188.830390337] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804189.331177344] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804189.830340973] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804190.331490280] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804190.799544957] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804189.526 for reason 'discarding message because the queue is full'
+[planner_server-2] [INFO] [1790804190.830340800] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804191.330354655] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804191.831217507] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804192.330349297] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804192.850494589] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804193.330378715] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804193.366114989] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804192.028 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804193.830383509] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804194.330324276] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804194.833575887] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804195.603791275] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804195.830306743] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804196.130761445] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804194.823 for reason 'discarding message because the queue is full'
+[planner_server-2] [INFO] [1790804196.335502251] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804196.830310873] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804197.335654738] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804197.830315551] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804198.335197960] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804198.644617624] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804197.020 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804198.830324457] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804199.330520225] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804199.836803405] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804200.330336387] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804200.830308383] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804201.182328074] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804199.828 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804201.330361254] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804201.830269565] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804202.331189763] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804202.830305983] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804203.331864983] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804203.824819911] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804202.529 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804203.830517811] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804204.336955196] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804204.833595914] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804205.331503977] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804205.830304494] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804206.331088223] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804206.512673838] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804205.129 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804206.832782183] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804207.331090234] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804207.830310105] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804208.335886464] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804208.830333378] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804209.224614828] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804207.841 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804209.333505523] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804209.830765361] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804210.352544073] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804210.830948796] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804211.343930598] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804211.770706208] [amcl]: initialPoseReceived
+[amcl-6] [INFO] [1790804211.770970287] [amcl]: Setting pose (1790804211.770970): -0.013 -0.270 0.000
+[amcl-6] [INFO] [1790804211.809540464] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804210.532 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804211.847506145] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804212.335538394] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804212.830999616] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804213.330340699] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804213.875503981] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[heading_controller-8] [WARN] [1790804214.184453404] [heading_controller]: /Odometry parou de chegar
+[planner_server-2] [INFO] [1790804214.330297572] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804214.376793853] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804212.915 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804214.837785872] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804215.335203719] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804215.846091451] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804216.336631876] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804216.830312410] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804216.985395168] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804215.729 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804217.330492767] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804217.830312946] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804218.330298975] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804218.830540735] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804219.330521379] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804219.498185953] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804218.227 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804219.832560525] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804220.333170741] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804220.831492648] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804221.338493553] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804221.830396962] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804222.143030080] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804220.829 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804222.332765287] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804222.834073682] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804223.330308931] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804223.848392719] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804224.330897353] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804224.772700771] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804223.410 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804224.835670904] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804225.330488030] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[heading_controller-8] [WARN] [1790804225.668974154] [heading_controller]: /Odometry parou de chegar
+[planner_server-2] [INFO] [1790804225.866496154] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804226.336267002] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804226.836801713] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-6] [INFO] [1790804227.314201916] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804226.036 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-2] [INFO] [1790804227.331236434] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804227.830311791] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [INFO] [1790804228.330314476] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-2] [ERROR] [1790804228.330484856] [global_costmap.global_costmap]: Failed to activate global_costmap because transform from base_link to map did not become available before timeout
+[lifecycle_manager-7] [ERROR] [1790804228.339789878] [lifecycle_manager_pilha]: Failed to change state for node: planner_server
+[lifecycle_manager-7] [ERROR] [1790804228.340984296] [lifecycle_manager_pilha]: Failed to bring up all requested nodes. Aborting bringup.
+[amcl-6] [INFO] [1790804230.105136126] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804228.713 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804232.839844295] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804231.226 for reason 'discarding message because the queue is full'
+[amcl-6] [INFO] [1790804235.416136554] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804233.950 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804237.924624313] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804236.424 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804240.712217104] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804239.030 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804243.444568570] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804241.731 for reason 'discarding message because the queue is full'
+[heading_controller-8] [WARN] [1790804246.010673997] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804246.055666298] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804244.298 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804248.686979213] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804246.115 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804251.236571909] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804248.230 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804251.824175895] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804253.789842465] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804251.418 for reason 'discarding message because the queue is full'
+[amcl-6] [INFO] [1790804256.342359789] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804254.769 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804259.070021677] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804257.036 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804262.211274558] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804259.031 for reason 'discarding message because the queue is full'
+[heading_controller-8] [WARN] [1790804262.443362748] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804264.731624097] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804262.234 for reason 'discarding message because the queue is full'
+[amcl-6] [INFO] [1790804267.690635892] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804265.529 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804269.163235553] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804271.603389745] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804266.131 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804274.498644997] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804267.432 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804274.533902533] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804277.719409061] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804274.690 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804279.889619444] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804282.467899342] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804278.130 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804285.120605453] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804286.263753270] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804282.214 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804288.352129630] [amcl]: initialPoseReceived
+[amcl-6] [INFO] [1790804288.352448938] [amcl]: Setting pose (1790804288.352448): 0.339 -0.446 0.021
+[amcl-6] [INFO] [1790804288.807516129] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804284.131 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804292.522941842] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804287.973 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804295.185272300] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804288.828 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804297.179156595] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804298.174076225] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804295.031 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804300.964733928] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804296.816 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804303.511099682] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804301.710 for reason 'discarding message because the queue is full'
+[heading_controller-8] [WARN] [1790804304.066473420] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804306.106608986] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804304.816 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804308.758547690] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804307.429 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804310.544340093] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804311.318632289] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804309.911 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804313.995759765] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804312.615 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804315.673247315] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804316.588757938] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804315.231 for reason 'discarding message because the queue is full'
+[amcl-6] [INFO] [1790804319.181851380] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804317.722 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804321.026051159] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804322.216681086] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804320.730 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804325.250627516] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804323.578 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804327.484780591] [heading_controller]: /Odometry parou de chegar
+[amcl-6] [INFO] [1790804327.806160716] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804326.331 for reason 'discarding message because the queue is full'
+[amcl-6] [INFO] [1790804330.361201075] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804329.130 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-6] [INFO] [1790804332.945719366] [amcl]: Message Filter dropping message: frame 'base_link' at time 1790804331.028 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[heading_controller-8] [WARN] [1790804333.079299026] [heading_controller]: /Odometry parou de chegar
+[controller_server-4] [INFO] [1790804334.667461002] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[controller_server-4] [INFO] [1790804334.667744386] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[controller_server-4] [INFO] [1790804334.667921732] [controller_server]: Cleaning up
+[controller_server-4] [INFO] [1790804334.668010462] [controller_server]: Cleaning up controller: FollowPath of type regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[controller_server-4] [INFO] [1790804334.668186386] [local_costmap.local_costmap]: Cleaning up
+[map_server-1] [INFO] [1790804334.667465969] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[map_server-1] [INFO] [1790804334.667797779] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)
+[map_server-1] [INFO] [1790804334.667938260] [map_server]: Deactivating
+[map_server-1] [INFO] [1790804334.668015004] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[bt_navigator-5] [INFO] [1790804334.667313005] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-5] [INFO] [1790804334.668405315] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-5] [INFO] [1790804334.668594174] [bt_navigator]: Cleaning up
+[smoother_server-3] [INFO] [1790804334.669810136] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[smoother_server-3] [INFO] [1790804334.670079580] [smoother_server]: Running Nav2 LifecycleNode rcl preshutdown (smoother_server)
+[smoother_server-3] [INFO] [1790804334.670254606] [smoother_server]: Cleaning up
+[smoother_server-3] [INFO] [1790804334.670341427] [smoother_server]: Cleaning up smoother: suave of type nav2_constrained_smoother::ConstrainedSmoother
+[amcl-6] [INFO] [1790804334.670629673] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[amcl-6] [INFO] [1790804334.670922087] [amcl]: Running Nav2 LifecycleNode rcl preshutdown (amcl)
+[amcl-6] [INFO] [1790804334.671087393] [amcl]: Deactivating
+[amcl-6] [INFO] [1790804334.671160485] [amcl]: Destroying bond (amcl) to lifecycle manager.
+[lifecycle_manager-7] [INFO] [1790804334.672558015] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-7] [INFO] [1790804334.672876579] [lifecycle_manager_pilha]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_pilha)
+[twist_mux-10] [INFO] [1790804334.673032695] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_server-2] [INFO] [1790804334.693839327] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_server-2] [INFO] [1790804334.695141154] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-2] [INFO] [1790804334.695315467] [planner_server]: Cleaning up
+[collision_monitor-9] [INFO] [1790804334.699091391] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[collision_monitor-9] [INFO] [1790804334.699377576] [collision_monitor]: Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+[collision_monitor-9] [INFO] [1790804334.699578511] [collision_monitor]: Cleaning up
+[collision_monitor-9] [INFO] [1790804334.699682776] [collision_monitor]: [PolygonApproach]: Destroying Polygon
+[collision_monitor-9] [INFO] [1790804334.699754177] [collision_monitor]: [PolygonStop]: Destroying Polygon
+[collision_monitor-9] [INFO] [1790804334.699793407] [collision_monitor]: [livox]: Destroying PointCloud
+[map_server-1] [INFO] [1790804334.734218928] [map_server]: Cleaning up
+[map_server-1] [INFO] [1790804334.734352981] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[amcl-6] [INFO] [1790804334.771206748] [amcl]: Cleaning up
+[collision_monitor-9] [INFO] [1790804334.894212232] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[map_server-1] [INFO] [1790804336.425348501] [map_server]: Destroying
+[smoother_server-3] [INFO] [1790804336.628964933] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[heading_controller-8] Traceback (most recent call last):
+[heading_controller-8]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_motion/robot_motion/heading_controller.py", line 528, in main
+[heading_controller-8]     rclpy.spin(no)
+[heading_controller-8]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[heading_controller-8]     executor.spin_once()
+[heading_controller-8]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[heading_controller-8]     self._spin_once_impl(timeout_sec)
+[heading_controller-8]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[heading_controller-8]     handler, entity, node = self.wait_for_ready_callbacks(
+[heading_controller-8]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[heading_controller-8]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[heading_controller-8]     return next(self._cb_iter)
+[heading_controller-8]            ^^^^^^^^^^^^^^^^^^^
+[heading_controller-8]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+[heading_controller-8]     raise ExternalShutdownException()
+[heading_controller-8] rclpy.executors.ExternalShutdownException
+[heading_controller-8] 
+[heading_controller-8] During handling of the above exception, another exception occurred:
+[heading_controller-8] 
+[heading_controller-8] Traceback (most recent call last):
+[heading_controller-8]   File "/home/ubuntu/Workspace/Controle_robo_livox/install/robot_motion/lib/robot_motion/heading_controller", line 33, in <module>
+[heading_controller-8]     sys.exit(load_entry_point('robot-motion', 'console_scripts', 'heading_controller')())
+[heading_controller-8]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[heading_controller-8]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_motion/robot_motion/heading_controller.py", line 533, in main
+[heading_controller-8]     no.publica(0.0, 0.0)
+[heading_controller-8]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_motion/robot_motion/heading_controller.py", line 521, in publica
+[heading_controller-8]     self.pub.publish(m)
+[heading_controller-8]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+[heading_controller-8]     self.__publisher.publish(msg)
+[heading_controller-8] rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[planner_server-2] [INFO] [1790804338.271596169] [global_costmap.global_costmap]: Cleaning up
+[amcl-6] [INFO] [1790804338.292538260] [amcl]: Destroying bond (amcl) to lifecycle manager.
+[bt_navigator-5] [INFO] [1790804338.326838784] [bt_navigator]: Completed Cleaning up
+[bt_navigator-5] [INFO] [1790804338.327104971] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[amcl-6] [INFO] [1790804338.516701242] [amcl]: Destroying
+[collision_monitor-9] [INFO] [1790804338.581256542] [collision_monitor]: Destroying
+[smoother_server-3] [INFO] [1790804338.689735391] [smoother_server]: Destroying
+[compensador_rumo-11] Traceback (most recent call last):
+[compensador_rumo-11]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_motion/robot_motion/compensador_rumo.py", line 419, in main
+[compensador_rumo-11]     rclpy.spin(no)
+[compensador_rumo-11]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[compensador_rumo-11]     executor.spin_once()
+[compensador_rumo-11]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[compensador_rumo-11]     self._spin_once_impl(timeout_sec)
+[compensador_rumo-11]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[compensador_rumo-11]     handler, entity, node = self.wait_for_ready_callbacks(
+[compensador_rumo-11]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[compensador_rumo-11]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[compensador_rumo-11]     return next(self._cb_iter)
+[compensador_rumo-11]            ^^^^^^^^^^^^^^^^^^^
+[compensador_rumo-11]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+[compensador_rumo-11]     raise ExternalShutdownException()
+[compensador_rumo-11] rclpy.executors.ExternalShutdownException
+[compensador_rumo-11] 
+[compensador_rumo-11] During handling of the above exception, another exception occurred:
+[compensador_rumo-11] 
+[compensador_rumo-11] Traceback (most recent call last):
+[compensador_rumo-11]   File "/home/ubuntu/Workspace/Controle_robo_livox/install/robot_motion/lib/robot_motion/compensador_rumo", line 33, in <module>
+[compensador_rumo-11]     sys.exit(load_entry_point('robot-motion', 'console_scripts', 'compensador_rumo')())
+[compensador_rumo-11]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[compensador_rumo-11]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_motion/robot_motion/compensador_rumo.py", line 424, in main
+[compensador_rumo-11]     rclpy.shutdown()
+[compensador_rumo-11]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[compensador_rumo-11]     _shutdown(context=context)
+[compensador_rumo-11]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[compensador_rumo-11]     context.shutdown()
+[compensador_rumo-11]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[compensador_rumo-11]     self.__context.shutdown()
+[compensador_rumo-11] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[ERROR] [compensador_rumo-11]: process has died [pid 1828446, exit code 1, cmd '/home/ubuntu/Workspace/Controle_robo_livox/install/robot_motion/lib/robot_motion/compensador_rumo --ros-args -r __node:=compensador_rumo --params-file /tmp/launch_params_c1t9ikpm --params-file /tmp/launch_params_7ms00o6p --params-file /tmp/launch_params_lppf3p_f --params-file /tmp/launch_params_o6l8i_ef'].
+[lifecycle_manager-7] [INFO] [1790804340.578483585] [lifecycle_manager_pilha]: Destroying lifecycle_manager_pilha
+[ERROR] [heading_controller-8]: process has died [pid 1828432, exit code 1, cmd '/home/ubuntu/Workspace/Controle_robo_livox/install/robot_motion/lib/robot_motion/heading_controller --ros-args -r __node:=heading_controller --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_motion/share/robot_motion/config/movimentacao.yaml --params-file /tmp/launch_params_eb77rjbg -r /hoverboard_base_controller/cmd_vel:=/auto_vel_raw'].
+[bt_navigator-5] [INFO] [1790804341.703474682] [bt_navigator]: Destroying
+[planner_server-2] [INFO] [1790804341.725285108] [planner_server]: Cleaning up plugin GridBased of type SmacPlanner2D
+[planner_server-2] [INFO] [1790804341.748209776] [planner_server]: Destroying plugin GridBased of type SmacPlanner2D
+[INFO] [map_server-1]: process has finished cleanly [pid 1828423]
+[INFO] [amcl-6]: process has finished cleanly [pid 1828430]
+[INFO] [collision_monitor-9]: process has finished cleanly [pid 1828434]
+[freeze_capture-13] Traceback (most recent call last):
+[freeze_capture-13]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_nav/robot_nav/freeze_capture.py", line 296, in main
+[freeze_capture-13]     rclpy.spin(node)
+[freeze_capture-13]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[freeze_capture-13]     executor.spin_once()
+[freeze_capture-13]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[freeze_capture-13]     self._spin_once_impl(timeout_sec)
+[freeze_capture-13]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[freeze_capture-13]     handler, entity, node = self.wait_for_ready_callbacks(
+[freeze_capture-13]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[freeze_capture-13]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[freeze_capture-13]     return next(self._cb_iter)
+[freeze_capture-13]            ^^^^^^^^^^^^^^^^^^^
+[freeze_capture-13]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+[freeze_capture-13]     raise ExternalShutdownException()
+[freeze_capture-13] rclpy.executors.ExternalShutdownException
+[freeze_capture-13] 
+[freeze_capture-13] During handling of the above exception, another exception occurred:
+[freeze_capture-13] 
+[freeze_capture-13] Traceback (most recent call last):
+[freeze_capture-13]   File "/home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/freeze_capture", line 33, in <module>
+[freeze_capture-13]     sys.exit(load_entry_point('robot-nav', 'console_scripts', 'freeze_capture')())
+[freeze_capture-13]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[freeze_capture-13]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_nav/robot_nav/freeze_capture.py", line 301, in main
+[freeze_capture-13]     rclpy.shutdown()
+[freeze_capture-13]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[freeze_capture-13]     _shutdown(context=context)
+[freeze_capture-13]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[freeze_capture-13]     context.shutdown()
+[freeze_capture-13]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[freeze_capture-13]     self.__context.shutdown()
+[freeze_capture-13] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[INFO] [smoother_server-3]: process has finished cleanly [pid 1828425]
+[planner_server-2] [INFO] [1790804343.122745161] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-2] [INFO] [1790804343.240020758] [global_costmap.global_costmap]: Destroying
+[INFO] [lifecycle_manager-7]: process has finished cleanly [pid 1828431]
+[ERROR] [freeze_capture-13]: process has died [pid 1828448, exit code 1, cmd '/home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/freeze_capture --ros-args -r __node:=freeze_capture --params-file /tmp/launch_params_53hspiij'].
+[INFO] [bt_navigator-5]: process has finished cleanly [pid 1828429]
+[path_follower-12] Traceback (most recent call last):
+[path_follower-12]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_motion/robot_motion/path_follower.py", line 1794, in main
+[path_follower-12]     rclpy.spin(no)
+[path_follower-12]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[path_follower-12]     executor.spin_once()
+[path_follower-12]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[path_follower-12]     self._spin_once_impl(timeout_sec)
+[path_follower-12]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[path_follower-12]     handler, entity, node = self.wait_for_ready_callbacks(
+[path_follower-12]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[path_follower-12]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[path_follower-12]     return next(self._cb_iter)
+[path_follower-12]            ^^^^^^^^^^^^^^^^^^^
+[path_follower-12]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 757, in _wait_for_ready_callbacks
+[path_follower-12]     wait_set = _rclpy.WaitSet(
+[path_follower-12]                ^^^^^^^^^^^^^^^
+[path_follower-12] rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
+[path_follower-12] 
+[path_follower-12] During handling of the above exception, another exception occurred:
+[path_follower-12] 
+[path_follower-12] Traceback (most recent call last):
+[path_follower-12]   File "/home/ubuntu/Workspace/Controle_robo_livox/install/robot_motion/lib/robot_motion/path_follower", line 33, in <module>
+[path_follower-12]     sys.exit(load_entry_point('robot-motion', 'console_scripts', 'path_follower')())
+[path_follower-12]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[path_follower-12]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_motion/robot_motion/path_follower.py", line 1800, in main
+[path_follower-12]     rclpy.shutdown()
+[path_follower-12]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[path_follower-12]     _shutdown(context=context)
+[path_follower-12]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[path_follower-12]     context.shutdown()
+[path_follower-12]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[path_follower-12]     self.__context.shutdown()
+[path_follower-12] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[planner_server-2] [INFO] [1790804343.752335503] [planner_server]: Destroying
+[INFO] [planner_server-2]: process has finished cleanly [pid 1828424]
+[ERROR] [path_follower-12]: process has died [pid 1828447, exit code 1, cmd '/home/ubuntu/Workspace/Controle_robo_livox/install/robot_motion/lib/robot_motion/path_follower --ros-args -r __node:=path_follower --params-file /tmp/launch_params_cukuurea --params-file /tmp/launch_params__185yv_q --params-file /tmp/launch_params_52dr0uww --params-file /tmp/launch_params_edacp_rf --params-file /tmp/launch_params_sbrpnpdn --params-file /tmp/launch_params_oi5t9gj3 --params-file /tmp/launch_params_rrz_h7to --params-file /tmp/launch_params_cnyr50bc --params-file /tmp/launch_params_gtoodk5v --params-file /tmp/launch_params_6u_a6o8w --params-file /tmp/launch_params_kepphy4w -r /path_follower/rumo_alvo:=/heading_controller/rumo_alvo -r /path_follower/velocidade_alvo:=/heading_controller/velocidade_alvo'].
+[controller_server-4] [INFO] [1790804344.609280395] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-4] [INFO] [1790804344.773354797] [local_costmap.local_costmap]: Destroying
+[controller_server-4] [INFO] [1790804345.174155057] [controller_server]: Destroying
+[INFO] [controller_server-4]: process has finished cleanly [pid 1828426]

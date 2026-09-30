@@ -1,0 +1,18 @@
+top - 18:38:40 up 8 days, 34 min,  8 users,  load average: 25.01, 28.27, 20.15
+Tasks: 286 total,   9 running, 277 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 62.8 us, 33.7 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  3.5 si,  0.0 st 
+1827669 ubuntu    20   0 1221500 160672  31188 S 150.0   2.0   2:35.99 livox_ros_drive
+1827671 ubuntu    20   0 1305012 369888  55304 R  50.0   4.6   2:31.90 fastlio_mapping
+   5195 ubuntu    20   0 4807200 320540 130972 R  38.9   4.0     16,41 gnome-shell
+1829153 ubuntu    20   0 1829748 146092  50168 S  38.9   1.8   1:11.19 python
+1827680 ubuntu    20   0  845776 105480  39696 S  27.8   1.3   0:28.22 nuvem_pontos
+1827685 ubuntu    20   0  916656  50380  28828 S  22.2   0.6   0:14.37 pointcloud_to_l
+1828432 ubuntu    20   0  822624  82936  39464 S  22.2   1.0   0:25.25 heading_control
+1356382 ubuntu    20   0 1991196 245344 109596 S  16.7   3.1      8,54 gnome-control-c
+1834564 ubuntu    20   0   14840   5628   3480 R  16.7   0.1   0:00.08 top
+1825817 ubuntu    20   0  971676  84100  39648 S  11.1   1.1   0:31.77 mega_bridge
+1828447 ubuntu    20   0  828800  89020  41356 S  11.1   1.1   0:32.67 path_follower
+1828448 ubuntu    20   0  835588  93520  44488 R  11.1   1.2   0:41.85 freeze_capture
+   1358 root      20   0  531828  35292  29144 S   5.6   0.4  41:36.52 rustdesk
+1825819 ubuntu    20   0  776548  45388  31396 S   5.6   0.6   0:22.12 joy_node
+1825821 ubuntu    20   0  822676  82704  39468 S   5.6   1.0   0:27.58 dpad_reto

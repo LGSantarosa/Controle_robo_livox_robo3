@@ -1,0 +1,73 @@
+[2026-09-30 18:35:17,941] INFO: [MapBridge] inicializado (modo=nav2, maps_dir=/home/ubuntu/Workspace/Controle_robo_livox/maps)
+[2026-09-30 18:35:17,960] WARNING: [Camera] ffmpeg não instalado (sudo apt install ffmpeg) — POV desabilitado
+[2026-09-30 18:35:18,674] INFO: [NavMetrics] coletor iniciado. CSV dir: /home/ubuntu/Workspace/Controle_robo_livox/controle_web/logs/nav_metrics
+[2026-09-30 18:35:19,116] INFO: [PowerMonitor] iniciado. CSV: /home/ubuntu/Workspace/Controle_robo_livox/controle_web/logs/power/power_2026-09-30_183518.csv
+[2026-09-30 18:35:19,209] INFO: Starting Socket.IO server on 0.0.0.0:5000
+[ROS2Controller] WEB_TELEOP=off — nó vivo, SEM publicar em /web_vel (movimento via PS4/WASD; web é só visualização).
+ * Serving Flask app 'app'
+ * Debug mode: off
+[2026-09-30 18:35:20,795] INFO: Client connected: addr=10.233.141.5 sid=gM631wdmyZ46bSeTAAAB
+[2026-09-30 18:35:20,963] INFO: client_hello from 10.233.141.5 sid=gM631wdmyZ46bSeTAAAB payload={'ts': 1790804120950, 'href': 'http://10.233.141.150:5000/', 'ua': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36'}
+[2026-09-30 18:35:53,202] INFO: HTTP GET / from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:35:53,594] INFO: HTTP 200 GET /
+[2026-09-30 18:35:53,729] INFO: Client disconnected: addr=10.233.141.5 sid=gM631wdmyZ46bSeTAAAB
+[2026-09-30 18:35:53,734] INFO: HTTP GET /static/css/styles.css from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:35:53,737] INFO: HTTP GET /static/js/client.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:35:53,817] INFO: HTTP GET /static/js/map.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:35:53,957] INFO: HTTP GET /static/js/gamepad.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:35:53,986] INFO: HTTP 304 GET /static/css/styles.css
+[2026-09-30 18:35:54,002] INFO: HTTP 304 GET /static/js/gamepad.js
+[2026-09-30 18:35:54,137] INFO: HTTP 304 GET /static/js/client.js
+[2026-09-30 18:35:54,227] INFO: HTTP 304 GET /static/js/map.js
+[2026-09-30 18:35:54,406] INFO: Client connected: addr=10.233.141.5 sid=t1UykWpYBmu72U3dAAAD
+[2026-09-30 18:35:55,110] INFO: client_hello from 10.233.141.5 sid=t1UykWpYBmu72U3dAAAD payload={'ts': 1790804154894, 'href': 'http://10.233.141.150:5000/', 'ua': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36'}
+[2026-09-30 18:35:59,428] INFO: HTTP GET / from 127.0.0.1 UA=curl/8.5.0
+[2026-09-30 18:35:59,474] INFO: HTTP 200 GET /
+[2026-09-30 18:36:01,098] INFO: HTTP GET / from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:36:01,100] INFO: HTTP 200 GET /
+[2026-09-30 18:36:01,139] INFO: HTTP GET /static/js/client.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:36:01,145] INFO: HTTP GET /static/css/styles.css from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:36:01,149] INFO: Client disconnected: addr=10.233.141.5 sid=t1UykWpYBmu72U3dAAAD
+[2026-09-30 18:36:01,160] INFO: HTTP 304 GET /static/js/client.js
+[2026-09-30 18:36:01,172] INFO: HTTP GET /static/js/map.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:36:01,197] INFO: HTTP 304 GET /static/css/styles.css
+[2026-09-30 18:36:01,229] INFO: HTTP 304 GET /static/js/map.js
+[2026-09-30 18:36:01,235] INFO: HTTP GET /static/js/gamepad.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:36:01,241] INFO: HTTP 304 GET /static/js/gamepad.js
+[2026-09-30 18:36:01,354] INFO: Client connected: addr=10.233.141.5 sid=aiQKtcXEq_rlgucQAAAF
+[2026-09-30 18:36:01,579] INFO: client_hello from 10.233.141.5 sid=aiQKtcXEq_rlgucQAAAF payload={'ts': 1790804161566, 'href': 'http://10.233.141.150:5000/', 'ua': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36'}
+[2026-09-30 18:36:07,372] INFO: [MapBridge] /map 391x1158 @ 0.050 m/px emitido
+[2026-09-30 18:36:51,769] INFO: [MapBridge] /initialpose → (-0.01, -0.27, yaw=0.00)
+[2026-09-30 18:36:51,770] INFO: set_pose from 10.233.141.5: (-0.01, -0.27, 0.00)
+[2026-09-30 18:37:17,189] INFO: HTTP GET / from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:37:17,190] INFO: HTTP 200 GET /
+[2026-09-30 18:37:17,220] INFO: Client disconnected: addr=10.233.141.5 sid=aiQKtcXEq_rlgucQAAAF
+[2026-09-30 18:37:17,246] INFO: HTTP GET /static/css/styles.css from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:37:17,272] INFO: HTTP 304 GET /static/css/styles.css
+[2026-09-30 18:37:17,273] INFO: HTTP GET /static/js/gamepad.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:37:17,302] INFO: HTTP 304 GET /static/js/gamepad.js
+[2026-09-30 18:37:17,275] INFO: HTTP GET /static/js/map.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:37:17,345] INFO: HTTP 304 GET /static/js/map.js
+[2026-09-30 18:37:17,317] INFO: HTTP GET /static/js/client.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:37:17,349] INFO: HTTP 304 GET /static/js/client.js
+[2026-09-30 18:37:17,630] INFO: Client connected: addr=10.233.141.5 sid=CAHEdXl0Nr2_6hTjAAAH
+[2026-09-30 18:37:17,727] INFO: client_hello from 10.233.141.5 sid=CAHEdXl0Nr2_6hTjAAAH payload={'ts': 1790804237677, 'href': 'http://10.233.141.150:5000/', 'ua': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36'}
+[2026-09-30 18:38:08,349] INFO: [MapBridge] /initialpose → (0.34, -0.45, yaw=0.02)
+[2026-09-30 18:38:08,352] INFO: set_pose from 10.233.141.5: (0.34, -0.45, 0.02)
+[2026-09-30 18:38:17,726] INFO: HTTP GET / from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:38:17,810] INFO: HTTP 200 GET /
+[2026-09-30 18:38:17,892] INFO: HTTP GET /static/css/styles.css from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:38:17,899] INFO: Client disconnected: addr=10.233.141.5 sid=CAHEdXl0Nr2_6hTjAAAH
+[2026-09-30 18:38:17,903] INFO: HTTP GET /static/js/client.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:38:17,923] INFO: HTTP GET /static/js/map.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:38:17,914] INFO: HTTP GET /static/js/gamepad.js from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:38:17,920] INFO: HTTP 200 GET /static/css/styles.css
+[2026-09-30 18:38:17,928] INFO: HTTP 200 GET /static/js/map.js
+[2026-09-30 18:38:17,931] INFO: HTTP 200 GET /static/js/gamepad.js
+[2026-09-30 18:38:17,933] INFO: HTTP 200 GET /static/js/client.js
+[2026-09-30 18:38:18,099] INFO: HTTP GET /favicon.ico from 10.233.141.5 UA=Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36
+[2026-09-30 18:38:18,104] INFO: HTTP 404 GET /favicon.ico
+[2026-09-30 18:38:18,116] INFO: Client connected: addr=10.233.141.5 sid=b8Z6xqVUtkTZdW87AAAJ
+[2026-09-30 18:38:18,167] INFO: client_hello from 10.233.141.5 sid=b8Z6xqVUtkTZdW87AAAJ payload={'ts': 1790804298145, 'href': 'http://10.233.141.150:5000/', 'ua': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36'}
+
+[app] Sinal 2 recebido, encerrando...

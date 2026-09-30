@@ -58,6 +58,23 @@ de CPU acabou.** Sobraram dois problemas que não são CPU (066 §7): o
 `collision_monitor` perdeu o heartbeat de novo com a máquina ociosa (a pilha se
 reergueu sozinha), e o STOP dele piscou 220 vezes com o robô parado na mesa.
 
+**No chão, com a placa (18h20–18h41) — não navegou, por três motivos novos**
+(066 §8, dados em `docs/dados/2026-09-30-robo3-nav2-chao/`):
+1. o `path_follower` recusou o plano por falta da TF `odom→camera_init` —
+   **o mesmo defeito do robô 2 em 14-08**, cujo remendo nunca veio para cá;
+   subi o remendo, mas não deu para testar;
+2. o `planner_server` perdeu o heartbeat (3ª queda do dia) e a pilha não voltou;
+3. o snap se auto-atualizou no meio (docker reiniciado), o load foi a 48, o
+   FAST-LIO recebeu nuvem 11–15 s atrasada e divergiu. Depois de derrubar
+   tudo, só a localização ainda gastava 2–3× o que gastava na mesa uma hora
+   antes, sem estrangulamento térmico. Causa em aberto.
+
+**Tropeços meus**: `grep`/`pgrep` casando com a própria linha de comando do
+ssh duas vezes (uma matou a sessão, outra impediu a TF de subir). Usar
+`grep -E "[p]adrão"`, nunca `pgrep -f` com o padrão na mesma linha.
+
+Dono foi embora às 18h45; robô e lidar desligados, notebook limpo.
+
 **Método**: o dono não relatou console nenhum; tudo saiu de log e de
 `pidstat`/`topic hz` puxados por ssh.
 

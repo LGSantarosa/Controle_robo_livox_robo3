@@ -1,0 +1,109 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-09-30-18-40-20-096494-ubuntu-Latitude-3490-1838827
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [livox]    /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py
+[INFO] [launch.user]: [fast_lio] /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/launch/mapping.launch.py (cfg: /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml)
+[INFO] [livox_ros_driver2_node-1]: process started with pid [1838943]
+[INFO] [fastlio_mapping-2]: process started with pid [1838944]
+[INFO] [tf_odom-3]: process started with pid [1838945]
+[INFO] [nuvem_pontos-4]: process started with pid [1838946]
+[INFO] [pointcloud_to_laserscan_node-5]: process started with pid [1838947]
+[livox_ros_driver2_node-1] [INFO] [1790804421.507314286] [livox_lidar_publisher]: Livox Ros Driver2 Version: 1.2.4
+[livox_ros_driver2_node-1] [INFO] [1790804421.514749610] [livox_lidar_publisher]: Data Source is raw lidar.
+[livox_ros_driver2_node-1] [INFO] [1790804421.514942375] [livox_lidar_publisher]: Config file : /home/ubuntu/Workspace/Controle_robo_livox/ros2_packages/livox_ros_driver2/launch_ROS2/../config/MID360_config.json
+[livox_ros_driver2_node-1] LdsLidar *GetInstance
+[livox_ros_driver2_node-1] config lidar type: 8
+[livox_ros_driver2_node-1] successfully parse base config, counts: 1
+[livox_ros_driver2_node-1] [INFO] [1790804421.601444380] [livox_lidar_publisher]: Init lds lidar success!
+[fastlio_mapping-2] [INFO] [1790804421.860765347] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-2] Multi thread started 
+[fastlio_mapping-2] ~~~~/home/ubuntu/Workspace/Controle_robo_livox/ros2_packages/FAST_LIO/ file opened
+[fastlio_mapping-2] [INFO] [1790804422.030392715] [laser_mapping]: Node init finished.
+[livox_ros_driver2_node-1] GetFreeIndex key:livox_lidar_2835458240.
+[livox_ros_driver2_node-1] Init queue, real query size:16.
+[livox_ros_driver2_node-1] Lidar[0] storage queue size: 10
+[livox_ros_driver2_node-1] set pcl data type, handle: 2835458240, data type: 1
+[livox_ros_driver2_node-1] set scan pattern, handle: 2835458240, scan pattern: 0
+[livox_ros_driver2_node-1] begin to change work mode to 'Normal', handle: 2835458240
+[livox_ros_driver2_node-1] successfully set data type, handle: 2835458240, set_bit: 2
+[livox_ros_driver2_node-1] successfully set pattern mode, handle: 2835458240, set_bit: 0
+[livox_ros_driver2_node-1] successfully set lidar attitude, ip: 192.168.1.169
+[livox_ros_driver2_node-1] successfully change work mode, handle: 2835458240
+[livox_ros_driver2_node-1] successfully enable Livox Lidar imu, ip: 192.168.1.169
+[livox_ros_driver2_node-1] [INFO] [1790804424.605733894] [livox_lidar_publisher]: livox/imu publish use imu format
+[livox_ros_driver2_node-1] [INFO] [1790804424.633928630] [livox_lidar_publisher]: livox/lidar publish use livox custom format
+[fastlio_mapping-2] [WARN] [1790804424.774963713] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804424.863302839] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804424.910165769] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[nuvem_pontos-4] [WARN] [1790804424.951814068] [nuvem_pontos]: raio cego do proprio robo: 0.150 m (decisão 027 — pontos mais perto que isto do EIXO do sensor são peça do robô e saem da nuvem). Com 0,000 o reflexo volta a poder disparar contra o próprio robô, que foi o defeito de 12-08.
+[nuvem_pontos-4] [WARN] [1790804424.956400797] [nuvem_pontos]: nuvem_pontos: /livox/lidar (CustomMsg) -> /livox/pontos (PointCloud2). Sem esta ponte os costmaps e o collision_monitor não recebem nuvem nenhuma no robô — medido em 10-08, com os dois costmaps em 0 células letais.
+[fastlio_mapping-2] IMU Initial Done
+[fastlio_mapping-2] [WARN] [1790804424.964677006] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[nuvem_pontos-4] [WARN] [1790804424.977610114] [nuvem_pontos]: primeira nuvem convertida: 20741 pontos (1915 inválidos descartados), frame "livox_frame". Se o frame não for `livox_frame`, a nuvem inteira sai deslocada e a TF não conserta.
+[nuvem_pontos-4] [INFO] [1790804424.981380969] [nuvem_pontos]: 20741 pontos, 1915 inválidos
+[fastlio_mapping-2] [INFO] [1790804425.009324291] [laser_mapping]: Initialize the map kdtree
+[tf_odom-3] [WARN] [1790804426.605164573] [tf_odom]: tf_odom: /Odometry -> TF odom -> base_link. A pose do LIO é do SENSOR; a composição com o URDF é o que impede os 42 cm do Mid-360 de virarem erro silencioso de navegação.
+[tf_odom-3] [ERROR] [1790804426.612536568] [tf_odom]: NÃO EXISTE TF livox_frame -> base_link: "livox_frame" passed to lookupTransform argument target_frame does not exist. 
+[tf_odom-3] Sem ela a pose do sensor viraria a pose do corpo, com o offset embutido e SEM sintoma. Este nó não vai publicar. Confira se o robot_state_publisher está de pé e se o URDF descreve 'livox_frame'.
+[nuvem_pontos-4] [INFO] [1790804435.045964787] [nuvem_pontos]: 18043 pontos, 2021 inválidos
+[nuvem_pontos-4] [INFO] [1790804445.083196636] [nuvem_pontos]: 13185 pontos, 6591 inválidos
+[nuvem_pontos-4] [INFO] [1790804455.123400606] [nuvem_pontos]: 15773 pontos, 4195 inválidos
+[nuvem_pontos-4] [INFO] [1790804465.234717361] [nuvem_pontos]: 15707 pontos, 4261 inválidos
+[nuvem_pontos-4] [INFO] [1790804475.319411713] [nuvem_pontos]: 15701 pontos, 4267 inválidos
+[nuvem_pontos-4] [INFO] [1790804485.332018932] [nuvem_pontos]: 15661 pontos, 4211 inválidos
+[nuvem_pontos-4] [INFO] [1790804495.424474326] [nuvem_pontos]: 15600 pontos, 4368 inválidos
+[nuvem_pontos-4] [INFO] [1790804505.425856624] [nuvem_pontos]: 15815 pontos, 4249 inválidos
+[nuvem_pontos-4] [INFO] [1790804515.524445503] [nuvem_pontos]: 15938 pontos, 4030 inválidos
+[nuvem_pontos-4] [INFO] [1790804525.618351667] [nuvem_pontos]: 15865 pontos, 4007 inválidos
+[nuvem_pontos-4] [INFO] [1790804535.620956503] [nuvem_pontos]: 15709 pontos, 4259 inválidos
+[nuvem_pontos-4] [INFO] [1790804545.719458726] [nuvem_pontos]: 15590 pontos, 4378 inválidos
+[nuvem_pontos-4] [INFO] [1790804555.721324740] [nuvem_pontos]: 12617 pontos, 7255 inválidos
+[fastlio_mapping-2] catch sig %d2
+[pointcloud_to_laserscan_node-5] [INFO] [1790804613.257432810] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[livox_ros_driver2_node-1] [INFO] [1790804613.257669184] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[tf_odom-3] Traceback (most recent call last):
+[tf_odom-3]   File "/home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom", line 33, in <module>
+[tf_odom-3]     sys.exit(load_entry_point('robot-base', 'console_scripts', 'tf_odom')())
+[tf_odom-3]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[tf_odom-3]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_base/robot_base/tf_odom.py", line 207, in main
+[tf_odom-3]     rclpy.spin(no)
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[tf_odom-3]     executor.spin_once()
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[tf_odom-3]     self._spin_once_impl(timeout_sec)
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[tf_odom-3]     handler, entity, node = self.wait_for_ready_callbacks(
+[tf_odom-3]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[tf_odom-3]     return next(self._cb_iter)
+[tf_odom-3]            ^^^^^^^^^^^^^^^^^^^
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+[tf_odom-3]     raise ExternalShutdownException()
+[tf_odom-3] rclpy.executors.ExternalShutdownException
+[nuvem_pontos-4] Traceback (most recent call last):
+[nuvem_pontos-4]   File "/home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos", line 33, in <module>
+[nuvem_pontos-4]     sys.exit(load_entry_point('robot-base', 'console_scripts', 'nuvem_pontos')())
+[nuvem_pontos-4]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[nuvem_pontos-4]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_base/robot_base/nuvem_pontos.py", line 139, in main
+[nuvem_pontos-4]     rclpy.spin(no)
+[nuvem_pontos-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[nuvem_pontos-4]     executor.spin_once()
+[nuvem_pontos-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[nuvem_pontos-4]     self._spin_once_impl(timeout_sec)
+[nuvem_pontos-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[nuvem_pontos-4]     handler, entity, node = self.wait_for_ready_callbacks(
+[nuvem_pontos-4]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[nuvem_pontos-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[nuvem_pontos-4]     return next(self._cb_iter)
+[nuvem_pontos-4]            ^^^^^^^^^^^^^^^^^^^
+[nuvem_pontos-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+[nuvem_pontos-4]     raise ExternalShutdownException()
+[nuvem_pontos-4] rclpy.executors.ExternalShutdownException
+[INFO] [pointcloud_to_laserscan_node-5]: process has finished cleanly [pid 1838947]
+[fastlio_mapping-2] Rebuild thread terminated normally
+[INFO] [fastlio_mapping-2]: process has finished cleanly [pid 1838944]
+[ERROR] [tf_odom-3]: process has died [pid 1838945, exit code 1, cmd '/home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_2bwq_j_m'].
+[ERROR] [nuvem_pontos-4]: process has died [pid 1838946, exit code 1, cmd '/home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos'].

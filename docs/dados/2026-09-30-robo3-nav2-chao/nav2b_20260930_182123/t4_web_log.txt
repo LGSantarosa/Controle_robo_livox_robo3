@@ -1,0 +1,48 @@
+[2026-09-30 18:22:39,678] INFO: [MapBridge] inicializado (modo=nav2, maps_dir=/home/ubuntu/Workspace/Controle_robo_livox/maps)
+[2026-09-30 18:22:39,685] WARNING: [Camera] ffmpeg não instalado (sudo apt install ffmpeg) — POV desabilitado
+[2026-09-30 18:22:39,922] INFO: [NavMetrics] coletor iniciado. CSV dir: /home/ubuntu/Workspace/Controle_robo_livox/controle_web/logs/nav_metrics
+[2026-09-30 18:22:39,950] INFO: [MapBridge] /map 391x1158 @ 0.050 m/px emitido
+[2026-09-30 18:22:40,088] INFO: [PowerMonitor] iniciado. CSV: /home/ubuntu/Workspace/Controle_robo_livox/controle_web/logs/power/power_2026-09-30_182239.csv
+[2026-09-30 18:22:40,106] INFO: Starting Socket.IO server on 0.0.0.0:5000
+[ROS2Controller] WEB_TELEOP=off — nó vivo, SEM publicar em /web_vel (movimento via PS4/WASD; web é só visualização).
+ * Serving Flask app 'app'
+ * Debug mode: off
+[2026-09-30 18:23:26,915] INFO: HTTP GET / from 127.0.0.1 UA=curl/8.5.0
+[2026-09-30 18:23:26,934] INFO: HTTP 200 GET /
+[2026-09-30 18:23:33,001] INFO: Client connected: addr=10.233.141.5 sid=NwDFpWq7rc4zv_1FAAAB
+[2026-09-30 18:23:33,125] INFO: client_hello from 10.233.141.5 sid=NwDFpWq7rc4zv_1FAAAB payload={'ts': 1790803413158, 'href': 'http://10.233.141.150:5000/', 'ua': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36'}
+[2026-09-30 18:23:57,325] INFO: [MapBridge] waypoints: 1 pontos, loop=False
+[2026-09-30 18:23:57,325] INFO: [Camera] nav_active(rota) sem câmera — gravação pulada
+[2026-09-30 18:23:58,845] INFO: [MapBridge] NavigateToPose → (1.72, 0.01, yaw=-0.09)
+[2026-09-30 18:23:58,871] INFO: [NavMetrics] início nav 4bad75d7
+[2026-09-30 18:23:58,871] INFO: [Camera] nav_active(nav) sem câmera — gravação pulada
+[2026-09-30 18:24:15,232] INFO: [MapBridge] /initialpose → (-0.09, -0.19, yaw=-0.02)
+[2026-09-30 18:24:15,232] INFO: set_pose from 10.233.141.5: (-0.09, -0.19, -0.02)
+[2026-09-30 18:24:31,143] INFO: [NavMetrics] nav 4bad75d7 → CANCELED em 32.3s | replans=7 | rec(b/s/w)=0/0/0 | dist=0.00m
+[2026-09-30 18:24:32,292] INFO: [MapBridge] waypoints: 1 pontos, loop=False
+[2026-09-30 18:24:32,292] INFO: [Camera] nav_active(rota) sem câmera — gravação pulada
+[2026-09-30 18:24:33,803] INFO: [MapBridge] NavigateToPose → (1.72, 0.01, yaw=-0.09)
+[2026-09-30 18:24:33,812] INFO: [NavMetrics] início nav 6430ce0a
+[2026-09-30 18:24:33,812] INFO: [Camera] nav_active(nav) sem câmera — gravação pulada
+[2026-09-30 18:25:02,316] INFO: [NavMetrics] nav 6430ce0a → CANCELED em 28.5s | replans=5 | rec(b/s/w)=0/0/0 | dist=0.00m
+[2026-09-30 18:25:03,382] INFO: [MapBridge] waypoints: 1 pontos, loop=False
+[2026-09-30 18:25:03,383] INFO: [Camera] nav_active(rota) sem câmera — gravação pulada
+[2026-09-30 18:25:04,898] INFO: [MapBridge] NavigateToPose → (1.72, 0.01, yaw=-0.09)
+[2026-09-30 18:25:04,906] INFO: [NavMetrics] início nav 49f324c6
+[2026-09-30 18:25:04,908] INFO: [Camera] nav_active(nav) sem câmera — gravação pulada
+[2026-09-30 18:25:24,217] WARNING: [MapBridge] waypoint 1/1 abortado — tentativa 1/2
+[2026-09-30 18:25:24,300] INFO: [NavMetrics] nav 49f324c6 → ABORTED em 19.3s | replans=3 | rec(b/s/w)=0/0/0 | dist=0.00m
+[2026-09-30 18:25:27,831] INFO: [MapBridge] NavigateToPose → (1.72, 0.01, yaw=-0.09)
+[2026-09-30 18:25:27,851] INFO: [NavMetrics] início nav fd2d5087
+[2026-09-30 18:25:27,852] INFO: [Camera] nav_active(nav) sem câmera — gravação pulada
+[2026-09-30 18:25:29,028] INFO: [NavMetrics] nav fd2d5087 → ABORTED em 1.2s | replans=0 | rec(b/s/w)=0/0/0 | dist=0.00m
+[2026-09-30 18:25:29,056] WARNING: [MapBridge] waypoint 1/1 abortado — tentativa 2/2
+[2026-09-30 18:25:32,653] INFO: [MapBridge] NavigateToPose → (1.72, 0.01, yaw=-0.09)
+[2026-09-30 18:25:32,707] INFO: [NavMetrics] início nav 66330e78
+[2026-09-30 18:25:32,707] INFO: [Camera] nav_active(nav) sem câmera — gravação pulada
+[2026-09-30 18:25:32,878] WARNING: [MapBridge] pulando waypoint 1/1 após 2 tentativas
+[2026-09-30 18:25:32,879] INFO: [NavMetrics] nav 66330e78 → ABORTED em 0.2s | replans=0 | rec(b/s/w)=0/0/0 | dist=0.00m
+[2026-09-30 18:26:17,705] WARNING: [PowerMonitor] TRIP_FRONT: vF=0.0V vR=0.0V setL/R=-0/0 meas=(0.0, -0.0, 0.0, -0.0)
+[2026-09-30 18:26:42,131] INFO: [MapBridge] /map 391x1158 @ 0.050 m/px emitido
+
+[app] Sinal 2 recebido, encerrando...

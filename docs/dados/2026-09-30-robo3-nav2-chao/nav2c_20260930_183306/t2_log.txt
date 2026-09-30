@@ -1,0 +1,843 @@
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-09-30-18-33-57-742499-ubuntu-Latitude-3490-1827499
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [livox]    /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py
+[INFO] [launch.user]: [fast_lio] /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/launch/mapping.launch.py (cfg: /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml)
+[INFO] [livox_ros_driver2_node-1]: process started with pid [1827669]
+[INFO] [fastlio_mapping-2]: process started with pid [1827671]
+[INFO] [tf_odom-3]: process started with pid [1827677]
+[INFO] [nuvem_pontos-4]: process started with pid [1827680]
+[INFO] [pointcloud_to_laserscan_node-5]: process started with pid [1827685]
+[livox_ros_driver2_node-1] [INFO] [1790804039.603723894] [livox_lidar_publisher]: Livox Ros Driver2 Version: 1.2.4
+[livox_ros_driver2_node-1] [INFO] [1790804039.618274351] [livox_lidar_publisher]: Data Source is raw lidar.
+[livox_ros_driver2_node-1] [INFO] [1790804039.619272058] [livox_lidar_publisher]: Config file : /home/ubuntu/Workspace/Controle_robo_livox/ros2_packages/livox_ros_driver2/launch_ROS2/../config/MID360_config.json
+[livox_ros_driver2_node-1] LdsLidar *GetInstance
+[livox_ros_driver2_node-1] config lidar type: 8
+[livox_ros_driver2_node-1] successfully parse base config, counts: 1
+[livox_ros_driver2_node-1] [INFO] [1790804039.684478204] [livox_lidar_publisher]: Init lds lidar success!
+[livox_ros_driver2_node-1] GetFreeIndex key:livox_lidar_2835458240.
+[livox_ros_driver2_node-1] Init queue, real query size:16.
+[livox_ros_driver2_node-1] Lidar[0] storage queue size: 10
+[livox_ros_driver2_node-1] set pcl data type, handle: 2835458240, data type: 1
+[livox_ros_driver2_node-1] set scan pattern, handle: 2835458240, scan pattern: 0
+[livox_ros_driver2_node-1] begin to change work mode to 'Normal', handle: 2835458240
+[livox_ros_driver2_node-1] successfully set data type, handle: 2835458240, set_bit: 2
+[livox_ros_driver2_node-1] successfully set pattern mode, handle: 2835458240, set_bit: 0
+[livox_ros_driver2_node-1] successfully set lidar attitude, ip: 192.168.1.169
+[livox_ros_driver2_node-1] successfully change work mode, handle: 2835458240
+[livox_ros_driver2_node-1] successfully enable Livox Lidar imu, ip: 192.168.1.169
+[livox_ros_driver2_node-1] [INFO] [1790804042.690044409] [livox_lidar_publisher]: livox/imu publish use imu format
+[livox_ros_driver2_node-1] [INFO] [1790804042.872232384] [livox_lidar_publisher]: livox/lidar publish use livox custom format
+[fastlio_mapping-2] [INFO] [1790804042.925195063] [laser_mapping]: p_pre->lidar_type 1
+[fastlio_mapping-2] Multi thread started 
+[fastlio_mapping-2] ~~~~/home/ubuntu/Workspace/Controle_robo_livox/ros2_packages/FAST_LIO/ file opened
+[fastlio_mapping-2] [INFO] [1790804043.940056217] [laser_mapping]: Node init finished.
+[fastlio_mapping-2] [WARN] [1790804044.879527762] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804044.909962558] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804044.944027978] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804044.963634679] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804044.976804001] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804044.990229154] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.043650605] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.086754252] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.142110102] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.180649042] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.222804922] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.245269250] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.247973617] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.261410264] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.284243428] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.310402762] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.361038116] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.455033029] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.493099039] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.533634185] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[nuvem_pontos-4] [WARN] [1790804045.534920246] [nuvem_pontos]: raio cego do proprio robo: 0.150 m (decisão 027 — pontos mais perto que isto do EIXO do sensor são peça do robô e saem da nuvem). Com 0,000 o reflexo volta a poder disparar contra o próprio robô, que foi o defeito de 12-08.
+[nuvem_pontos-4] [WARN] [1790804045.541819544] [nuvem_pontos]: nuvem_pontos: /livox/lidar (CustomMsg) -> /livox/pontos (PointCloud2). Sem esta ponte os costmaps e o collision_monitor não recebem nuvem nenhuma no robô — medido em 10-08, com os dois costmaps em 0 células letais.
+[nuvem_pontos-4] [WARN] [1790804045.568769111] [nuvem_pontos]: primeira nuvem convertida: 11655 pontos (537 inválidos descartados), frame "livox_frame". Se o frame não for `livox_frame`, a nuvem inteira sai deslocada e a TF não conserta.
+[nuvem_pontos-4] [INFO] [1790804045.575253079] [nuvem_pontos]: 11655 pontos, 537 inválidos
+[fastlio_mapping-2] [WARN] [1790804045.574879103] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.577736639] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.587979442] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.718560025] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.741043356] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.778116283] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.862356401] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.881714678] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.898391543] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.910688760] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.917725158] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.927651426] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804045.938059601] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804046.050658282] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804046.063196268] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804046.078393669] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804046.420564662] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804046.433816998] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804046.446712649] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [WARN] [1790804046.457373729] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] IMU Initial Done
+[fastlio_mapping-2] [WARN] [1790804046.477153630] [laser_mapping]: No point, skip this scan!
+[fastlio_mapping-2] 
+[fastlio_mapping-2] [INFO] [1790804046.505935419] [laser_mapping]: Initialize the map kdtree
+[tf_odom-3] [WARN] [1790804048.505033214] [tf_odom]: tf_odom: /Odometry -> TF odom -> base_link. A pose do LIO é do SENSOR; a composição com o URDF é o que impede os 42 cm do Mid-360 de virarem erro silencioso de navegação.
+[tf_odom-3] [WARN] [1790804048.812078177] [tf_odom]: primeira TF publicada (pose vinha de 'livox_frame', composta com o URDF)
+[nuvem_pontos-4] [INFO] [1790804055.757309824] [nuvem_pontos]: 17295 pontos, 1041 inválidos
+[nuvem_pontos-4] [INFO] [1790804065.774755209] [nuvem_pontos]: 2160 pontos, 240 inválidos
+[nuvem_pontos-4] [INFO] [1790804075.991811490] [nuvem_pontos]: 2222 pontos, 178 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804087.216915808] [nuvem_pontos]: 2827 pontos, 149 inválidos
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804089.593609, lidar header time: 1790804076.894103 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804090.488208, lidar header time: 1790804076.908642 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804090.877286, lidar header time: 1790804076.924983 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804091.576205, lidar header time: 1790804076.929441 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804092.044581, lidar header time: 1790804076.933975 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804092.445673, lidar header time: 1790804076.937513 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804093.889958, lidar header time: 1790804076.965256 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804093.889958, lidar header time: 1790804077.049481 
+[nuvem_pontos-4] [INFO] [1790804097.276092490] [nuvem_pontos]: 3389 pontos, 67 inválidos
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804093.889958, lidar header time: 1790804077.666618 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804095.517065, lidar header time: 1790804077.904175 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804096.160337, lidar header time: 1790804077.910034 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804096.160337, lidar header time: 1790804078.639811 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804096.160337, lidar header time: 1790804081.921291 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804097.670076, lidar header time: 1790804087.146009 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804098.238995, lidar header time: 1790804087.166698 
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804107.338908969] [nuvem_pontos]: 354 pontos, 30 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[pointcloud_to_laserscan_node-5] [INFO] [1790804110.160610436] [scan_2d]: Got a subscriber to laserscan, starting pointcloud subscriber
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804117.964953250] [nuvem_pontos]: 16426 pontos, 1142 inválidos
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.060325 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.062031 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.063459 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.065652 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.076075 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.080767 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.090527 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.112066 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.203345 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.253604 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804114.469895, lidar header time: 1790804103.499302 
+[fastlio_mapping-2] IMU and LiDAR not Synced, IMU time: 1790804120.107995, lidar header time: 1790804105.106774 
+[nuvem_pontos-4] [INFO] [1790804128.709167348] [nuvem_pontos]: 3904 pontos, 800 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804138.871689464] [nuvem_pontos]: 2077 pontos, 131 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804149.002050673] [nuvem_pontos]: 29007 pontos, 1809 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804165.984231639] [nuvem_pontos]: 2016 pontos, 0 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804176.162881328] [nuvem_pontos]: 24440 pontos, 1576 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804186.416680241] [nuvem_pontos]: 29383 pontos, 1817 inválidos
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[nuvem_pontos-4] [INFO] [1790804196.571525787] [nuvem_pontos]: 16961 pontos, 1183 inválidos
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804206.690968643] [nuvem_pontos]: 17198 pontos, 946 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804216.780540995] [nuvem_pontos]: 11140 pontos, 956 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804226.783856120] [nuvem_pontos]: 9793 pontos, 863 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804236.801342806] [nuvem_pontos]: 27766 pontos, 1610 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804246.948650298] [nuvem_pontos]: 32954 pontos, 2566 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804257.389337849] [nuvem_pontos]: 23911 pontos, 2201 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804267.645355372] [nuvem_pontos]: 18895 pontos, 1361 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804277.674793272] [nuvem_pontos]: 20112 pontos, 1392 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804287.709131262] [nuvem_pontos]: 46933 pontos, 3371 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804298.002366296] [nuvem_pontos]: 4754 pontos, 142 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804308.058483163] [nuvem_pontos]: 15060 pontos, 684 inválidos
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[nuvem_pontos-4] [INFO] [1790804318.159224213] [nuvem_pontos]: 16042 pontos, 1430 inválidos
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[nuvem_pontos-4] [INFO] [1790804328.159293945] [nuvem_pontos]: 22080 pontos, 1920 inválidos
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[pointcloud_to_laserscan_node-5] [INFO] [1790804334.948554125] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-2] catch sig %d2
+[livox_ros_driver2_node-1] [INFO] [1790804334.994339560] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[livox_ros_driver2_node-1] DistributeImuData is RequestExit
+[fastlio_mapping-2] No Effective Points!
+[fastlio_mapping-2] No Effective Points!
+[INFO] [pointcloud_to_laserscan_node-5]: process has finished cleanly [pid 1827685]
+[INFO] [nuvem_pontos-4]: process has finished cleanly [pid 1827680]
+[livox_ros_driver2_node-1] Livox Lidar SDK Deinit completely!
+[livox_ros_driver2_node-1] lddc destory!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[tf_odom-3] Traceback (most recent call last):
+[tf_odom-3]   File "/home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom", line 33, in <module>
+[tf_odom-3]     sys.exit(load_entry_point('robot-base', 'console_scripts', 'tf_odom')())
+[tf_odom-3]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[tf_odom-3]   File "/home/ubuntu/Workspace/Controle_robo_livox/build/robot_base/robot_base/tf_odom.py", line 207, in main
+[tf_odom-3]     rclpy.spin(no)
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[tf_odom-3]     executor.spin_once()
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[tf_odom-3]     self._spin_once_impl(timeout_sec)
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[tf_odom-3]     handler, entity, node = self.wait_for_ready_callbacks(
+[tf_odom-3]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[tf_odom-3]     return next(self._cb_iter)
+[tf_odom-3]            ^^^^^^^^^^^^^^^^^^^
+[tf_odom-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+[tf_odom-3]     raise ExternalShutdownException()
+[tf_odom-3] rclpy.executors.ExternalShutdownException
+[ERROR] [tf_odom-3]: process has died [pid 1827677, exit code 1, cmd '/home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_trecvequ'].
+[livox_ros_driver2_node-1] lds destory!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[INFO] [livox_ros_driver2_node-1]: process has finished cleanly [pid 1827669]
+[fastlio_mapping-2] Rebuild thread terminated normally
+[INFO] [fastlio_mapping-2]: process has finished cleanly [pid 1827671]
