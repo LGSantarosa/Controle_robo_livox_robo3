@@ -5,7 +5,7 @@
 > (cópia de `d54d05a`); R1 dispensado e R2 revertido com teste (ver 063).
 > **Sobe SEMPRE pelo web, sem RViz: `bin/sobe-robo3-web` (decisão 064).**
 >
-> Atualizado em **2026-09-29, tarde** (PC de dev, robô e lidar desligados; duas
+> Atualizado em **2026-09-30, noite** (lab, robô 3 real; ver o bloco 🟡 do topo). Antes: **2026-09-29, tarde** (PC de dev, robô e lidar desligados; duas
 > pilhas de Gazebo subidas e derrubadas na sessão — a 2ª deixou 22 órfãos que
 > foram mortos por PID). Esta é a
 > cópia da branch **`etapa6-pilha-robo3`**, que desde 25-09 reúne três frentes
@@ -47,6 +47,35 @@
 
 ---
 
+## 🟡 30-09, NOITE — ROBÔ 3 REAL: SLAM OK, NAV2 BARRADO PELA CPU (decisão 066)
+
+Tudo desligado no fim. Detalhe no `DIARIO.md` (entrada do topo).
+
+| o quê | estado |
+|---|---|
+| notebook `ubuntu@10.233.141.150` (**IP novo** na rede do lab) | ✅ `origin` = repo `_robo3`, em `01f81a2`; volta: `backup/pre-robo3-fba6d39` |
+| build | ✅ do zero, 8 pacotes — **só passa com** `--cmake-args -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble` |
+| ROS no notebook | ✅ `apt full-upgrade` (30-09): Nav2 1.3.13, casado com o `diagnostic_updater` 4.2.7 |
+| 058 (`setup_livox.sh --perfil notebook`) | ✅ **provada em hardware**: sensor `.169`, host `.5`; rede `livox` do NM sobe sozinha |
+| web no notebook | ✅ `controle_web/.venv` criado; `ROBOT_MODE=slam` mostra o mapa em `http://<ip>:5000` |
+| SLAM | ✅ mapa do andar 3 em **`maps/andar3_robo3/`**, (0,0) = marca de fita da largada |
+| Nav2 real | 🔴 **não navegou**: costmaps expiram, `lifecycle_manager` derruba a pilha; robô não andou |
+| causa | ✅ medida: **`nuvem_pontos` satura 1 thread** (99 %), `/livox/pontos` 7,2 Hz com 0,69 s de atraso |
+
+**Próximo (066, aprovado pelo dono):** vetorizar o `passo()` do `nuvem_pontos`
+com numpy → provar offline (saída idêntica, tempo) → deploy → repetir a
+medição na mesa (`/livox/pontos` 10 Hz) → Nav2 parado → Nav2 no chão. Depois,
+um por vez: sessão gráfica (~45 % parada) e o `bag --all-topics` da pilha.
+
+**Como subir no robô real hoje** (o `sobe-robo3-web` é SÓ Gazebo): quatro
+processos no domínio 30, só localhost — `bash bin/sobe-robo3 [mux:=false]`,
+`ros2 launch robot_base localizacao.launch.py rviz:=false`, `slam.launch.py`
+**ou** a `pilha.launch.py` do roteiro abaixo, e a web
+(`cd controle_web && ROBOT_MODE=slam|nav2 WEB_TELEOP=off .venv/bin/python app.py`).
+**`pgrep` antes de subir** — duas instâncias do driver Livox derrubam o LIO.
+
+---
+
 ## ⏭️ 30-09, FIM DO DIA — PASSAGEM DE BASTÃO PARA O LAB
 
 O dono vai ao lab querendo pôr o código no robô 3 real. O que está escrito aqui
@@ -81,7 +110,7 @@ export ROS_DOMAIN_ID=30 ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
 ```bash
 git remote set-url origin git@github.com:LGSantarosa/Controle_robo_livox_robo3.git
 git fetch && git reset --hard origin/main
-colcon build --base-paths ros2_packages --symlink-install && source install/setup.bash
+colcon build --base-paths ros2_packages --symlink-install --cmake-args -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble && source install/setup.bash   # sem os cmake-args o Livox quebra no build do zero (30-09)
 ros2 pkg prefix slam_toolbox || sudo apt install ros-jazzy-slam-toolbox
 ./setup_livox.sh --perfil notebook          # decisão 058, 1ª vez em hardware
 ```

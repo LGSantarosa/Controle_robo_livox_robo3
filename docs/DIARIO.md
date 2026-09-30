@@ -4,6 +4,51 @@
 > o que falhou E POR QUÊ. Fracasso documentado é resultado — vai pro artigo.
 > Decisões formais têm registro próprio em `docs/decisoes/`.
 
+## 🟡 2026-09-30, noite (LAB, robô 3 REAL) — 1º SLAM EM HARDWARE DEU MAPA BOM; O NAV2 ENGASGOU NO `nuvem_pontos`
+
+Primeira vez do robô 3 real com a pilha inteira. Deploy e tudo por ssh, do PC
+de dev, no notebook `ubuntu@10.233.141.150` (a rede do lab mudou de faixa; a
+chave ed25519 conferida contra a do `.150` antigo antes de aceitar).
+
+**O que funcionou**
+- Deploy do `9dbc641` com branch de volta `backup/pre-robo3-fba6d39` e o
+  `origin` trocado para o repo `_robo3`.
+- **Decisão 058 provada em hardware**: `setup_livox.sh --perfil notebook`
+  achou sozinho o sensor `.169` (MAC `e4:7a:2c:90:1d:f1`) e casou o host `.5`.
+  A rede do cabo sobe sozinha (conexão `livox` do NetworkManager).
+- **SLAM**: Livox + FAST-LIO (`/Odometry` 10 Hz) + `slam_toolbox` + web em
+  `ROBOT_MODE=slam` (novo `.venv` no notebook). O dono dirigiu no Xbox vendo o
+  mapa na web e salvou o andar 3 inteiro (~58 m de corredor, paredes nítidas):
+  `maps/andar3_robo3/` (`01f81a2`).
+
+**O que falhou, e por quê**
+1. Build: symlink velho do `MID360_config.json` (tirado do git pela 058) em
+   `build/` e `install/`. Apagado. Vai acontecer em todo clone compilado antes
+   da 058.
+2. **`lifecycle_manager` morto por símbolo**: em 14-09 um apt parcial subiu
+   só o `diagnostic_updater` (4.2.7) e deixou o Nav2 de janeiro. O dono rodou
+   `apt full-upgrade`; Nav2 foi a 1.3.13. Depois disso o CMake guardava a
+   `libfastcdr` antiga — build do zero, e o do zero só passa com
+   `--cmake-args -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble` (o Livox). **O
+   `colcon build` do roteiro do ESTADO não tem esses argumentos.**
+3. **Erro meu**: um comando que o dono rejeitou chegou a rodar, e eu subi a
+   pilha de novo por cima sem conferir — dois drivers Livox brigando pelo
+   sensor, `/Odometry` parou. Derrubado; a partir daí, `pgrep` antes de toda
+   subida.
+4. **Nav2 real** (`nav2_20260930_174129`): nós ativos, AMCL em (0, 0), três
+   objetivos da web abortaram no planner (*Costmap timed out*), nuvem
+   descartada por ser mais velha que a TF, `lifecycle_manager` derrubou tudo.
+   Load 27. **O robô não andou.**
+
+**Diagnóstico** (robô na mesa, só lidar; decisão **066**, dados em
+`docs/dados/2026-09-30-robo3-cpu/`): medido por camadas, o `nuvem_pontos`
+come 99 % de uma thread já só com a localização, e entrega `/livox/pontos` a
+7,2 Hz com 0,69 s de atraso (entrada 10 Hz, 20 064 pontos). A interface
+gráfica gasta ~45 % parada. Conserto aprovado: vetorizar o nó com numpy.
+
+**Método**: o dono não relatou console nenhum; tudo saiu de log e de
+`pidstat`/`topic hz` puxados por ssh.
+
 ## 2026-09-30 (dev, robô e lidar DESLIGADOS) — REPOSITÓRIO SÓ DO ROBÔ 3; R1 DISPENSADO, R2 REVERTIDO COM TESTE
 
 O robô 3 passou a viver em `Controle_robo_livox_robo3` (cópia de `d54d05a`, a

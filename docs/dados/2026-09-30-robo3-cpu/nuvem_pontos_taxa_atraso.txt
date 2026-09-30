@@ -1,0 +1,8 @@
+== hz /livox/pontos: average rate: 7.152
+== hz /scan: 
+== hz /Odometry: average rate: 9.997
+== atraso /livox/pontos: average delay: 0.694
+== atraso /scan: 
+== atraso /Odometry: average delay: 0.023
+== hz /livox/lidar: average rate: 10.001
+20064

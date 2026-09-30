@@ -1,0 +1,25 @@
+top - 17:45:43 up 7 days, 23:41,  6 users,  load average: 28.29, 16.51, 9.35
+Tasks: 273 total,  14 running, 259 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 69.7 us, 28.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  2.3 si,  0.0 st 
+MiB Mem :   7811.4 total,   1845.8 free,   3579.7 used,   2972.3 buff/cache     
+MiB Swap:   4096.0 total,   4093.8 free,      2.2 used.   4231.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+1618438 ubuntu    20   0 1173112 230552  54272 R  87.1   2.9   1:37.35 fastlio+
+1618437 ubuntu    20   0 1222736 116976  30676 S  48.4   1.5   1:24.90 livox_r+
+   5195 ubuntu    20   0 4808904 319556 131004 R  29.0   4.0     16,26 gnome-s+
+1618440 ubuntu    20   0  838216  98264  38860 R  25.8   1.2   2:31.66 nuvem_p+
+1620408 ubuntu    20   0 2278508 137868  48088 S  22.6   1.7   0:35.33 python
+1619448 ubuntu    20   0  827284  88416  40800 R  19.4   1.1   0:20.70 path_fo+
+   1008 root      20   0   18324   9144   7844 R  16.1   0.1     11,44 systemd+
+1619449 ubuntu    20   0  833976  92464  43592 S  12.9   1.2   0:28.11 freeze_+
+1630153 ubuntu    20   0   14840   5640   3496 R   9.7   0.1   0:00.10 top
+1356382 ubuntu    20   0 1989128 243316 109640 S   6.5   3.0      8,51 gnome-c+
+1616642 ubuntu    20   0  969952  83024  38656 S   6.5   1.0   0:11.56 mega_br+
+1616646 ubuntu    20   0  821036  81768  38592 S   6.5   1.0   0:09.50 dpad_re+
+1617126 ubuntu    20   0 1182616  88212  46260 S   6.5   1.1   0:09.94 ros2
+1619437 ubuntu    20   0  747100  53616  36580 R   6.5   0.7   0:07.49 map_ser+
+1619444 ubuntu    20   0  820960  81844  38556 R   6.5   1.0   0:10.98 heading+
+     31 root      20   0       0      0      0 S   3.2   0.0  37:00.11 ksoftir+
+     57 root     -51   0       0      0      0 S   3.2   0.0  61:58.10 irq/9-a+
+    976 avahi     20   0    8788   4884   4116 S   3.2   0.1   8:40.21 avahi-d+

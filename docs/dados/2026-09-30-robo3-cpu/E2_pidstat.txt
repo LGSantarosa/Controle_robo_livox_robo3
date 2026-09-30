@@ -1,0 +1,1004 @@
+Linux 7.0.0-31-generic (ubuntu-Latitude-3490) 	09/30/26 	_x86_64_	(4 CPU)
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:07        0        31    0.00    1.96    0.00    0.00    1.96     2  ksoftirqd/2
+17:53:07      101       978    0.98    0.00    0.00    0.00    0.98     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:07        0      1008    0.98    2.94    0.00    0.98    3.92     2  /usr/lib/systemd/systemd-logind
+17:53:07     1000      5195   11.76    3.92    0.00    2.94   15.69     0  /usr/bin/gnome-shell
+17:53:07     1000   1490305    0.00    0.98    0.00    0.00    0.98     3  /usr/share/rustdesk/rustdesk --server
+17:53:07     1000   1651214   25.49    5.88    0.00    0.00   31.37     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:07     1000   1651215   32.35    2.94    0.00    2.94   35.29     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:07     1000   1651216    1.96    0.98    0.00    0.98    2.94     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:07     1000   1651217   95.10    1.96    0.00    1.96   97.06     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:07     1000   1658447    1.96    0.00    0.00    0.00    1.96     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:07     1000   1658449    0.98    0.98    0.00    0.00    1.96     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:07     1000   1659063    0.98    0.00    0.00    0.00    0.98     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:07     1000   1660972    0.00    0.98    0.00    0.00    0.98     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:08        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:08        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:08        0      1008    0.00    2.00    0.00    0.00    2.00     2  /usr/lib/systemd/systemd-logind
+17:53:08     1000      5195   10.00    4.00    0.00    2.00   14.00     0  /usr/bin/gnome-shell
+17:53:08        0   1594671    0.00    1.00    0.00    1.00    1.00     3  kworker/u17:3-i915_flip
+17:53:08        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:53:08     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:08     1000   1651215   31.00    2.00    0.00    2.00   33.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:08     1000   1651216    2.00    0.00    0.00    0.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:08     1000   1651217   95.00    4.00    0.00    1.00   99.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:08     1000   1658447    1.00    1.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:08     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:08     1000   1660972    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+17:53:08      987   3823175    0.00    1.00    0.00    0.00    1.00     0  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:09        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:09        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:09        0      1008    3.00    5.00    0.00    1.00    8.00     0  /usr/lib/systemd/systemd-logind
+17:53:09        0      1010    1.00    0.00    0.00    0.00    1.00     0  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:53:09        0      1358    0.00    1.00    0.00    1.00    1.00     2  /usr/bin/rustdesk --service
+17:53:09     1000      5195   10.00    3.00    0.00    2.00   13.00     3  /usr/bin/gnome-shell
+17:53:09     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:09     1000   1651153    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 launch robot_base localizacao.launch.py rviz:=false
+17:53:09     1000   1651214   24.00    4.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:09     1000   1651215   33.00    3.00    0.00    3.00   36.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:09     1000   1651216    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:09     1000   1651217   95.00    3.00    0.00    3.00   98.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:09     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:09     1000   1658447    2.00    0.00    0.00    0.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:09     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:09     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:09     1000   1660972    1.00    0.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:10        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:10      101       978    1.00    0.00    0.00    1.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:10        0      1008    0.00    2.00    0.00    1.00    2.00     3  /usr/lib/systemd/systemd-logind
+17:53:10     1000      5195   11.00    3.00    0.00    2.00   14.00     3  /usr/bin/gnome-shell
+17:53:10     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:10        0   1594671    0.00    1.00    0.00    1.00    1.00     0  kworker/u17:3+i915_flip
+17:53:10     1000   1651214   23.00    4.00    0.00    0.00   27.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:10     1000   1651215   33.00    1.00    0.00    1.00   34.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:10     1000   1651216    2.00    0.00    0.00    1.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:10     1000   1651217   97.00    2.00    0.00    1.00   99.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:10     1000   1658447    1.00    0.00    0.00    1.00    1.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:10     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:10     1000   1659063    1.00    1.00    0.00    0.00    2.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:10     1000   1660972    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:11        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:11        0      1008    2.00    3.00    0.00    0.00    5.00     1  /usr/lib/systemd/systemd-logind
+17:53:11     1000      5195   11.00    3.00    0.00    2.00   14.00     2  /usr/bin/gnome-shell
+17:53:11     1000   1651214   25.00    5.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:11     1000   1651215   32.00    3.00    0.00    2.00   35.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:11     1000   1651216    3.00    0.00    0.00    0.00    3.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:11     1000   1651217   98.00    1.00    0.00    1.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:11     1000   1658447    2.00    1.00    0.00    0.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:11     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:11     1000   1660972    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:12        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:12        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:12      101       978    0.00    1.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:12        0      1008    2.00    6.00    0.00    1.00    8.00     1  /usr/lib/systemd/systemd-logind
+17:53:12        0      1358    0.00    1.00    0.00    1.00    1.00     0  /usr/bin/rustdesk --service
+17:53:12     1000      5195   11.00    3.00    0.00    2.00   14.00     1  /usr/bin/gnome-shell
+17:53:12     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:12        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:53:12     1000   1651214   23.00    5.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:12     1000   1651215   33.00    3.00    0.00    3.00   36.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:12     1000   1651216    2.00    0.00    0.00    1.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:12     1000   1651217   99.00    1.00    0.00    0.00  100.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:12     1000   1658447    2.00    0.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:12     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:12     1000   1659063    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:12     1000   1660972    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:13        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:13        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:13      101       978    1.00    0.00    0.00    1.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:13        0      1008    1.00    3.00    0.00    1.00    4.00     0  /usr/lib/systemd/systemd-logind
+17:53:13     1000      5195   11.00    4.00    0.00    2.00   15.00     2  /usr/bin/gnome-shell
+17:53:13     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:13        0   1594671    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:3-i915_flip
+17:53:13     1000   1651214   26.00    4.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:13     1000   1651215   34.00    1.00    0.00    2.00   35.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:13     1000   1651216    1.00    1.00    0.00    0.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:13     1000   1651217   99.00    1.00    0.00    1.00  100.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:13     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:13     1000   1658447    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:13     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:13     1000   1658451    0.00    1.00    0.00    0.00    1.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/dpad_reto --ros-args -r __node:=dpad_reto
+17:53:13     1000   1659063    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:13     1000   1660972    1.00    1.00    0.00    1.00    2.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:14        0        15    0.00    1.00    0.00    2.00    1.00     0  rcu_preempt
+17:53:14        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:14        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:14        0      1008    0.00    2.00    0.00    0.00    2.00     0  /usr/lib/systemd/systemd-logind
+17:53:14     1000      5195   10.00    4.00    0.00    2.00   14.00     0  /usr/bin/gnome-shell
+17:53:14     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:14        0   1646543    0.00    1.00    0.00    0.00    1.00     3  kworker/u16:5-events_unbound
+17:53:14     1000   1651214   24.00    4.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:14     1000   1651215   33.00    2.00    0.00    2.00   35.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:14     1000   1651216    3.00    0.00    0.00    1.00    3.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:14     1000   1651217   96.00    2.00    0.00    1.00   98.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:14     1000   1651218    0.00    1.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:14     1000   1658447    2.00    1.00    0.00    1.00    3.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:14     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:14     1000   1660972    0.00    1.00    0.00    0.00    1.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:15        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:15        0      1008    2.00    5.00    0.00    1.00    7.00     2  /usr/lib/systemd/systemd-logind
+17:53:15        0      1816    1.00    0.00    0.00    0.00    1.00     3  /usr/libexec/upowerd
+17:53:15     1000      5195   12.00    4.00    0.00    1.00   16.00     0  /usr/bin/gnome-shell
+17:53:15        0   1594671    0.00    1.00    0.00    1.00    1.00     3  kworker/u17:3-i915_flip
+17:53:15     1000   1651214   24.00    3.00    0.00    0.00   27.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:15     1000   1651215   33.00    2.00    0.00    1.00   35.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:15     1000   1651216    2.00    0.00    0.00    0.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:15     1000   1651217   98.00    2.00    0.00    1.00  100.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:15     1000   1658447    2.00    0.00    0.00    0.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:15     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:15     1000   1658452    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/robot_state_publisher/robot_state_publisher --ros-args -r __node:=robot_state_publisher --params-file /tmp/launch_params_yx2av1m8
+17:53:15     1000   1659063    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:15     1000   1660972    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:16        0        31    0.00    1.00    0.00    2.00    1.00     2  ksoftirqd/2
+17:53:16        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:16      101       978    1.00    0.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:16        0      1008    2.00    3.00    0.00    1.00    5.00     0  /usr/lib/systemd/systemd-logind
+17:53:16        0      1010    0.00    1.00    0.00    0.00    1.00     0  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:53:16        0      1358    1.00    1.00    0.00    1.00    2.00     1  /usr/bin/rustdesk --service
+17:53:16        0      3038    0.00    1.00    0.00    0.00    1.00     3  containerd --config /run/snap.docker/containerd/containerd.toml
+17:53:16     1000      5195   11.00    4.00    0.00    2.00   15.00     3  /usr/bin/gnome-shell
+17:53:16        0   1590873    0.00    1.00    0.00    1.00    1.00     0  kworker/u16:1-flush-8:0
+17:53:16        0   1630483    0.00    1.00    0.00    4.00    1.00     2  kworker/2:2-i915-unordered
+17:53:16     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:16     1000   1651215   33.00    1.00    0.00    1.00   34.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:16     1000   1651216    2.00    0.00    0.00    2.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:16     1000   1651217   96.00    3.00    0.00    1.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:16     1000   1658447    1.00    0.00    0.00    1.00    1.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:16     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:16     1000   1658450    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/teleop_twist_joy/teleop_node --ros-args -r __node:=teleop_twist_joy_node --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/share/robot_nav/config/teleop_xbox_robo3.yaml -r cmd_vel:=joy_vel
+17:53:16     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:16     1000   1660972    1.00    0.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:17        0        25    0.00    1.00    0.00    0.00    1.00     1  ksoftirqd/1
+17:53:17        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:17        0      1008    0.00    3.00    0.00    0.00    3.00     3  /usr/lib/systemd/systemd-logind
+17:53:17     1000      5195    9.00    5.00    0.00    2.00   14.00     2  /usr/bin/gnome-shell
+17:53:17     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:17        0   1594671    0.00    1.00    0.00    1.00    1.00     3  kworker/u17:3-i915_flip
+17:53:17     1000   1651214   23.00    6.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:17     1000   1651215   31.00    4.00    0.00    2.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:17     1000   1651216    2.00    0.00    0.00    0.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:17     1000   1651217   98.00    1.00    0.00    2.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:17     1000   1658447    1.00    1.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:17     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:17     1000   1659063    0.00    1.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:17     1000   1660972    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:18        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:18        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:18      101       978    1.00    0.00    0.00    1.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:18        0      1008    3.00    4.00    0.00    1.00    7.00     1  /usr/lib/systemd/systemd-logind
+17:53:18     1000      5195   11.00    4.00    0.00    3.00   15.00     3  /usr/bin/gnome-shell
+17:53:18     1000   1651214   22.00    6.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:18     1000   1651215   32.00    3.00    0.00    4.00   35.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:18     1000   1651216    2.00    0.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:18     1000   1651217   97.00    0.00    0.00    2.00   97.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:18     1000   1658447    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:18     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:18     1000   1658450    0.00    1.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/teleop_twist_joy/teleop_node --ros-args -r __node:=teleop_twist_joy_node --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/share/robot_nav/config/teleop_xbox_robo3.yaml -r cmd_vel:=joy_vel
+17:53:18     1000   1659063    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:18     1000   1660972    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:19        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:19        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:19        0      1008    1.00    2.00    0.00    0.00    3.00     0  /usr/lib/systemd/systemd-logind
+17:53:19     1000      5195   11.00    3.00    0.00    2.00   14.00     0  /usr/bin/gnome-shell
+17:53:19        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:53:19     1000   1651214   22.00    5.00    0.00    0.00   27.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:19     1000   1651215   34.00    1.00    0.00    1.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:19     1000   1651216    2.00    0.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:19     1000   1651217   98.00    2.00    0.00    0.00  100.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:19     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:19     1000   1658447    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:19     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:19     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:19     1000   1660972    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:20        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:20        0      1008    1.00    2.00    0.00    1.00    3.00     0  /usr/lib/systemd/systemd-logind
+17:53:20     1000      5195   11.00    4.00    0.00    3.00   15.00     2  /usr/bin/gnome-shell
+17:53:20     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:20        0   1594671    0.00    1.00    0.00    1.00    1.00     1  kworker/u17:3-i915_flip
+17:53:20     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:20     1000   1651215   33.00    2.00    0.00    2.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:20     1000   1651216    2.00    1.00    0.00    0.00    3.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:20     1000   1651217   96.00    3.00    0.00    2.00   99.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:20     1000   1658447    1.00    1.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:20     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:20     1000   1660972    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:21        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:21        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:21      101       978    1.00    0.00    0.00    2.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:21        0      1008    2.00    5.00    0.00    1.00    7.00     0  /usr/lib/systemd/systemd-logind
+17:53:21     1000      5195   10.00    3.00    0.00    2.00   13.00     1  /usr/bin/gnome-shell
+17:53:21     1000      6438    1.00    0.00    0.00    0.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:21     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:21        0   1638092    0.00    1.00    0.00    0.00    1.00     0  kworker/0:3-events
+17:53:21     1000   1651214   26.00    5.00    0.00    0.00   31.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:21     1000   1651215   34.00    3.00    0.00    4.00   37.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:21     1000   1651216    2.00    0.00    0.00    1.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:21     1000   1651217   99.00    1.00    0.00    0.00  100.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:21     1000   1658447    2.00    0.00    0.00    0.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:21     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:21     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:21     1000   1660972    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:22        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:22        0      1008    1.00    1.00    0.00    1.00    2.00     0  /usr/lib/systemd/systemd-logind
+17:53:22        0      1358    0.00    1.00    0.00    0.00    1.00     1  /usr/bin/rustdesk --service
+17:53:22     1000      5195   11.00    3.00    0.00    1.00   14.00     1  /usr/bin/gnome-shell
+17:53:22        0   1594671    0.00    1.00    0.00    1.00    1.00     1  kworker/u17:3-i915_flip
+17:53:22        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:53:22     1000   1651214   25.00    5.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:22     1000   1651215   33.00    2.00    0.00    1.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:22     1000   1651216    3.00    0.00    0.00    0.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:22     1000   1651217   99.00    0.00    0.00    0.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:22     1000   1658447    1.00    1.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:22     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:22     1000   1658452    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/robot_state_publisher/robot_state_publisher --ros-args -r __node:=robot_state_publisher --params-file /tmp/launch_params_yx2av1m8
+17:53:22     1000   1659063    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:22     1000   1660972    1.00    0.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:23        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:23        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:23        0      1008    2.00    4.00    0.00    1.00    6.00     0  /usr/lib/systemd/systemd-logind
+17:53:23        0      1358    1.00    0.00    0.00    1.00    1.00     1  /usr/bin/rustdesk --service
+17:53:23     1000      5195   11.00    4.00    0.00    3.00   15.00     2  /usr/bin/gnome-shell
+17:53:23     1000   1651214   24.00    4.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:23     1000   1651215   33.00    2.00    0.00    4.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:23     1000   1651216    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:23     1000   1651217   98.00    1.00    0.00    2.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:23     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:23     1000   1658447    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:23     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:23     1000   1660972    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+17:53:23      987   3823175    1.00    0.00    0.00    0.00    1.00     0  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:24        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:24        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:24      108       976    0.00    1.00    0.00    0.00    1.00     0  avahi-daemon: running [ubuntu-Latitude-3490.local]
+17:53:24      101       978    1.00    1.00    0.00    0.00    2.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:24        0      1008    1.00    5.00    0.00    0.00    6.00     2  /usr/lib/systemd/systemd-logind
+17:53:24     1000      5195   11.00    4.00    0.00    1.00   15.00     1  /usr/bin/gnome-shell
+17:53:24        0   1557500    0.00    1.00    0.00    0.00    1.00     3  kworker/3:2-mm_percpu_wq
+17:53:24        0   1594671    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:3-i915_flip
+17:53:24     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:24     1000   1651215   33.00    2.00    0.00    1.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:24     1000   1651216    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:24     1000   1651217   98.00    2.00    0.00    1.00  100.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:24     1000   1658447    2.00    0.00    0.00    0.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:24     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:24     1000   1659063    1.00    1.00    0.00    0.00    2.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:24     1000   1660972    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:25        0        15    0.00    1.00    0.00    1.00    1.00     3  rcu_preempt
+17:53:25        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:25        0       223    0.00    1.00    0.00    0.00    1.00     2  kworker/2:1H-i915_cleanup
+17:53:25        0       314    0.00    1.00    0.00    0.00    1.00     1  kworker/1:1H-i915_cleanup
+17:53:25        0      1008    2.00    2.00    0.00    1.00    4.00     2  /usr/lib/systemd/systemd-logind
+17:53:25        0      1010    1.00    0.00    0.00    0.00    1.00     1  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:53:25     1000      5195   13.00    3.00    0.00    2.00   16.00     2  /usr/bin/gnome-shell
+17:53:25        0   1630483    0.00    1.00    0.00    6.00    1.00     2  kworker/2:2-events
+17:53:25     1000   1651214   24.00    6.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:25     1000   1651215   34.00    2.00    0.00    2.00   36.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:25     1000   1651216    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:25     1000   1651217   97.00    1.00    0.00    2.00   98.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:25     1000   1658447    2.00    0.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:25     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:25     1000   1659063    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:25     1000   1660972    0.00    1.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:26        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:26        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:26        0      1008    1.00    3.00    0.00    0.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:53:26        0      1358    0.00    1.00    0.00    1.00    1.00     1  /usr/bin/rustdesk --service
+17:53:26     1000      5195   11.00    4.00    0.00    2.00   15.00     0  /usr/bin/gnome-shell
+17:53:26        0   1594671    0.00    1.00    0.00    1.00    1.00     0  kworker/u17:3-i915_flip
+17:53:26     1000   1651214   23.00    5.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:26     1000   1651215   33.00    4.00    0.00    2.00   37.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:26     1000   1651216    2.00    1.00    0.00    0.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:26     1000   1651217   97.00    2.00    0.00    1.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:26     1000   1658447    1.00    0.00    0.00    1.00    1.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:26     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:26     1000   1660972    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:27        0         1    1.00    0.00    0.00    0.00    1.00     3  /sbin/init splash
+17:53:27        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:27        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:27      101       978    1.00    0.00    0.00    1.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:27        0      1008    2.00    5.00    0.00    1.00    7.00     0  /usr/lib/systemd/systemd-logind
+17:53:27     1000      5195   10.00    3.00    0.00    3.00   13.00     2  /usr/bin/gnome-shell
+17:53:27     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:27     1000   1651214   25.00    5.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:27     1000   1651215   34.00    2.00    0.00    4.00   36.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:27     1000   1651216    2.00    0.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:27     1000   1651217  100.00    0.00    0.00    1.00  100.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:27     1000   1651218    1.00    1.00    0.00    0.00    2.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:27     1000   1658447    2.00    1.00    0.00    0.00    3.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:27     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:27     1000   1659063    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:27     1000   1660972    0.00    1.00    0.00    1.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:28        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:28        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:28        0      1008    1.00    2.00    0.00    0.00    3.00     1  /usr/lib/systemd/systemd-logind
+17:53:28     1000      5195   11.00    4.00    0.00    2.00   15.00     2  /usr/bin/gnome-shell
+17:53:28     1000      6438    0.00    1.00    0.00    0.00    1.00     2  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:28     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:28     1000   1651214   22.00    6.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:28     1000   1651215   34.00    2.00    0.00    2.00   36.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:28     1000   1651216    2.00    0.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:28     1000   1651217   96.00    1.00    0.00    2.00   97.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:28     1000   1658447    1.00    1.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:28     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:28     1000   1658451    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/dpad_reto --ros-args -r __node:=dpad_reto
+17:53:28     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:28     1000   1660972    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:29        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:29        0      1008    1.00    2.00    0.00    1.00    3.00     3  /usr/lib/systemd/systemd-logind
+17:53:29     1000      5195   10.00    4.00    0.00    2.00   14.00     3  /usr/bin/gnome-shell
+17:53:29     1000   1356812    1.00    0.00    0.00    0.00    1.00     1  /usr/libexec/gvfsd-dnssd --spawner :1.20 /org/gtk/gvfs/exec_spaw/2
+17:53:29        0   1594671    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:3-i915_flip
+17:53:29        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:53:29     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:29     1000   1651215   33.00    2.00    0.00    2.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:29     1000   1651216    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:29     1000   1651217   97.00    1.00    0.00    2.00   98.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:29     1000   1658447    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:29     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:29     1000   1660972    0.00    1.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:30        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:30        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:30      101       978    1.00    0.00    0.00    2.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:30        0      1008    2.00    6.00    0.00    3.00    8.00     3  /usr/lib/systemd/systemd-logind
+17:53:30        0      1358    1.00    0.00    0.00    1.00    1.00     2  /usr/bin/rustdesk --service
+17:53:30     1000      5195   11.00    3.00    0.00    3.00   14.00     2  /usr/bin/gnome-shell
+17:53:30     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:30     1000   1490305    2.00    0.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:30     1000   1651214   26.00    4.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:30     1000   1651215   33.00    3.00    0.00    6.00   36.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:30     1000   1651216    3.00    0.00    0.00    2.00    3.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:30     1000   1651217   97.00    2.00    0.00    2.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:30     1000   1658447    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:30     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:30     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:30     1000   1660972    1.00    0.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:31        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:31        0      1008    1.00    2.00    0.00    0.00    3.00     3  /usr/lib/systemd/systemd-logind
+17:53:31     1000      5195   12.00    3.00    0.00    2.00   15.00     0  /usr/bin/gnome-shell
+17:53:31        0   1594671    0.00    1.00    0.00    1.00    1.00     0  kworker/u17:3-i915_flip
+17:53:31     1000   1651214   24.00    4.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:31     1000   1651215   33.00    2.00    0.00    1.00   35.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:31     1000   1651216    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:31     1000   1651217   98.00    1.00    0.00    1.00   99.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:31     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:31     1000   1658447    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:31     1000   1658448    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/cmd_vel_to_wheels --ros-args -r __node:=cmd_vel_to_wheels --params-file /tmp/launch_params_p9u1f1b9
+17:53:31     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:31     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:31     1000   1660972    0.00    1.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:32        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:32        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:32      101       978    1.00    0.00    0.00    0.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:32        0      1008    1.00    3.00    0.00    1.00    4.00     2  /usr/lib/systemd/systemd-logind
+17:53:32        0      1358    0.00    1.00    0.00    1.00    1.00     2  /usr/bin/rustdesk --service
+17:53:32     1000      5195   11.00    4.00    0.00    2.00   15.00     3  /usr/bin/gnome-shell
+17:53:32        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-events
+17:53:32     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:32     1000   1651215   36.00    2.00    0.00    2.00   38.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:32     1000   1651216    3.00    0.00    0.00    1.00    3.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:32     1000   1651217   97.00    1.00    0.00    2.00   98.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:32     1000   1658447    2.00    1.00    0.00    1.00    3.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:32     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:32     1000   1659063    1.00    1.00    0.00    0.00    2.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:32     1000   1660972    1.00    2.00    0.00    0.00    3.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:33        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:33        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:33        0      1008    3.00    4.00    0.00    0.00    7.00     2  /usr/lib/systemd/systemd-logind
+17:53:33     1000      5195   10.00    3.00    0.00    4.00   13.00     1  /usr/bin/gnome-shell
+17:53:33        0   1448809    1.00    0.00    0.00    0.00    1.00     3  /usr/lib/snapd/snapd
+17:53:33     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:33        0   1594671    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:3-i915_flip
+17:53:33     1000   1651214   23.00    5.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:33     1000   1651215   35.00    1.00    0.00    2.00   36.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:33     1000   1651216    2.00    0.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:33     1000   1651217   98.00    1.00    0.00    1.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:33     1000   1658447    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:33     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:34        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:34      101       978    1.00    0.00    0.00    0.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:34        0      1008    1.00    3.00    0.00    1.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:53:34     1000      5195   11.00    4.00    0.00    2.00   15.00     2  /usr/bin/gnome-shell
+17:53:34     1000      6438    1.00    0.00    0.00    0.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:34     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:34     1000   1651215   35.00    2.00    0.00    2.00   37.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:34     1000   1651216    2.00    0.00    0.00    0.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:34     1000   1651217   97.00    1.00    0.00    2.00   98.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:34     1000   1658447    2.00    1.00    0.00    1.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:34     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:34     1000   1659063    1.00    0.00    0.00    1.00    1.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:34     1000   1660972    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+17:53:34        0   1663091    0.00    1.00    0.00    0.00    1.00     0  ps -u 1000 -f
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:35        0        15    0.00    1.00    0.00    1.00    1.00     3  rcu_preempt
+17:53:35        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:35        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:35        0      1008    1.00    2.00    0.00    0.00    3.00     2  /usr/lib/systemd/systemd-logind
+17:53:35     1000      5195   13.00    4.00    0.00    2.00   17.00     3  /usr/bin/gnome-shell
+17:53:35        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:53:35     1000   1651214   26.00    4.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:35     1000   1651215   34.00    2.00    0.00    3.00   36.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:35     1000   1651216    3.00    0.00    0.00    1.00    3.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:35     1000   1651217   97.00    2.00    0.00    2.00   99.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:35     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:35     1000   1658447    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:35     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:35     1000   1659063    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:35     1000   1660972    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:36        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:36      101       978    1.00    0.00    0.00    1.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:36        0      1008    2.00    4.00    0.00    1.00    6.00     2  /usr/lib/systemd/systemd-logind
+17:53:36     1000      5195   10.00    4.00    0.00    2.00   14.00     2  /usr/bin/gnome-shell
+17:53:36     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:36        0   1594671    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:3+i915_flip
+17:53:36     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:36     1000   1651215   34.00    3.00    0.00    3.00   37.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:36     1000   1651216    2.00    1.00    0.00    0.00    3.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:36     1000   1651217   96.00    3.00    0.00    0.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:36     1000   1658447    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:36     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:36     1000   1660972    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+17:53:36      987   3823175    1.00    0.00    0.00    0.00    1.00     2  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:37        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:37        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:37        0      1008    1.00    2.00    0.00    0.00    3.00     1  /usr/lib/systemd/systemd-logind
+17:53:37        0      1358    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/rustdesk --service
+17:53:37     1000      5195   11.00    3.00    0.00    2.00   14.00     3  /usr/bin/gnome-shell
+17:53:37        0   1461716    0.00    1.00    0.00    0.00    1.00     1  /usr/sbin/NetworkManager --no-daemon
+17:53:37        0   1646543    0.00    1.00    0.00    0.00    1.00     3  kworker/u16:5-events_unbound
+17:53:37     1000   1651214   23.00    6.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:37     1000   1651215   33.00    2.00    0.00    2.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:37     1000   1651216    3.00    0.00    0.00    1.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:37     1000   1651217   97.00    2.00    0.00    2.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:37     1000   1658447    2.00    1.00    0.00    1.00    3.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:37     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:37     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:37     1000   1660972    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:38        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:38        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:38        0      1008    1.00    2.00    0.00    0.00    3.00     3  /usr/lib/systemd/systemd-logind
+17:53:38     1000      5195   11.00    4.00    0.00    2.00   15.00     1  /usr/bin/gnome-shell
+17:53:38        0   1594671    0.00    1.00    0.00    1.00    1.00     3  kworker/u17:3+i915_flip
+17:53:38        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:53:38     1000   1651214   23.00    5.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:38     1000   1651215   33.00    2.00    0.00    2.00   35.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:38     1000   1651216    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:38     1000   1651217   98.00    0.00    0.00    2.00   98.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:38     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:38     1000   1658447    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:38     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:38     1000   1659063    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:38     1000   1660972    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:39        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:39        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:39      101       978    1.00    0.00    0.00    1.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:39        0      1008    3.00    7.00    0.00    2.00   10.00     1  /usr/lib/systemd/systemd-logind
+17:53:39        0      1358    1.00    0.00    0.00    2.00    1.00     1  /usr/bin/rustdesk --service
+17:53:39     1000      5195   10.00    4.00    0.00    3.00   14.00     3  /usr/bin/gnome-shell
+17:53:39     1000   1651214   24.00    7.00    0.00    0.00   31.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:39     1000   1651215   33.00    3.00    0.00    3.00   36.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:39     1000   1651216    2.00    0.00    0.00    0.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:39     1000   1651217   97.00    1.00    0.00    2.00   98.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:39     1000   1658447    1.00    1.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:39     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:39     1000   1660972    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+17:53:39     1000   1660973    0.00    1.00    0.00    0.00    1.00     2  mpstat -P ALL 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:40        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:40      101       978    0.00    1.00    0.00    0.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:40        0      1008    0.00    2.00    0.00    0.00    2.00     0  /usr/lib/systemd/systemd-logind
+17:53:40     1000      5195   12.00    3.00    0.00    2.00   15.00     0  /usr/bin/gnome-shell
+17:53:40     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:40        0   1594671    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:3+i915_flip
+17:53:40     1000   1651214   23.00    5.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:40     1000   1651215   34.00    3.00    0.00    2.00   37.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:40     1000   1651216    2.00    0.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:40     1000   1651217   97.00    2.00    0.00    2.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:40     1000   1651218    0.00    1.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:40     1000   1658447    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:40     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:40     1000   1659063    1.00    1.00    0.00    0.00    2.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:40     1000   1660972    1.00    0.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:41        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:41        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:41        0      1008    1.00    3.00    0.00    0.00    4.00     0  /usr/lib/systemd/systemd-logind
+17:53:41        0      1358    0.00    1.00    0.00    0.00    1.00     0  /usr/bin/rustdesk --service
+17:53:41     1000      5195   10.00    4.00    0.00    3.00   14.00     3  /usr/bin/gnome-shell
+17:53:41     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:41     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:41     1000   1651215   33.00    1.00    0.00    2.00   34.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:41     1000   1651216    2.00    0.00    0.00    0.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:41     1000   1651217   97.00    2.00    0.00    1.00   99.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:41     1000   1658447    1.00    1.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:41     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:41     1000   1660972    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+17:53:41        0   1663627    0.00    1.00    0.00    0.00    1.00     0  ps
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:42        0         1    0.00    1.00    0.00    0.00    1.00     3  /sbin/init splash
+17:53:42        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:42      101       978    1.00    0.00    0.00    1.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:42        0      1008    2.00    6.00    0.00    2.00    8.00     3  /usr/lib/systemd/systemd-logind
+17:53:42        0      1010    1.00    0.00    0.00    0.00    1.00     3  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:53:42     1000      5195   11.00    3.00    0.00    2.00   14.00     0  /usr/bin/gnome-shell
+17:53:42        0   1539331    0.00    1.00    0.00    0.00    1.00     1  kworker/1:1-events
+17:53:42        0   1594671    0.00    1.00    0.00    0.00    1.00     0  kworker/u17:3-i915_flip
+17:53:42        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:53:42     1000   1651214   23.00    4.00    0.00    0.00   27.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:42     1000   1651215   32.00    3.00    0.00    4.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:42     1000   1651216    2.00    0.00    0.00    0.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:42     1000   1651217   97.00    2.00    0.00    1.00   99.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:42     1000   1658447    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:42     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:42     1000   1659063    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:42     1000   1660972    0.00    1.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:43        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:43        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:43        0      1008    1.00    3.00    0.00    0.00    4.00     3  /usr/lib/systemd/systemd-logind
+17:53:43     1000      5195   11.00    3.00    0.00    2.00   14.00     3  /usr/bin/gnome-shell
+17:53:43     1000   1651214   24.00    4.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:43     1000   1651215   34.00    2.00    0.00    1.00   36.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:43     1000   1651216    2.00    0.00    0.00    1.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:43     1000   1651217   99.00    1.00    0.00    0.00  100.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:43     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:43     1000   1658447    1.00    0.00    0.00    1.00    1.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:43     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:43     1000   1659063    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:43     1000   1660972    1.00    1.00    0.00    1.00    2.00     0  pidstat -u -h -l 1 60
+17:53:43        0   1663759    1.00    0.00    0.00    0.00    1.00     3  pgrep -a Xwayland
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:44        0        14    0.00    1.00    0.00    0.00    1.00     0  ksoftirqd/0
+17:53:44        0        24    0.00    1.00    0.00    0.00    1.00     1  migration/1
+17:53:44        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:44        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:44        0       222    0.00    1.00    0.00    0.00    1.00     3  kworker/3:1H-i915_cleanup
+17:53:44        0      1008    1.00    2.00    0.00    0.00    3.00     3  /usr/lib/systemd/systemd-logind
+17:53:44        0      1358    0.00    1.00    0.00    1.00    1.00     3  /usr/bin/rustdesk --service
+17:53:44     1000      5195   11.00    4.00    0.00    2.00   15.00     2  /usr/bin/gnome-shell
+17:53:44     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:44     1000   1651214   24.00    4.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:44     1000   1651215   33.00    1.00    0.00    2.00   34.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:44     1000   1651216    3.00    1.00    0.00    0.00    4.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:44     1000   1651217   96.00    3.00    0.00    1.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:44     1000   1658447    1.00    1.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:44     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:44     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:44     1000   1660972    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:45        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:45      101       978    1.00    0.00    0.00    1.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:45        0      1008    2.00    5.00    0.00    1.00    7.00     1  /usr/lib/systemd/systemd-logind
+17:53:45     1000      5195   12.00    4.00    0.00    3.00   16.00     0  /usr/bin/gnome-shell
+17:53:45     1000      6438    1.00    0.00    0.00    0.00    1.00     2  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:45     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:45        0   1594671    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:3+i915_flip
+17:53:45        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:53:45     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:45     1000   1651215   33.00    2.00    0.00    2.00   35.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:45     1000   1651216    2.00    0.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:45     1000   1651217   99.00    0.00    0.00    0.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:45     1000   1658447    2.00    0.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:45     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:45     1000   1660972    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:46        0        15    0.00    1.00    0.00    2.00    1.00     2  rcu_preempt
+17:53:46        0        31    0.00    1.00    0.00    1.00    1.00     2  ksoftirqd/2
+17:53:46        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:46        0      1008    2.00    2.00    0.00    1.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:53:46     1000      5195   11.00    3.00    0.00    2.00   14.00     1  /usr/bin/gnome-shell
+17:53:46     1000   1651214   22.00    6.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:46     1000   1651215   33.00    3.00    0.00    1.00   36.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:46     1000   1651216    2.00    0.00    0.00    2.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:46     1000   1651217   95.00    5.00    0.00    1.00  100.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:46     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:46     1000   1658447    2.00    1.00    0.00    0.00    3.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:46     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:46     1000   1659063    1.00    1.00    0.00    0.00    2.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:46     1000   1660972    0.00    1.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:47        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:47      990       607    1.00    0.00    0.00    0.00    1.00     2  /usr/lib/systemd/systemd-oomd
+17:53:47        0      1008    1.00    2.00    0.00    0.00    3.00     3  /usr/lib/systemd/systemd-logind
+17:53:47     1000      5195   11.00    4.00    0.00    2.00   15.00     2  /usr/bin/gnome-shell
+17:53:47        0   1594671    0.00    1.00    0.00    1.00    1.00     1  kworker/u17:3-i915_flip
+17:53:47        0   1615084    0.00    1.00    0.00    0.00    1.00     2  kworker/u16:0-events_unbound
+17:53:47     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:47     1000   1651215   32.00    3.00    0.00    2.00   35.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:47     1000   1651216    2.00    0.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:47     1000   1651217   98.00    1.00    0.00    1.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:47     1000   1658447    1.00    0.00    0.00    1.00    1.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:47     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:47     1000   1660972    1.00    0.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:48        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:48        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:48      101       978    1.00    0.00    0.00    0.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:48        0      1008    2.00    7.00    0.00    2.00    9.00     3  /usr/lib/systemd/systemd-logind
+17:53:48        0      1358    0.00    1.00    0.00    1.00    1.00     3  /usr/bin/rustdesk --service
+17:53:48     1000      5195   11.00    3.00    0.00    2.00   14.00     3  /usr/bin/gnome-shell
+17:53:48     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:48     1000   1651214   26.00    5.00    0.00    0.00   31.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:48     1000   1651215   33.00    2.00    0.00    2.00   35.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:48     1000   1651216    1.00    1.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:48     1000   1651217   99.00    1.00    0.00    2.00  100.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:48     1000   1658447    2.00    1.00    0.00    1.00    3.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:48     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:48     1000   1659063    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:48     1000   1660972    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:49        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:49        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:49        0      1008    1.00    2.00    0.00    1.00    3.00     1  /usr/lib/systemd/systemd-logind
+17:53:49     1000      5195   10.00    4.00    0.00    2.00   14.00     3  /usr/bin/gnome-shell
+17:53:49        0   1461716    1.00    0.00    0.00    0.00    1.00     3  /usr/sbin/NetworkManager --no-daemon
+17:53:49     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:49        0   1594671    0.00    1.00    0.00    1.00    1.00     1  kworker/u17:3-i915_flip
+17:53:49        0   1630483    0.00    1.00    0.00    4.00    1.00     2  kworker/2:2-i915-unordered
+17:53:49     1000   1651214   23.00    5.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:49     1000   1651215   33.00    3.00    0.00    3.00   36.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:49     1000   1651216    3.00    0.00    0.00    0.00    3.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:49     1000   1651217   97.00    1.00    0.00    2.00   98.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:49     1000   1658447    2.00    0.00    0.00    0.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:49     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:49     1000   1659063    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:49     1000   1660972    0.00    1.00    0.00    0.00    1.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:50        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:50        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:50      101       978    1.00    0.00    0.00    0.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:50        0      1008    1.00    3.00    0.00    0.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:53:50     1000      5195   10.00    4.00    0.00    2.00   14.00     2  /usr/bin/gnome-shell
+17:53:50     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:50     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:50     1000   1651215   32.00    2.00    0.00    2.00   34.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:50     1000   1651216    2.00    0.00    0.00    1.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:50     1000   1651217   98.00    1.00    0.00    1.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:50     1000   1658447    1.00    0.00    0.00    1.00    1.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:50     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:50     1000   1659063    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:50     1000   1660972    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+17:53:50      987   3823175    1.00    0.00    0.00    0.00    1.00     3  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:51        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:51        0      1008    3.00    3.00    0.00    3.00    6.00     2  /usr/lib/systemd/systemd-logind
+17:53:51        0      1358    0.00    1.00    0.00    1.00    1.00     3  /usr/bin/rustdesk --service
+17:53:51     1000      5195   11.00    3.00    0.00    3.00   14.00     1  /usr/bin/gnome-shell
+17:53:51     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:51     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:51     1000   1651215   35.00    2.00    0.00    4.00   37.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:51     1000   1651216    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:51     1000   1651217   97.00    1.00    0.00    2.00   98.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:51     1000   1651218    1.00    1.00    0.00    0.00    2.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:51     1000   1658447    2.00    1.00    0.00    2.00    3.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:51     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:51     1000   1658450    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/teleop_twist_joy/teleop_node --ros-args -r __node:=teleop_twist_joy_node --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/share/robot_nav/config/teleop_xbox_robo3.yaml -r cmd_vel:=joy_vel
+17:53:51     1000   1658452    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/robot_state_publisher/robot_state_publisher --ros-args -r __node:=robot_state_publisher --params-file /tmp/launch_params_yx2av1m8
+17:53:51     1000   1659063    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:51     1000   1660972    0.00    1.00    0.00    0.00    1.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:52        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:52        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:52        0      1008    0.00    3.00    0.00    0.00    3.00     1  /usr/lib/systemd/systemd-logind
+17:53:52     1000      5195   10.00    4.00    0.00    1.00   14.00     3  /usr/bin/gnome-shell
+17:53:52        0   1594671    0.00    1.00    0.00    1.00    1.00     1  kworker/u17:3-i915_flip
+17:53:52        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:53:52        0   1646543    0.00    1.00    0.00    0.00    1.00     1  kworker/u16:5-events_unbound
+17:53:52     1000   1651214   26.00    5.00    0.00    0.00   31.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:52     1000   1651215   33.00    2.00    0.00    2.00   35.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:52     1000   1651216    2.00    0.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:52     1000   1651217   96.00    1.00    0.00    3.00   97.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:52     1000   1658447    2.00    0.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:52     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:52     1000   1658451    0.00    1.00    0.00    0.00    1.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/dpad_reto --ros-args -r __node:=dpad_reto
+17:53:52     1000   1660972    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:53        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:53      101       978    1.00    0.00    0.00    1.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:53        0      1008    1.00    4.00    0.00    0.00    5.00     2  /usr/lib/systemd/systemd-logind
+17:53:53     1000      5195   11.00    3.00    0.00    4.00   14.00     1  /usr/bin/gnome-shell
+17:53:53     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:53     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:53     1000   1651215   34.00    2.00    0.00    3.00   36.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:53     1000   1651216    2.00    0.00    0.00    1.00    2.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:53     1000   1651217   98.00    0.00    0.00    2.00   98.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:53     1000   1658447    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:53     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:53     1000   1659063    1.00    1.00    0.00    0.00    2.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:53     1000   1660972    0.00    1.00    0.00    0.00    1.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:54        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:54        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:54        0      1008    3.00    5.00    0.00    1.00    8.00     1  /usr/lib/systemd/systemd-logind
+17:53:54        0      1358    1.00    0.00    0.00    1.00    1.00     1  /usr/bin/rustdesk --service
+17:53:54     1000      5195   10.00    5.00    0.00    3.00   15.00     1  /usr/bin/gnome-shell
+17:53:54        0   1594671    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:3-i915_flip
+17:53:54        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:53:54     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:54     1000   1651215   33.00    3.00    0.00    2.00   36.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:54     1000   1651216    3.00    0.00    0.00    1.00    3.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:54     1000   1651217   97.00    1.00    0.00    2.00   98.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:54     1000   1658447    2.00    1.00    0.00    1.00    3.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:54     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:54     1000   1660972    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:55        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:55        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:55      101       978    1.00    0.00    0.00    0.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:55        0      1008    1.00    3.00    0.00    1.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:53:55     1000      5195   13.00    4.00    0.00    4.00   17.00     2  /usr/bin/gnome-shell
+17:53:55     1000   1490312    0.00    1.00    0.00    0.00    1.00     1  /usr/share/rustdesk/rustdesk --tray
+17:53:55     1000   1651214   24.00    5.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:55     1000   1651215   34.00    2.00    0.00    3.00   36.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:55     1000   1651216    2.00    0.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:55     1000   1651217   98.00    1.00    0.00    2.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:55     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:55     1000   1658447    1.00    0.00    0.00    1.00    1.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:55     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:55     1000   1659063    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:55     1000   1660972    0.00    2.00    0.00    1.00    2.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:56        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:56        0      1008    0.00    1.00    0.00    0.00    1.00     3  /usr/lib/systemd/systemd-logind
+17:53:56        0      1358    0.00    1.00    0.00    1.00    1.00     1  /usr/bin/rustdesk --service
+17:53:56     1000      5195   11.00    3.00    0.00    2.00   14.00     3  /usr/bin/gnome-shell
+17:53:56        0   1594671    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:3-i915_flip
+17:53:56     1000   1651214   23.00    7.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:56     1000   1651215   31.00    3.00    0.00    1.00   34.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:56     1000   1651216    2.00    1.00    0.00    1.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:56     1000   1651217   98.00    1.00    0.00    1.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:56     1000   1658447    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:56     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:56     1000   1659063    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:56     1000   1660972    1.00    0.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:57        0        15    0.00    1.00    0.00    2.00    1.00     0  rcu_preempt
+17:53:57        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:57        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:57      101       978    1.00    0.00    0.00    1.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:57        0      1008    3.00    6.00    0.00    1.00    9.00     0  /usr/lib/systemd/systemd-logind
+17:53:57     1000      5195   11.00    3.00    0.00    3.00   14.00     2  /usr/bin/gnome-shell
+17:53:57     1000      6438    1.00    0.00    0.00    0.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:53:57     1000   1651214   25.00    5.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:57     1000   1651215   34.00    3.00    0.00    2.00   37.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:57     1000   1651216    2.00    0.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:57     1000   1651217   99.00    0.00    0.00    2.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:57     1000   1658447    2.00    1.00    0.00    1.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:57     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:57     1000   1658452    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/robot_state_publisher/robot_state_publisher --ros-args -r __node:=robot_state_publisher --params-file /tmp/launch_params_yx2av1m8
+17:53:57     1000   1660972    0.00    2.00    0.00    1.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:58        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:53:58        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:53:58        0      1008    0.00    3.00    0.00    1.00    3.00     2  /usr/lib/systemd/systemd-logind
+17:53:58     1000      5195   10.00    4.00    0.00    1.00   14.00     3  /usr/bin/gnome-shell
+17:53:58     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:58        0   1594671    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:3-i915_flip
+17:53:58        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:53:58     1000   1651214   25.00    5.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:58     1000   1651215   32.00    3.00    0.00    3.00   35.00     3  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:58     1000   1651216    2.00    0.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:58     1000   1651217   98.00    0.00    0.00    1.00   98.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:58     1000   1658447    1.00    0.00    0.00    1.00    1.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:58     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:58     1000   1658450    0.00    1.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/teleop_twist_joy/teleop_node --ros-args -r __node:=teleop_twist_joy_node --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/share/robot_nav/config/teleop_xbox_robo3.yaml -r cmd_vel:=joy_vel
+17:53:58     1000   1659063    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:58     1000   1660972    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:53:59        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:53:59      101       978    0.00    1.00    0.00    0.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:53:59        0      1008    1.00    2.00    0.00    0.00    3.00     0  /usr/lib/systemd/systemd-logind
+17:53:59     1000      5195   10.00    4.00    0.00    2.00   14.00     1  /usr/bin/gnome-shell
+17:53:59     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:53:59     1000   1651214   22.00    5.00    0.00    0.00   27.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:53:59     1000   1651215   34.00    2.00    0.00    1.00   36.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:53:59     1000   1651216    2.00    0.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:53:59     1000   1651217   98.00    1.00    0.00    1.00   99.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:53:59     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:53:59     1000   1658447    2.00    1.00    0.00    0.00    3.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:53:59     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:53:59     1000   1659063    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:53:59     1000   1660972    0.00    1.00    0.00    0.00    1.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:54:00        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:54:00        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:54:00      101       978    1.00    0.00    0.00    2.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:54:00        0      1008    4.00    5.00    0.00    2.00    9.00     2  /usr/lib/systemd/systemd-logind
+17:54:00        0      1010    1.00    0.00    0.00    0.00    1.00     0  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:54:00     1000      5195   11.00    3.00    0.00    3.00   14.00     0  /usr/bin/gnome-shell
+17:54:00        0   1594671    0.00    1.00    0.00    1.00    1.00     3  kworker/u17:3-i915_flip
+17:54:00     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:54:00     1000   1651215   33.00    3.00    0.00    3.00   36.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:54:00     1000   1651216    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:54:00     1000   1651217   95.00    2.00    0.00    3.00   97.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:54:00     1000   1658447    1.00    0.00    0.00    1.00    1.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:54:00     1000   1658449    2.00    0.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:54:00     1000   1660972    0.00    1.00    0.00    0.00    1.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:54:01        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:54:01        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:54:01        0       313    0.00    1.00    0.00    0.00    1.00     0  kworker/0:1H-i915_cleanup
+17:54:01        0      1008    1.00    1.00    0.00    0.00    2.00     0  /usr/lib/systemd/systemd-logind
+17:54:01        0      1358    1.00    1.00    0.00    0.00    2.00     1  /usr/bin/rustdesk --service
+17:54:01     1000      5195   12.00    4.00    0.00    2.00   16.00     0  /usr/bin/gnome-shell
+17:54:01     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:54:01        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:54:01     1000   1651214   23.00    6.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:54:01     1000   1651215   32.00    2.00    0.00    1.00   34.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:54:01     1000   1651216    3.00    0.00    0.00    1.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:54:01     1000   1651217   99.00    1.00    0.00    0.00  100.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:54:01     1000   1658447    2.00    0.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:54:01     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:54:01     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:54:01     1000   1660972    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:54:02        0        31    0.00    2.00    0.00    1.00    2.00     2  ksoftirqd/2
+17:54:02        0      1008    1.00    3.00    0.00    1.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:54:02     1000      5195   11.00    3.00    0.00    2.00   14.00     2  /usr/bin/gnome-shell
+17:54:02     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:54:02     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:54:02     1000   1651215   35.00    2.00    0.00    3.00   37.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:54:02     1000   1651216    2.00    1.00    0.00    1.00    3.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:54:02     1000   1651217  100.00    0.00    0.00    1.00  100.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:54:02     1000   1658447    2.00    1.00    0.00    1.00    3.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:54:02     1000   1658448    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/cmd_vel_to_wheels --ros-args -r __node:=cmd_vel_to_wheels --params-file /tmp/launch_params_p9u1f1b9
+17:54:02     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:54:02     1000   1659063    1.00    1.00    0.00    0.00    2.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:54:02     1000   1660972    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:54:03        0        30    0.00    1.00    0.00    0.00    1.00     2  migration/2
+17:54:03        0        31    0.00    1.00    0.00    1.00    1.00     2  ksoftirqd/2
+17:54:03        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:54:03      101       978    1.00    0.00    0.00    1.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:54:03        0      1008    2.00    6.00    0.00    1.00    8.00     1  /usr/lib/systemd/systemd-logind
+17:54:03     1000      5195   11.00    3.00    0.00    2.00   14.00     0  /usr/bin/gnome-shell
+17:54:03     1000      6438    0.00    1.00    0.00    1.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:54:03     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:54:03        0   1594671    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:3+i915_flip
+17:54:03     1000   1651214   25.00    4.00    0.00    0.00   29.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:54:03     1000   1651215   33.00    3.00    0.00    3.00   36.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:54:03     1000   1651216    2.00    0.00    0.00    0.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:54:03     1000   1651217   99.00    1.00    0.00    0.00  100.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:54:03     1000   1651218    1.00    0.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:54:03     1000   1658447    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:54:03     1000   1658448    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/cmd_vel_to_wheels --ros-args -r __node:=cmd_vel_to_wheels --params-file /tmp/launch_params_p9u1f1b9
+17:54:03     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:54:03     1000   1659063    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:54:03     1000   1660972    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:54:04        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:54:04        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:54:04        0      1008    1.00    3.00    0.00    1.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:54:04        0      3038    1.00    0.00    0.00    0.00    1.00     3  containerd --config /run/snap.docker/containerd/containerd.toml
+17:54:04     1000      5195   11.00    4.00    0.00    1.00   15.00     2  /usr/bin/gnome-shell
+17:54:04     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:54:04        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:54:04     1000   1651214   24.00    4.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:54:04     1000   1651215   34.00    2.00    0.00    3.00   36.00     1  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:54:04     1000   1651216    2.00    0.00    0.00    1.00    2.00     2  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:54:04     1000   1651217   99.00    1.00    0.00    1.00  100.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:54:04     1000   1651218    0.00    1.00    0.00    0.00    1.00     1  /opt/ros/jazzy/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node --ros-args -r __node:=scan_2d --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/share/robot_base/config/scan_2d.yaml --params-file /tmp/launch_params_n1mcgbxx -r cloud_in:=/livox/pontos -r scan:=/scan
+17:54:04     1000   1658447    2.00    0.00    0.00    1.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:54:04     1000   1658449    1.00    0.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:54:04     1000   1660972    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+17:54:04      987   3823175    1.00    0.00    0.00    0.00    1.00     2  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:54:05        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:54:05      101       978    1.00    0.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:54:05        0      1008    1.00    2.00    0.00    0.00    3.00     0  /usr/lib/systemd/systemd-logind
+17:54:05        0      1358    0.00    1.00    0.00    1.00    1.00     2  /usr/bin/rustdesk --service
+17:54:05     1000      5195   12.00    3.00    0.00    2.00   15.00     2  /usr/bin/gnome-shell
+17:54:05        0   1594671    0.00    1.00    0.00    1.00    1.00     0  kworker/u17:3+i915_flip
+17:54:05     1000   1651214   24.00    4.00    0.00    0.00   28.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:54:05     1000   1651215   35.00    2.00    0.00    2.00   37.00     2  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:54:05     1000   1651216    3.00    0.00    0.00    1.00    3.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:54:05     1000   1651217   98.00    1.00    0.00    1.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:54:05     1000   1658447    1.00    1.00    0.00    0.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:54:05     1000   1658449    0.00    1.00    0.00    0.00    1.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:54:05     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:54:05     1000   1660972    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:54:06        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:54:06        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:54:06        0      1008    2.00    5.00    0.00    1.00    7.00     1  /usr/lib/systemd/systemd-logind
+17:54:06     1000      5195   11.00    4.00    0.00    2.00   15.00     0  /usr/bin/gnome-shell
+17:54:06     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:54:06     1000   1651214   26.00    4.00    0.00    0.00   30.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher --params-file /tmp/launch_params_neqil4p2 --params-file /tmp/launch_params_bk4wuzsg --params-file /tmp/launch_params_56vfqokc --params-file /tmp/launch_params_z595dic7 --params-file /tmp/launch_params_vbgog3uq --params-file /tmp/launch_params_xadx1x6h --params-file /tmp/launch_params_pgw1fcb5 --params-file /tmp/launch_params_98a8tx2u --params-file /tmp/launch_params_xuphn321
+17:54:06     1000   1651215   32.00    1.00    0.00    2.00   33.00     0  /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args --params-file /home/ubuntu/Workspace/Controle_robo_livox/install/fast_lio/share/fast_lio/config/mid360.yaml --params-file /tmp/launch_params_ks1ldr9m
+17:54:06     1000   1651216    2.00    0.00    0.00    0.00    2.00     1  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/tf_odom --ros-args -r __node:=tf_odom --params-file /tmp/launch_params_7bgor2vz
+17:54:06     1000   1651217   98.00    1.00    0.00    1.00   99.00     3  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_base/lib/robot_base/nuvem_pontos --ros-args -r __node:=nuvem_pontos
+17:54:06     1000   1658447    2.00    0.00    0.00    1.00    2.00     0  /usr/bin/python3 /home/ubuntu/Workspace/Controle_robo_livox/install/robot_nav/lib/robot_nav/mega_bridge --ros-args -r __node:=mega_bridge --params-file /tmp/launch_params_s6ovukhx
+17:54:06     1000   1658449    1.00    1.00    0.00    0.00    2.00     0  /opt/ros/jazzy/lib/joy/joy_node --ros-args -r __node:=joy_node --params-file /tmp/launch_params__l4ey7dh
+17:54:06     1000   1659063    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/python3 /opt/ros/jazzy/bin/ros2 bag record -o /home/ubuntu/bancada_robo3/controle_20260930_175227/bag /joy /joy_vel /cmd_vel /hoverboard_base_controller/cmd_vel /wheel_vel_setpoints /hoverboard/wheel_velocities /battery/front /system/health /mega/debug
+17:54:06     1000   1660972    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60

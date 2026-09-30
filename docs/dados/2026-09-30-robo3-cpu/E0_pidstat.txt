@@ -1,0 +1,838 @@
+Linux 7.0.0-31-generic (ubuntu-Latitude-3490) 	09/30/26 	_x86_64_	(4 CPU)
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:39      990       607    0.00    0.99    0.00    0.00    0.99     0  /usr/lib/systemd/systemd-oomd
+17:49:39        0       977    0.00    0.99    0.00    0.00    0.99     1  /usr/libexec/bluetooth/bluetoothd
+17:49:39      101       978    0.99    0.00    0.00    0.00    0.99     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:39        0      1008    0.99    5.94    0.00    0.99    6.93     0  /usr/lib/systemd/systemd-logind
+17:49:39        0      1358    0.99    0.99    0.00    0.00    1.98     1  /usr/bin/rustdesk --service
+17:49:39     1000      5195   17.82    7.92    0.00    0.99   25.74     1  /usr/bin/gnome-shell
+17:49:39     1000      6438    0.99    0.00    0.00    0.00    0.99     2  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:49:39     1000   1356382    7.92    1.98    0.00    0.00    9.90     2  /usr/bin/gnome-control-center wifi
+17:49:39     1000   1490305    0.00    0.99    0.00    0.00    0.99     3  /usr/share/rustdesk/rustdesk --server
+17:49:39        0   1616152    0.00    0.99    0.00    0.00    0.99     2  kworker/u17:0-i915_flip
+17:49:39     1000   1644074    0.99    0.99    0.00    0.00    1.98     3  pidstat -u -h -l 1 60
+17:49:39      987   3823175    0.99    0.00    0.00    0.00    0.99     1  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:40        0         1    0.00    1.00    0.00    0.00    1.00     1  /sbin/init splash
+17:49:40        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:40        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:40        0       977    1.00    1.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:49:40        0      1008    1.00    4.00    0.00    0.00    5.00     1  /usr/lib/systemd/systemd-logind
+17:49:40     1000      4927    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/wireplumber
+17:49:40     1000      5195   20.00    8.00    0.00    0.00   28.00     0  /usr/bin/gnome-shell
+17:49:40     1000   1356382    9.00    2.00    0.00    0.00   11.00     1  /usr/bin/gnome-control-center wifi
+17:49:40        0   1461716    1.00    0.00    0.00    0.00    1.00     2  /usr/sbin/NetworkManager --no-daemon
+17:49:40        0   1616152    0.00    1.00    0.00    1.00    1.00     1  kworker/u17:0-hci0
+17:49:40        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:40     1000   1644074    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:41        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:41        0       977    0.00    2.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:49:41      101       978    1.00    1.00    0.00    1.00    2.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:41        0      1008    4.00    5.00    0.00    0.00    9.00     1  /usr/lib/systemd/systemd-logind
+17:49:41        0      1010    1.00    0.00    0.00    1.00    1.00     2  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:49:41     1000      4903    1.00    0.00    0.00    0.00    1.00     3  /usr/lib/systemd/systemd --user
+17:49:41     1000      5195   20.00    8.00    0.00    1.00   28.00     1  /usr/bin/gnome-shell
+17:49:41     1000   1356382   11.00    1.00    0.00    0.00   12.00     0  /usr/bin/gnome-control-center wifi
+17:49:41        0   1461716    0.00    1.00    0.00    0.00    1.00     2  /usr/sbin/NetworkManager --no-daemon
+17:49:41     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:41        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0-hci0
+17:49:41        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:49:41        0   1638092    0.00    1.00    0.00    1.00    1.00     0  kworker/0:3-events
+17:49:41     1000   1644074    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:42        0        25    0.00    1.00    0.00    0.00    1.00     1  ksoftirqd/1
+17:49:42        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:42        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:42        0       977    1.00    1.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:49:42      101       978    1.00    0.00    0.00    1.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:42        0      1008    1.00    3.00    0.00    0.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:49:42     1000      5195   26.00   10.00    0.00    0.00   36.00     0  /usr/bin/gnome-shell
+17:49:42     1000   1356382   11.00    2.00    0.00    0.00   13.00     2  /usr/bin/gnome-control-center wifi
+17:49:42        0   1460335    1.00    0.00    0.00    0.00    1.00     2  /usr/libexec/fwupd/fwupd
+17:49:42        0   1594671    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:3-hci0
+17:49:42        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:42     1000   1644074    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:43        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:43      101       978    1.00    1.00    0.00    0.00    2.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:43        0      1008    1.00    5.00    0.00    0.00    6.00     1  /usr/lib/systemd/systemd-logind
+17:49:43        0      1010    0.00    1.00    0.00    0.00    1.00     2  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:49:43        0      1358    0.00    1.00    0.00    1.00    1.00     0  /usr/bin/rustdesk --service
+17:49:43     1000      5195   18.00    6.00    0.00    1.00   24.00     3  /usr/bin/gnome-shell
+17:49:43     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:49:43      115    709200    0.00    1.00    0.00    0.00    1.00     2  /usr/sbin/cups-browsed
+17:49:43     1000   1356382    8.00    2.00    0.00    1.00   10.00     1  /usr/bin/gnome-control-center wifi
+17:49:43     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:43        0   1616152    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:0-hci0
+17:49:43      987   3823175    0.00    1.00    0.00    1.00    1.00     2  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:44        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:44        0       222    0.00    1.00    0.00    0.00    1.00     3  kworker/3:1H-i915_cleanup
+17:49:44        0       313    0.00    1.00    0.00    0.00    1.00     0  kworker/0:1H-i915_cleanup
+17:49:44        0       977    1.00    0.00    0.00    0.00    1.00     3  /usr/libexec/bluetooth/bluetoothd
+17:49:44      101       978    1.00    0.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:44        0      1008    3.00    5.00    0.00    0.00    8.00     1  /usr/lib/systemd/systemd-logind
+17:49:44     1000      5195   22.00    7.00    0.00    1.00   29.00     3  /usr/bin/gnome-shell
+17:49:44     1000   1356382    9.00    2.00    0.00    0.00   11.00     2  /usr/bin/gnome-control-center wifi
+17:49:44     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:44        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:44     1000   1644074    1.00    2.00    0.00    0.00    3.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:45        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:45        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:45        0       977    1.00    1.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:49:45        0      1008    2.00    5.00    0.00    0.00    7.00     3  /usr/lib/systemd/systemd-logind
+17:49:45     1000      5195   24.00    7.00    0.00    0.00   31.00     2  /usr/bin/gnome-shell
+17:49:45     1000   1356382    8.00    2.00    0.00    0.00   10.00     2  /usr/bin/gnome-control-center wifi
+17:49:45     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:45        0   1594671    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:3-i915_flip
+17:49:45        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:45     1000   1644074    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:46        0        31    0.00    1.00    0.00    1.00    1.00     2  ksoftirqd/2
+17:49:46        0       977    0.00    1.00    0.00    0.00    1.00     1  /usr/libexec/bluetooth/bluetoothd
+17:49:46        0      1008    3.00    3.00    0.00    0.00    6.00     3  /usr/lib/systemd/systemd-logind
+17:49:46        0      1358    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/rustdesk --service
+17:49:46     1000      5195   19.00    8.00    0.00    1.00   27.00     2  /usr/bin/gnome-shell
+17:49:46     1000   1356382    8.00    3.00    0.00    0.00   11.00     1  /usr/bin/gnome-control-center wifi
+17:49:46     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:46        0   1539331    0.00    1.00    0.00    0.00    1.00     1  kworker/1:1-events
+17:49:46        0   1616152    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:0+i915_flip
+17:49:46     1000   1644074    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:47        0        15    0.00    1.00    0.00    1.00    1.00     0  rcu_preempt
+17:49:47        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:47        0       977    1.00    0.00    0.00    0.00    1.00     0  /usr/libexec/bluetooth/bluetoothd
+17:49:47      101       978    1.00    0.00    0.00    0.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:47        0      1008    3.00    6.00    0.00    0.00    9.00     2  /usr/lib/systemd/systemd-logind
+17:49:47     1000      5195   17.00    7.00    0.00    0.00   24.00     1  /usr/bin/gnome-shell
+17:49:47     1000      6438    1.00    1.00    0.00    0.00    2.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:49:47      115    709200    1.00    0.00    0.00    0.00    1.00     1  /usr/sbin/cups-browsed
+17:49:47     1000   1356382    8.00    1.00    0.00    1.00    9.00     3  /usr/bin/gnome-control-center wifi
+17:49:47        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:47     1000   1644074    1.00    2.00    0.00    0.00    3.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:48        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:48        0       977    0.00    1.00    0.00    0.00    1.00     1  /usr/libexec/bluetooth/bluetoothd
+17:49:48      101       978    1.00    0.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:48        0      1008    2.00    4.00    0.00    1.00    6.00     0  /usr/lib/systemd/systemd-logind
+17:49:48        0      1358    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/rustdesk --service
+17:49:48     1000      5195   25.00    7.00    0.00    0.00   32.00     3  /usr/bin/gnome-shell
+17:49:48     1000   1356382   10.00    2.00    0.00    0.00   12.00     3  /usr/bin/gnome-control-center wifi
+17:49:48     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:48        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0-i915_flip
+17:49:48        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:48     1000   1644074    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:49        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:49        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:49        0       977    1.00    0.00    0.00    0.00    1.00     0  /usr/libexec/bluetooth/bluetoothd
+17:49:49        0      1008    1.00    6.00    0.00    0.00    7.00     2  /usr/lib/systemd/systemd-logind
+17:49:49     1000      5195   19.00    8.00    0.00    1.00   27.00     3  /usr/bin/gnome-shell
+17:49:49     1000   1356382    8.00    2.00    0.00    0.00   10.00     0  /usr/bin/gnome-control-center wifi
+17:49:49     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:49        0   1594671    0.00    1.00    0.00    0.00    1.00     0  kworker/u17:3-hci0
+17:49:49        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:49        0   1638092    0.00    1.00    0.00    0.00    1.00     0  kworker/0:3-events
+17:49:49     1000   1644074    1.00    2.00    0.00    0.00    3.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:50        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:50        0       977    1.00    1.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:49:50      101       978    1.00    1.00    0.00    1.00    2.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:50        0      1008    3.00    7.00    0.00    0.00   10.00     2  /usr/lib/systemd/systemd-logind
+17:49:50        0      3038    1.00    0.00    0.00    0.00    1.00     3  containerd --config /run/snap.docker/containerd/containerd.toml
+17:49:50     1000      5195   19.00    6.00    0.00    0.00   25.00     1  /usr/bin/gnome-shell
+17:49:50     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:49:50     1000   1356382    9.00    0.00    0.00    0.00    9.00     0  /usr/bin/gnome-control-center wifi
+17:49:50     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:50        0   1594671    0.00    1.00    0.00    0.00    1.00     0  kworker/u17:3-i915_flip
+17:49:50     1000   1644074    1.00    0.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+17:49:50      987   3823175    1.00    0.00    0.00    0.00    1.00     0  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:51        0        25    0.00    1.00    0.00    0.00    1.00     1  ksoftirqd/1
+17:49:51        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:51        0       977    2.00    1.00    0.00    0.00    3.00     1  /usr/libexec/bluetooth/bluetoothd
+17:49:51        0      1008    1.00    2.00    0.00    0.00    3.00     2  /usr/lib/systemd/systemd-logind
+17:49:51        0      1358    0.00    1.00    0.00    1.00    1.00     3  /usr/bin/rustdesk --service
+17:49:51     1000      5195   23.00    8.00    0.00    0.00   31.00     0  /usr/bin/gnome-shell
+17:49:51     1000   1356382   10.00    2.00    0.00    0.00   12.00     0  /usr/bin/gnome-control-center wifi
+17:49:51     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:51        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0+i915_flip
+17:49:51        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:49:51     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:52        0        14    0.00    1.00    0.00    0.00    1.00     0  ksoftirqd/0
+17:49:52        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:52        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:52        0       977    1.00    0.00    0.00    1.00    1.00     2  /usr/libexec/bluetooth/bluetoothd
+17:49:52      101       978    2.00    0.00    0.00    0.00    2.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:52        0      1008    3.00    4.00    0.00    0.00    7.00     0  /usr/lib/systemd/systemd-logind
+17:49:52        0      1816    1.00    0.00    0.00    0.00    1.00     0  /usr/libexec/upowerd
+17:49:52     1000      4927    1.00    0.00    0.00    1.00    1.00     3  /usr/bin/wireplumber
+17:49:52     1000      5195   23.00    7.00    0.00    1.00   30.00     1  /usr/bin/gnome-shell
+17:49:52     1000   1356382    9.00    3.00    0.00    1.00   12.00     1  /usr/bin/gnome-control-center wifi
+17:49:52     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:52        0   1616152    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:0-hci0
+17:49:52        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:49:52     1000   1644074    0.00    1.00    0.00    1.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:53        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:53        0       977    1.00    0.00    0.00    0.00    1.00     2  /usr/libexec/bluetooth/bluetoothd
+17:49:53        0      1008    3.00    6.00    0.00    0.00    9.00     0  /usr/lib/systemd/systemd-logind
+17:49:53        0      1010    1.00    0.00    0.00    0.00    1.00     3  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:49:53     1000      5195   22.00    7.00    0.00    0.00   29.00     3  /usr/bin/gnome-shell
+17:49:53     1000   1356382    9.00    2.00    0.00    0.00   11.00     2  /usr/bin/gnome-control-center wifi
+17:49:53        0   1461716    1.00    0.00    0.00    0.00    1.00     2  /usr/sbin/NetworkManager --no-daemon
+17:49:53     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:53        0   1594671    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:3-i915_flip
+17:49:53        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:53     1000   1644074    1.00    2.00    0.00    0.00    3.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:54        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:54      101       978    1.00    0.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:54        0      1008    1.00    4.00    0.00    1.00    5.00     3  /usr/lib/systemd/systemd-logind
+17:49:54     1000      5195   19.00    7.00    0.00    1.00   26.00     1  /usr/bin/gnome-shell
+17:49:54     1000      6438    1.00    1.00    0.00    0.00    2.00     1  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:49:54     1000   1356382    9.00    2.00    0.00    0.00   11.00     1  /usr/bin/gnome-control-center wifi
+17:49:54     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:54        0   1594671    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:3+i915_flip
+17:49:54     1000   1644074    0.00    1.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:55        0         1    1.00    0.00    0.00    0.00    1.00     3  /sbin/init splash
+17:49:55        0        15    0.00    1.00    0.00    0.00    1.00     3  rcu_preempt
+17:49:55        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:55        0       977    2.00    0.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:49:55      101       978    1.00    0.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:55        0      1008    1.00    4.00    0.00    0.00    5.00     0  /usr/lib/systemd/systemd-logind
+17:49:55        0      3038    0.00    1.00    0.00    0.00    1.00     3  containerd --config /run/snap.docker/containerd/containerd.toml
+17:49:55     1000      5195   23.00    8.00    0.00    0.00   31.00     2  /usr/bin/gnome-shell
+17:49:55     1000   1356382    8.00    2.00    0.00    0.00   10.00     1  /usr/bin/gnome-control-center wifi
+17:49:55        0   1460335    0.00    1.00    0.00    0.00    1.00     0  /usr/libexec/fwupd/fwupd
+17:49:55        0   1594671    0.00    1.00    0.00    1.00    1.00     1  kworker/u17:3-i915_flip
+17:49:55        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:49:55        0   1638092    0.00    1.00    0.00    1.00    1.00     0  kworker/0:3-events
+17:49:55     1000   1644074    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:56        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:56        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:56      108       976    1.00    0.00    0.00    0.00    1.00     3  avahi-daemon: running [ubuntu-Latitude-3490.local]
+17:49:56        0       977    1.00    0.00    0.00    0.00    1.00     1  /usr/libexec/bluetooth/bluetoothd
+17:49:56      101       978    2.00    1.00    0.00    2.00    3.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:56        0      1008    2.00    6.00    0.00    0.00    8.00     0  /usr/lib/systemd/systemd-logind
+17:49:56        0      1358    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/rustdesk --service
+17:49:56     1000      4927    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/wireplumber
+17:49:56     1000      5195   22.00    6.00    0.00    1.00   28.00     0  /usr/bin/gnome-shell
+17:49:56     1000   1356382   10.00    2.00    0.00    1.00   12.00     1  /usr/bin/gnome-control-center wifi
+17:49:56        0   1460335    1.00    0.00    0.00    1.00    1.00     1  /usr/libexec/fwupd/fwupd
+17:49:56     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:56        0   1594671    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:3+i915_flip
+17:49:56        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:57        0        25    0.00    1.00    0.00    0.00    1.00     1  ksoftirqd/1
+17:49:57        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:57        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:57        0       977    1.00    1.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:49:57        0      1008    2.00    4.00    0.00    0.00    6.00     3  /usr/lib/systemd/systemd-logind
+17:49:57     1000      5195   22.00   10.00    0.00    1.00   32.00     3  /usr/bin/gnome-shell
+17:49:57        0   1337231    0.00    1.00    0.00    0.00    1.00     3  kworker/u16:3-events_unbound
+17:49:57     1000   1356382   11.00    2.00    0.00    0.00   13.00     0  /usr/bin/gnome-control-center wifi
+17:49:57     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:57        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:57     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:58        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:58        0       977    1.00    0.00    0.00    0.00    1.00     1  /usr/libexec/bluetooth/bluetoothd
+17:49:58      101       978    1.00    0.00    0.00    0.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:49:58        0      1008    2.00    5.00    0.00    0.00    7.00     1  /usr/lib/systemd/systemd-logind
+17:49:58        0      1010    0.00    1.00    0.00    0.00    1.00     2  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:49:58        0      1358    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/rustdesk --service
+17:49:58        0      1816    1.00    0.00    0.00    0.00    1.00     3  /usr/libexec/upowerd
+17:49:58     1000      4927    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/wireplumber
+17:49:58     1000      5195   22.00    6.00    0.00    1.00   28.00     3  /usr/bin/gnome-shell
+17:49:58     1000      6438    1.00    0.00    0.00    0.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:49:58     1000   1356382    9.00    1.00    0.00    1.00   10.00     0  /usr/bin/gnome-control-center wifi
+17:49:58        0   1616152    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:0+i915_flip
+17:49:58     1000   1644074    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+17:49:58      987   3823175    1.00    0.00    0.00    1.00    1.00     2  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:49:59        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:49:59        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:49:59        0       977    1.00    1.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:49:59        0      1008    3.00    6.00    0.00    0.00    9.00     1  /usr/lib/systemd/systemd-logind
+17:49:59     1000      5195   25.00    6.00    0.00    0.00   31.00     0  /usr/bin/gnome-shell
+17:49:59     1000   1356382   11.00    2.00    0.00    0.00   13.00     2  /usr/bin/gnome-control-center wifi
+17:49:59        0   1461716    1.00    0.00    0.00    0.00    1.00     0  /usr/sbin/NetworkManager --no-daemon
+17:49:59     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:49:59        0   1616152    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:0-i915_flip
+17:49:59        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:49:59     1000   1644074    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:00        0         1    1.00    1.00    0.00    0.00    2.00     2  /sbin/init splash
+17:50:00        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:00        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:00        0       280    0.00    1.00    0.00    0.00    1.00     1  /usr/lib/systemd/systemd-journald
+17:50:00        0       977    1.00    0.00    0.00    0.00    1.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:00      101       978    2.00    1.00    0.00    0.00    3.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:00        0      1008    3.00    8.00    0.00    1.00   11.00     0  /usr/lib/systemd/systemd-logind
+17:50:00        0      1358    0.00    1.00    0.00    0.00    1.00     1  /usr/bin/rustdesk --service
+17:50:00     1000      5195   20.00    7.00    0.00    1.00   27.00     1  /usr/bin/gnome-shell
+17:50:00     1000      6438    1.00    0.00    0.00    0.00    1.00     1  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:00     1000   1356382    8.00    1.00    0.00    0.00    9.00     2  /usr/bin/gnome-control-center wifi
+17:50:00     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:00        0   1539331    0.00    1.00    0.00    0.00    1.00     1  kworker/1:1-i915-unordered
+17:50:00        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:00     1000   1644074    0.00    1.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:01        0      1008    1.00    3.00    0.00    0.00    4.00     3  /usr/lib/systemd/systemd-logind
+17:50:01     1000      5195   21.00    7.00    0.00    0.00   28.00     2  /usr/bin/gnome-shell
+17:50:01     1000   1356382    9.00    2.00    0.00    0.00   11.00     0  /usr/bin/gnome-control-center wifi
+17:50:01     1000   1490312    1.00    0.00    0.00    0.00    1.00     1  /usr/share/rustdesk/rustdesk --tray
+17:50:01        0   1616152    0.00    1.00    0.00    0.00    1.00     0  kworker/u17:0+i915_flip
+17:50:01        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:50:01     1000   1644074    1.00    2.00    0.00    0.00    3.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:02        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:02        0        37    0.00    1.00    0.00    0.00    1.00     3  ksoftirqd/3
+17:50:02        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:02      990       607    0.00    1.00    0.00    0.00    1.00     1  /usr/lib/systemd/systemd-oomd
+17:50:02        0       977    0.00    1.00    0.00    0.00    1.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:02      101       978    1.00    0.00    0.00    1.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:02        0      1008    3.00    7.00    0.00    0.00   10.00     0  /usr/lib/systemd/systemd-logind
+17:50:02     1000      5195   17.00    5.00    0.00    0.00   22.00     2  /usr/bin/gnome-shell
+17:50:02     1000      6438    1.00    0.00    0.00    0.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:02     1000   1356382    6.00    1.00    0.00    0.00    7.00     3  /usr/bin/gnome-control-center wifi
+17:50:02     1000   1490305    2.00    0.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:02        0   1590873    0.00    1.00    0.00    0.00    1.00     1  kworker/u16:1-events_unbound
+17:50:02        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0-i915_flip
+17:50:02     1000   1644074    1.00    2.00    0.00    0.00    3.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:03        0       314    0.00    1.00    0.00    0.00    1.00     1  kworker/1:1H-i915_cleanup
+17:50:03        0       977    1.00    0.00    0.00    0.00    1.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:03        0      1008    3.00    5.00    0.00    1.00    8.00     0  /usr/lib/systemd/systemd-logind
+17:50:03     1000      4903    0.00    1.00    0.00    0.00    1.00     3  /usr/lib/systemd/systemd --user
+17:50:03     1000      5195   23.00    8.00    0.00    1.00   31.00     1  /usr/bin/gnome-shell
+17:50:03     1000   1356382    9.00    2.00    0.00    0.00   11.00     3  /usr/bin/gnome-control-center wifi
+17:50:03     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:03        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0+i915_flip
+17:50:03        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:03     1000   1644074    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:04        0        15    0.00    1.00    0.00    0.00    1.00     2  rcu_preempt
+17:50:04        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:04        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:04      108       976    0.00    1.00    0.00    1.00    1.00     1  avahi-daemon: running [ubuntu-Latitude-3490.local]
+17:50:04        0       977    0.00    1.00    0.00    0.00    1.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:04      101       978    1.00    0.00    0.00    0.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:04        0      1008    1.00    6.00    0.00    0.00    7.00     0  /usr/lib/systemd/systemd-logind
+17:50:04        0      2961    1.00    0.00    0.00    0.00    1.00     3  dockerd --group docker --exec-root=/run/snap.docker --data-root=/var/snap/docker/common/var-lib-docker --pidfile=/run/snap.docker/docker.pid --config-file=/var/snap/docker/3579/config/daemon.json
+17:50:04     1000      5195   18.00    8.00    0.00    0.00   26.00     1  /usr/bin/gnome-shell
+17:50:04     1000   1356382    8.00    2.00    0.00    1.00   10.00     3  /usr/bin/gnome-control-center wifi
+17:50:04        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:04        0   1638092    0.00    1.00    0.00    0.00    1.00     0  kworker/0:3-events
+17:50:04     1000   1644074    1.00    2.00    0.00    0.00    3.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:05        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:05        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:05      101       978    1.00    0.00    0.00    0.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:05        0      1008    2.00    7.00    0.00    0.00    9.00     3  /usr/lib/systemd/systemd-logind
+17:50:05        0      1358    1.00    1.00    0.00    0.00    2.00     0  /usr/bin/rustdesk --service
+17:50:05     1000      5195   22.00    7.00    0.00    0.00   29.00     1  /usr/bin/gnome-shell
+17:50:05     1000   1356382    9.00    1.00    0.00    0.00   10.00     3  /usr/bin/gnome-control-center wifi
+17:50:05     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:05        0   1616152    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:0-hci0
+17:50:05     1000   1644074    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+17:50:05        0   1646231    0.00    1.00    0.00    0.00    1.00     0  pgrep -a Xwayland
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:06        0        31    0.00    0.99    0.00    0.00    0.99     2  ksoftirqd/2
+17:50:06        0       977    0.99    0.99    0.00    0.00    1.98     0  /usr/libexec/bluetooth/bluetoothd
+17:50:06        0      1008    1.98    2.97    0.00    0.00    4.95     3  /usr/lib/systemd/systemd-logind
+17:50:06        0      1010    0.99    0.00    0.00    0.00    0.99     1  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:50:06     1000      5195   22.77    7.92    0.00    0.99   30.69     0  /usr/bin/gnome-shell
+17:50:06     1000      6438    0.99    0.00    0.00    0.00    0.99     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:06     1000   1356382    8.91    2.97    0.00    0.00   11.88     1  /usr/bin/gnome-control-center wifi
+17:50:06     1000   1490305    0.99    0.00    0.00    0.00    0.99     3  /usr/share/rustdesk/rustdesk --server
+17:50:06        0   1616152    0.00    0.99    0.00    0.00    0.99     1  kworker/u17:0-i915_flip
+17:50:06        0   1630483    0.00    0.99    0.00    2.97    0.99     2  kworker/2:2-i915-unordered
+17:50:06     1000   1644074    0.00    0.99    0.00    0.00    0.99     2  pidstat -u -h -l 1 60
+17:50:06     1000   1644075    0.99    0.99    0.00    0.00    1.98     1  mpstat -P ALL 1 60
+17:50:06      987   3823175    0.99    0.00    0.00    0.00    0.99     0  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:07        0        25    0.00    1.00    0.00    0.00    1.00     1  ksoftirqd/1
+17:50:07        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:07        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:07        0       222    0.00    1.00    0.00    0.00    1.00     3  kworker/3:1H-i915_cleanup
+17:50:07        0       977    0.00    1.00    0.00    1.00    1.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:07      101       978    1.00    1.00    0.00    1.00    2.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:07        0      1008    1.00    4.00    0.00    0.00    5.00     1  /usr/lib/systemd/systemd-logind
+17:50:07        0      1816    0.00    1.00    0.00    0.00    1.00     0  /usr/libexec/upowerd
+17:50:07     1000      5195   22.00    7.00    0.00    1.00   29.00     2  /usr/bin/gnome-shell
+17:50:07     1000   1356382    9.00    2.00    0.00    0.00   11.00     3  /usr/bin/gnome-control-center wifi
+17:50:07     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:07        0   1594671    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:3-hci0
+17:50:07        0   1616152    0.00    1.00    0.00    1.00    1.00     3  kworker/u17:0+i915_flip
+17:50:07        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:50:07     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:08        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:08        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:08        0       977    1.00    1.00    0.00    0.00    2.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:08      101       978    1.00    0.00    0.00    0.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:08        0      1008    3.00    4.00    0.00    0.00    7.00     1  /usr/lib/systemd/systemd-logind
+17:50:08     1000      5195   21.00    7.00    0.00    0.00   28.00     0  /usr/bin/gnome-shell
+17:50:08     1000   1356382    9.00    1.00    0.00    1.00   10.00     3  /usr/bin/gnome-control-center wifi
+17:50:08        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:08     1000   1644074    1.00    1.00    0.00    0.00    2.00     2  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:09        0        14    0.00    1.00    0.00    0.00    1.00     0  ksoftirqd/0
+17:50:09        0       977    1.00    1.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:50:09        0      1008    2.00    5.00    0.00    0.00    7.00     1  /usr/lib/systemd/systemd-logind
+17:50:09        0      1358    0.00    1.00    0.00    0.00    1.00     2  /usr/bin/rustdesk --service
+17:50:09     1000      5195   26.00    6.00    0.00    1.00   32.00     0  /usr/bin/gnome-shell
+17:50:09     1000   1356382   11.00    2.00    0.00    0.00   13.00     2  /usr/bin/gnome-control-center wifi
+17:50:09     1000   1356812    0.00    1.00    0.00    0.00    1.00     3  /usr/libexec/gvfsd-dnssd --spawner :1.20 /org/gtk/gvfs/exec_spaw/2
+17:50:09     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:09        0   1557500    0.00    1.00    0.00    0.00    1.00     3  kworker/3:2-events
+17:50:09        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0-hci0
+17:50:09     1000   1644074    1.00    0.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+17:50:09        0   1646572    0.00    1.00    0.00    0.00    1.00     1  ps -u 1000 -f
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:10        0        31    0.00    1.00    0.00    1.00    1.00     2  ksoftirqd/2
+17:50:10        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:10        0       977    0.00    1.00    0.00    0.00    1.00     0  /usr/libexec/bluetooth/bluetoothd
+17:50:10      101       978    1.00    0.00    0.00    0.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:10        0      1008    1.00    3.00    0.00    0.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:50:10     1000      4927    1.00    0.00    0.00    0.00    1.00     3  /usr/bin/wireplumber
+17:50:10     1000      5195   21.00    7.00    0.00    1.00   28.00     0  /usr/bin/gnome-shell
+17:50:10     1000      6438    1.00    1.00    0.00    0.00    2.00     1  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:10     1000   1356382    9.00    1.00    0.00    0.00   10.00     2  /usr/bin/gnome-control-center wifi
+17:50:10        0   1460335    1.00    0.00    0.00    0.00    1.00     2  /usr/libexec/fwupd/fwupd
+17:50:10     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:10        0   1594671    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:3-hci0
+17:50:10        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:10        0   1638092    0.00    1.00    0.00    1.00    1.00     0  kworker/0:3-events
+17:50:10     1000   1644074    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:11        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:11        0       977    1.00    1.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:11      101       978    1.00    1.00    0.00    1.00    2.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:11        0      1008    3.00    5.00    0.00    1.00    8.00     1  /usr/lib/systemd/systemd-logind
+17:50:11     1000      5195   24.00    6.00    0.00    0.00   30.00     2  /usr/bin/gnome-shell
+17:50:11     1000   1356382   10.00    2.00    0.00    0.00   12.00     2  /usr/bin/gnome-control-center wifi
+17:50:11     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:11        0   1594671    0.00    1.00    0.00    0.00    1.00     0  kworker/u17:3-i915_flip
+17:50:11        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:11     1000   1644074    0.00    1.00    0.00    0.00    1.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:12        0        15    0.00    1.00    0.00    0.00    1.00     3  rcu_preempt
+17:50:12        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:12        0       313    0.00    1.00    0.00    0.00    1.00     0  kworker/0:1H-i915_cleanup
+17:50:12        0       977    1.00    0.00    0.00    0.00    1.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:12        0      1008    2.00    4.00    0.00    0.00    6.00     1  /usr/lib/systemd/systemd-logind
+17:50:12     1000      5195   23.00    7.00    0.00    1.00   30.00     3  /usr/bin/gnome-shell
+17:50:12     1000   1356382   10.00    2.00    0.00    1.00   12.00     3  /usr/bin/gnome-control-center wifi
+17:50:12     1000   1356812    1.00    0.00    0.00    0.00    1.00     1  /usr/libexec/gvfsd-dnssd --spawner :1.20 /org/gtk/gvfs/exec_spaw/2
+17:50:12        0   1461716    1.00    0.00    0.00    1.00    1.00     3  /usr/sbin/NetworkManager --no-daemon
+17:50:12        0   1594671    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:3-hci0
+17:50:12        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:12     1000   1644074    0.00    1.00    0.00    1.00    1.00     0  pidstat -u -h -l 1 60
+17:50:12      987   3823175    0.00    1.00    0.00    0.00    1.00     3  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:13        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:13        0       977    1.00    0.00    0.00    0.00    1.00     0  /usr/libexec/bluetooth/bluetoothd
+17:50:13      101       978    1.00    0.00    0.00    0.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:13        0      1008    2.00    5.00    0.00    0.00    7.00     3  /usr/lib/systemd/systemd-logind
+17:50:13        0      1358    1.00    1.00    0.00    0.00    2.00     3  /usr/bin/rustdesk --service
+17:50:13     1000      4903    1.00    0.00    0.00    0.00    1.00     3  /usr/lib/systemd/systemd --user
+17:50:13     1000      5195   21.00    6.00    0.00    0.00   27.00     1  /usr/bin/gnome-shell
+17:50:13     1000   1356382    8.00    1.00    0.00    0.00    9.00     2  /usr/bin/gnome-control-center wifi
+17:50:13     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:13        0   1539331    0.00    1.00    0.00    0.00    1.00     1  kworker/1:1-i915-unordered
+17:50:13        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0-i915_flip
+17:50:13     1000   1644074    1.00    0.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:14        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:14        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:14      990       607    1.00    0.00    0.00    0.00    1.00     1  /usr/lib/systemd/systemd-oomd
+17:50:14        0       977    0.00    1.00    0.00    0.00    1.00     1  /usr/libexec/bluetooth/bluetoothd
+17:50:14        0      1008    2.00    6.00    0.00    0.00    8.00     2  /usr/lib/systemd/systemd-logind
+17:50:14        0      3038    1.00    0.00    0.00    0.00    1.00     3  containerd --config /run/snap.docker/containerd/containerd.toml
+17:50:14     1000      5195   23.00    8.00    0.00    1.00   31.00     3  /usr/bin/gnome-shell
+17:50:14     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:14     1000   1356382    9.00    2.00    0.00    0.00   11.00     1  /usr/bin/gnome-control-center wifi
+17:50:14        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:14     1000   1644074    1.00    2.00    0.00    0.00    3.00     0  pidstat -u -h -l 1 60
+17:50:14      987   3823175    1.00    0.00    0.00    0.00    1.00     1  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:15        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:15        0       977    1.00    1.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:15      101       978    1.00    1.00    0.00    1.00    2.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:15        0      1008    3.00    4.00    0.00    1.00    7.00     2  /usr/lib/systemd/systemd-logind
+17:50:15        0      1816    1.00    0.00    0.00    0.00    1.00     2  /usr/libexec/upowerd
+17:50:15     1000      4927    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/wireplumber
+17:50:15     1000      5195   21.00    6.00    0.00    0.00   27.00     1  /usr/bin/gnome-shell
+17:50:15     1000   1356382   10.00    2.00    0.00    1.00   12.00     3  /usr/bin/gnome-control-center wifi
+17:50:15        0   1461716    0.00    1.00    0.00    0.00    1.00     2  /usr/sbin/NetworkManager --no-daemon
+17:50:15     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:15        0   1594671    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:3-hci0
+17:50:15        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0-hci0
+17:50:15        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:15     1000   1644074    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+17:50:15        0   1646543    0.00    1.00    0.00    0.00    1.00     1  kworker/u16:5-events_unbound
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:16        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:16      101       978    1.00    0.00    0.00    0.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:16        0      1008    1.00    4.00    0.00    0.00    5.00     0  /usr/lib/systemd/systemd-logind
+17:50:16        0      1010    1.00    0.00    0.00    0.00    1.00     1  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:50:16     1000      5195   24.00    8.00    0.00    0.00   32.00     1  /usr/bin/gnome-shell
+17:50:16     1000   1356382   13.00    1.00    0.00    0.00   14.00     2  /usr/bin/gnome-control-center wifi
+17:50:16     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:16     1000   1644074    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:17        0         1    0.00    1.00    0.00    0.00    1.00     2  /sbin/init splash
+17:50:17        0        25    0.00    1.00    0.00    0.00    1.00     1  ksoftirqd/1
+17:50:17        0        31    0.00    1.00    0.00    1.00    1.00     2  ksoftirqd/2
+17:50:17        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:17        0       977    1.00    1.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:17      101       978    1.00    0.00    0.00    1.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:17        0      1008    3.00    7.00    0.00    1.00   10.00     3  /usr/lib/systemd/systemd-logind
+17:50:17        0      1358    0.00    1.00    0.00    0.00    1.00     2  /usr/bin/rustdesk --service
+17:50:17        0      3038    0.00    1.00    0.00    0.00    1.00     3  containerd --config /run/snap.docker/containerd/containerd.toml
+17:50:17     1000      5195   22.00    8.00    0.00    1.00   30.00     1  /usr/bin/gnome-shell
+17:50:17     1000      6438    1.00    0.00    0.00    0.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:17     1000   1356382    9.00    2.00    0.00    0.00   11.00     2  /usr/bin/gnome-control-center wifi
+17:50:17     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:17        0   1616152    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:0-hci0
+17:50:17        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:17     1000   1644074    0.00    2.00    0.00    1.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:18        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:18        0       977    1.00    0.00    0.00    0.00    1.00     1  /usr/libexec/bluetooth/bluetoothd
+17:50:18        0      1008    2.00    5.00    0.00    0.00    7.00     0  /usr/lib/systemd/systemd-logind
+17:50:18     1000      5195   27.00    8.00    0.00    1.00   35.00     1  /usr/bin/gnome-shell
+17:50:18     1000   1356382   11.00    2.00    0.00    0.00   13.00     3  /usr/bin/gnome-control-center wifi
+17:50:18     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:18        0   1616152    0.00    1.00    0.00    1.00    1.00     1  kworker/u17:0-hci0
+17:50:18        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:18     1000   1644074    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:19        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:19        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:19        0       977    0.00    1.00    0.00    0.00    1.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:19      101       978    1.00    0.00    0.00    0.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:19        0      1008    1.00    5.00    0.00    0.00    6.00     1  /usr/lib/systemd/systemd-logind
+17:50:19     1000      5195   20.00    6.00    0.00    0.00   26.00     3  /usr/bin/gnome-shell
+17:50:19     1000   1356382    8.00    2.00    0.00    1.00   10.00     2  /usr/bin/gnome-control-center wifi
+17:50:19        0   1616152    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:0+i915_flip
+17:50:19        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:50:19        0   1638092    0.00    1.00    0.00    1.00    1.00     0  kworker/0:3-events
+17:50:19     1000   1644074    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:20        0         1    1.00    0.00    0.00    0.00    1.00     1  /sbin/init splash
+17:50:20        0        15    0.00    1.00    0.00    1.00    1.00     2  rcu_preempt
+17:50:20        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:20        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:20        0       977    1.00    1.00    0.00    0.00    2.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:20      101       978    1.00    0.00    0.00    0.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:20        0      1008    2.00    7.00    0.00    0.00    9.00     3  /usr/lib/systemd/systemd-logind
+17:50:20     1000      5195   26.00    7.00    0.00    1.00   33.00     1  /usr/bin/gnome-shell
+17:50:20      115    709200    0.00    1.00    0.00    0.00    1.00     0  /usr/sbin/cups-browsed
+17:50:20     1000   1356382   11.00    2.00    0.00    0.00   13.00     2  /usr/bin/gnome-control-center wifi
+17:50:20     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:20        0   1594671    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:3+i915_flip
+17:50:20        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:20     1000   1644074    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:21        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:50:21      108       976    1.00    0.00    0.00    0.00    1.00     0  avahi-daemon: running [ubuntu-Latitude-3490.local]
+17:50:21        0       977    0.00    1.00    0.00    1.00    1.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:21      101       978    1.00    0.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:21        0      1008    2.00    4.00    0.00    0.00    6.00     1  /usr/lib/systemd/systemd-logind
+17:50:21        0      1358    1.00    0.00    0.00    1.00    1.00     2  /usr/bin/rustdesk --service
+17:50:21     1000      5195   25.00    7.00    0.00    0.00   32.00     2  /usr/bin/gnome-shell
+17:50:21     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:21     1000   1356382   11.00    2.00    0.00    0.00   13.00     3  /usr/bin/gnome-control-center wifi
+17:50:21     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:21        0   1594671    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:3+i915_flip
+17:50:21        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:21     1000   1644074    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:22        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:22        0       314    0.00    1.00    0.00    0.00    1.00     1  kworker/1:1H-i915_cleanup
+17:50:22        0       977    1.00    1.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:22        0      1008    1.00    4.00    0.00    0.00    5.00     2  /usr/lib/systemd/systemd-logind
+17:50:22        0      1358    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/rustdesk --service
+17:50:22     1000      5195   25.00    7.00    0.00    1.00   32.00     3  /usr/bin/gnome-shell
+17:50:22      115    709200    1.00    0.00    0.00    0.00    1.00     3  /usr/sbin/cups-browsed
+17:50:22     1000   1356382   10.00    3.00    0.00    0.00   13.00     2  /usr/bin/gnome-control-center wifi
+17:50:22        0   1616152    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:0-hci0
+17:50:22        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:22     1000   1644074    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:23        0        31    0.00    1.00    0.00    1.00    1.00     2  ksoftirqd/2
+17:50:23        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:23        0       977    1.00    1.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:50:23      101       978    1.00    1.00    0.00    0.00    2.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:23        0      1008    3.00    6.00    0.00    1.00    9.00     3  /usr/lib/systemd/systemd-logind
+17:50:23     1000      5195   25.00    9.00    0.00    1.00   34.00     0  /usr/bin/gnome-shell
+17:50:23     1000      6438    1.00    0.00    0.00    0.00    1.00     1  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:23     1000   1356382   12.00    1.00    0.00    1.00   13.00     2  /usr/bin/gnome-control-center wifi
+17:50:23     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:23        0   1594671    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:3-hci0
+17:50:23     1000   1644074    1.00    2.00    0.00    0.00    3.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:24        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:24        0       977    1.00    0.00    0.00    0.00    1.00     0  /usr/libexec/bluetooth/bluetoothd
+17:50:24      101       978    1.00    0.00    0.00    0.00    1.00     0  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:24        0      1008    3.00    4.00    0.00    0.00    7.00     1  /usr/lib/systemd/systemd-logind
+17:50:24     1000      5195   22.00    7.00    0.00    0.00   29.00     2  /usr/bin/gnome-shell
+17:50:24     1000   1356382    9.00    2.00    0.00    0.00   11.00     2  /usr/bin/gnome-control-center wifi
+17:50:24        0   1461716    1.00    0.00    0.00    0.00    1.00     0  /usr/sbin/NetworkManager --no-daemon
+17:50:24     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:24        0   1539331    0.00    1.00    0.00    0.00    1.00     1  kworker/1:1-events
+17:50:24        0   1594671    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:3-i915_flip
+17:50:24        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:24     1000   1644074    1.00    0.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+17:50:24      987   3823175    1.00    0.00    0.00    0.00    1.00     3  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:25        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:25        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:25        0       977    0.00    1.00    0.00    0.00    1.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:25        0      1008    1.00    3.00    0.00    0.00    4.00     1  /usr/lib/systemd/systemd-logind
+17:50:25     1000      4927    1.00    0.00    0.00    0.00    1.00     2  /usr/bin/wireplumber
+17:50:25     1000      5195   21.00    6.00    0.00    1.00   27.00     3  /usr/bin/gnome-shell
+17:50:25     1000   1356382    8.00    1.00    0.00    0.00    9.00     3  /usr/bin/gnome-control-center wifi
+17:50:25        0   1460335    1.00    0.00    0.00    0.00    1.00     1  /usr/libexec/fwupd/fwupd
+17:50:25     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:25        0   1594671    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:3+i915_flip
+17:50:25        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:50:25     1000   1644074    0.00    1.00    0.00    0.00    1.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:26        0        25    0.00    1.00    0.00    0.00    1.00     1  ksoftirqd/1
+17:50:26        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:26        0       977    1.00    1.00    0.00    0.00    2.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:26      101       978    1.00    0.00    0.00    1.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:26        0      1008    2.00    6.00    0.00    0.00    8.00     0  /usr/lib/systemd/systemd-logind
+17:50:26        0      1010    1.00    0.00    0.00    0.00    1.00     1  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:50:26        0      1358    0.00    1.00    0.00    0.00    1.00     2  /usr/bin/rustdesk --service
+17:50:26     1000      5195   24.00    7.00    0.00    1.00   31.00     3  /usr/bin/gnome-shell
+17:50:26     1000      6438    0.00    1.00    0.00    0.00    1.00     2  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:26     1000   1356382   11.00    1.00    0.00    0.00   12.00     2  /usr/bin/gnome-control-center wifi
+17:50:26        0   1616152    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:0-hci0
+17:50:26        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:26        0   1638092    0.00    1.00    0.00    2.00    1.00     0  kworker/0:3-events
+17:50:26     1000   1644074    1.00    1.00    0.00    0.00    2.00     0  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:27        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:27        0       223    0.00    1.00    0.00    0.00    1.00     2  kworker/2:1H-i915_cleanup
+17:50:27        0       977    1.00    1.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:27      101       978    1.00    0.00    0.00    0.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:27        0      1008    1.00    4.00    0.00    0.00    5.00     0  /usr/lib/systemd/systemd-logind
+17:50:27     1000      5195   23.00    6.00    0.00    0.00   29.00     3  /usr/bin/gnome-shell
+17:50:27     1000      6438    1.00    0.00    0.00    0.00    1.00     2  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:27     1000   1356382    9.00    3.00    0.00    1.00   12.00     2  /usr/bin/gnome-control-center wifi
+17:50:27     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:27     1000   1490312    0.00    1.00    0.00    0.00    1.00     1  /usr/share/rustdesk/rustdesk --tray
+17:50:27        0   1616152    0.00    1.00    0.00    1.00    1.00     2  kworker/u17:0-i915_flip
+17:50:27     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:28        0        15    0.00    1.00    0.00    0.00    1.00     3  rcu_preempt
+17:50:28        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:28        0       977    0.00    1.00    0.00    0.00    1.00     0  /usr/libexec/bluetooth/bluetoothd
+17:50:28      101       978    1.00    1.00    0.00    0.00    2.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:28        0      1008    2.00    3.00    0.00    1.00    5.00     1  /usr/lib/systemd/systemd-logind
+17:50:28     1000      5195   23.00    5.00    0.00    1.00   28.00     3  /usr/bin/gnome-shell
+17:50:28     1000   1356382    9.00    1.00    0.00    0.00   10.00     0  /usr/bin/gnome-control-center wifi
+17:50:28        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:28     1000   1644074    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:29        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:29        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:29      991       623    1.00    0.00    0.00    0.00    1.00     1  /usr/lib/systemd/systemd-resolved
+17:50:29      108       976    0.00    1.00    0.00    1.00    1.00     1  avahi-daemon: running [ubuntu-Latitude-3490.local]
+17:50:29      101       978    1.00    0.00    0.00    0.00    1.00     2  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:29        0      1008    3.00    6.00    0.00    0.00    9.00     0  /usr/lib/systemd/systemd-logind
+17:50:29        0      1010    0.00    1.00    0.00    0.00    1.00     1  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:50:29        0      1816    1.00    0.00    0.00    0.00    1.00     3  /usr/libexec/upowerd
+17:50:29     1000      4927    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/wireplumber
+17:50:29     1000      5195   23.00    9.00    0.00    0.00   32.00     3  /usr/bin/gnome-shell
+17:50:29     1000   1356382   10.00    3.00    0.00    0.00   13.00     0  /usr/bin/gnome-control-center wifi
+17:50:29     1000   1490305    1.00    1.00    0.00    0.00    2.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:29        0   1616152    0.00    1.00    0.00    0.00    1.00     0  kworker/u17:0-i915_flip
+17:50:29        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:29     1000   1644074    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:30        0        31    0.00    1.00    0.00    1.00    1.00     2  ksoftirqd/2
+17:50:30        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:30        0       222    0.00    1.00    0.00    0.00    1.00     3  kworker/3:1H-i915_cleanup
+17:50:30        0       977    1.00    0.00    0.00    0.00    1.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:30      101       978    1.00    0.00    0.00    1.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:30        0      1008    2.00    5.00    0.00    0.00    7.00     3  /usr/lib/systemd/systemd-logind
+17:50:30        0      1358    1.00    0.00    0.00    0.00    1.00     0  /usr/bin/rustdesk --service
+17:50:30     1000      5195   20.00    6.00    0.00    1.00   26.00     1  /usr/bin/gnome-shell
+17:50:30     1000      6438    1.00    0.00    0.00    0.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:30     1000   1356382    8.00    1.00    0.00    0.00    9.00     3  /usr/bin/gnome-control-center wifi
+17:50:30     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:30     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+17:50:30      987   3823175    0.00    1.00    0.00    0.00    1.00     2  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:31      990       607    0.00    1.00    0.00    0.00    1.00     2  /usr/lib/systemd/systemd-oomd
+17:50:31        0       977    0.00    1.00    0.00    0.00    1.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:31        0      1008    0.00    3.00    0.00    0.00    3.00     3  /usr/lib/systemd/systemd-logind
+17:50:31        0      1358    0.00    1.00    0.00    0.00    1.00     2  /usr/bin/rustdesk --service
+17:50:31        0      3038    1.00    0.00    0.00    0.00    1.00     3  containerd --config /run/snap.docker/containerd/containerd.toml
+17:50:31     1000      5195   23.00    7.00    0.00    0.00   30.00     2  /usr/bin/gnome-shell
+17:50:31     1000   1356382    9.00    2.00    0.00    0.00   11.00     0  /usr/bin/gnome-control-center wifi
+17:50:31     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:31        0   1590873    0.00    1.00    0.00    0.00    1.00     1  kworker/u16:1-events_unbound
+17:50:31        0   1594671    0.00    1.00    0.00    0.00    1.00     0  kworker/u17:3-hci0
+17:50:31        0   1616152    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:0-hci0
+17:50:31        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:31     1000   1644074    0.00    1.00    0.00    0.00    1.00     1  pidstat -u -h -l 1 60
+17:50:31     1000   1644075    0.00    1.00    0.00    0.00    1.00     0  mpstat -P ALL 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:32        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:32        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:32        0       977    2.00    1.00    0.00    0.00    3.00     3  /usr/libexec/bluetooth/bluetoothd
+17:50:32      101       978    1.00    0.00    0.00    0.00    1.00     3  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:32        0      1008    4.00    7.00    0.00    0.00   11.00     0  /usr/lib/systemd/systemd-logind
+17:50:32     1000      5195   21.00    6.00    0.00    1.00   27.00     3  /usr/bin/gnome-shell
+17:50:32     1000      6438    1.00    0.00    0.00    0.00    1.00     3  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:32     1000   1356382    7.00    3.00    0.00    1.00   10.00     2  /usr/bin/gnome-control-center wifi
+17:50:32     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:32        0   1594671    0.00    1.00    0.00    1.00    1.00     0  kworker/u17:3-i915_flip
+17:50:32        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:32     1000   1644074    1.00    2.00    0.00    0.00    3.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:33        0      1008    1.00    4.00    0.00    0.00    5.00     0  /usr/lib/systemd/systemd-logind
+17:50:33     1000      5195   19.00    6.00    0.00    0.00   25.00     2  /usr/bin/gnome-shell
+17:50:33     1000   1356382    8.00    2.00    0.00    0.00   10.00     0  /usr/bin/gnome-control-center wifi
+17:50:33        0   1594671    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:3-i915_flip
+17:50:33        0   1630483    0.00    1.00    0.00    1.00    1.00     2  kworker/2:2-i915-unordered
+17:50:33     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:34        0         1    1.00    0.00    0.00    0.00    1.00     0  /sbin/init splash
+17:50:34        0        25    0.00    1.00    0.00    1.00    1.00     1  ksoftirqd/1
+17:50:34        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:50:34        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:34      101       978    1.00    1.00    0.00    1.00    2.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:34        0      1008    4.00    6.00    0.00    0.00   10.00     3  /usr/lib/systemd/systemd-logind
+17:50:34     1000      5195   23.00    5.00    0.00    1.00   28.00     0  /usr/bin/gnome-shell
+17:50:34     1000   1356382   10.00    1.00    0.00    0.00   11.00     2  /usr/bin/gnome-control-center wifi
+17:50:34     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:34        0   1638092    0.00    1.00    0.00    1.00    1.00     0  kworker/0:3-events
+17:50:34     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+17:50:34      987   3823175    1.00    0.00    0.00    0.00    1.00     3  /usr/lib/polkit-1/polkitd --no-debug
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:35        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:35        0       977    1.00    1.00    0.00    0.00    2.00     2  /usr/libexec/bluetooth/bluetoothd
+17:50:35        0      1008    2.00    6.00    0.00    0.00    8.00     0  /usr/lib/systemd/systemd-logind
+17:50:35     1000      5195   23.00    9.00    0.00    0.00   32.00     3  /usr/bin/gnome-shell
+17:50:35     1000   1356382    9.00    2.00    0.00    0.00   11.00     0  /usr/bin/gnome-control-center wifi
+17:50:35     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:35        0   1616152    0.00    1.00    0.00    1.00    1.00     3  kworker/u17:0-hci0
+17:50:35        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:35     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:36        0        14    0.00    1.00    0.00    0.00    1.00     0  ksoftirqd/0
+17:50:36        0        31    0.00    1.00    0.00    1.00    1.00     2  ksoftirqd/2
+17:50:36        0        37    0.00    1.00    0.00    0.00    1.00     3  ksoftirqd/3
+17:50:36        0       977    1.00    1.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:50:36      101       978    1.00    0.00    0.00    0.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:36        0      1008    2.00    4.00    0.00    0.00    6.00     2  /usr/lib/systemd/systemd-logind
+17:50:36        0      1010    1.00    0.00    0.00    0.00    1.00     0  /usr/sbin/thermald --systemd --dbus-enable --adaptive
+17:50:36        0      1358    0.00    1.00    0.00    0.00    1.00     3  /usr/bin/rustdesk --service
+17:50:36     1000      5195   22.00    8.00    0.00    1.00   30.00     0  /usr/bin/gnome-shell
+17:50:36     1000      6438    1.00    0.00    0.00    0.00    1.00     0  gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+17:50:36     1000   1356382    9.00    2.00    0.00    0.00   11.00     1  /usr/bin/gnome-control-center wifi
+17:50:36        0   1461716    1.00    0.00    0.00    0.00    1.00     1  /usr/sbin/NetworkManager --no-daemon
+17:50:36     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:36        0   1539331    0.00    1.00    0.00    1.00    1.00     1  kworker/1:1-events
+17:50:36        0   1616152    0.00    1.00    0.00    0.00    1.00     1  kworker/u17:0-hci0
+17:50:36        0   1630483    0.00    1.00    0.00    3.00    1.00     2  kworker/2:2-i915-unordered
+17:50:36     1000   1644074    1.00    1.00    0.00    0.00    2.00     3  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:37        0        15    0.00    1.00    0.00    0.00    1.00     3  rcu_preempt
+17:50:37        0        31    0.00    2.00    0.00    0.00    2.00     2  ksoftirqd/2
+17:50:37        0        57    0.00    1.00    0.00    0.00    1.00     0  irq/9-acpi
+17:50:37        0       977    1.00    1.00    0.00    0.00    2.00     0  /usr/libexec/bluetooth/bluetoothd
+17:50:37        0      1008    2.00    4.00    0.00    0.00    6.00     2  /usr/lib/systemd/systemd-logind
+17:50:37        0      1358    1.00    0.00    0.00    0.00    1.00     1  /usr/bin/rustdesk --service
+17:50:37     1000      5195   28.00    8.00    0.00    0.00   36.00     3  /usr/bin/gnome-shell
+17:50:37     1000   1356382   13.00    2.00    0.00    0.00   15.00     0  /usr/bin/gnome-control-center wifi
+17:50:37     1000   1490305    0.00    1.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:37        0   1594671    0.00    1.00    0.00    0.00    1.00     3  kworker/u17:3-hci0
+17:50:37        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:37     1000   1644074    1.00    1.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60
+
+# Time        UID       PID    %usr %system  %guest   %wait    %CPU   CPU  Command
+17:50:38        0        25    0.00    1.00    0.00    0.00    1.00     1  ksoftirqd/1
+17:50:38        0        31    0.00    1.00    0.00    0.00    1.00     2  ksoftirqd/2
+17:50:38      101       978    1.00    0.00    0.00    0.00    1.00     1  @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+17:50:38        0      1008    3.00    6.00    0.00    0.00    9.00     0  /usr/lib/systemd/systemd-logind
+17:50:38        0      3038    0.00    1.00    0.00    0.00    1.00     3  containerd --config /run/snap.docker/containerd/containerd.toml
+17:50:38     1000      5195   18.00    6.00    0.00    0.00   24.00     3  /usr/bin/gnome-shell
+17:50:38     1000   1356382    7.00    1.00    0.00    1.00    8.00     2  /usr/bin/gnome-control-center wifi
+17:50:38     1000   1490305    1.00    0.00    0.00    0.00    1.00     3  /usr/share/rustdesk/rustdesk --server
+17:50:38        0   1616152    0.00    1.00    0.00    0.00    1.00     2  kworker/u17:0-hci0
+17:50:38        0   1630483    0.00    1.00    0.00    2.00    1.00     2  kworker/2:2-i915-unordered
+17:50:38     1000   1644074    0.00    2.00    0.00    0.00    2.00     1  pidstat -u -h -l 1 60

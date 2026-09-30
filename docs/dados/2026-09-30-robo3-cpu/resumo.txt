@@ -1,0 +1,60 @@
+=== E0
+  29.1%  gnome-shell
+  11.1%  gnome-control-center
+   6.9%  systemd-logind
+   1.8%  pidstat
+   1.3%  rustdesk
+   1.3%  bluetoothd
+   0.9%  @dbus-daemon
+   0.8%  2
+   0.7%  2:2-i915-unordered
+   0.6%  9-acpi
+   0.4%  gjs
+   0.2%  u17:0-hci0
+soma 58% de 400% (60 s)
+Average:     all   11.57    0.00    9.04    0.06    0.00    1.36    0.00    0.00    0.00   77.97
+=== E1
+  99.1%  nuvem_pontos (nuvem_pontos)
+  34.8%  fastlio_mapping
+  28.4%  livox_lidar_publisher (livox_ros_driver2_node)
+  16.3%  gnome-shell
+   4.2%  systemd-logind
+   1.6%  tf_odom (tf_odom)
+   1.4%  pidstat
+   1.3%  2
+   1.3%  gnome-control-center
+   0.8%  rustdesk
+   0.6%  9-acpi
+   0.6%  @dbus-daemon
+soma 193% de 400% (60 s)
+Average:     all   46.43    0.00    9.00    0.06    0.00    0.78    0.00    0.00    0.00   43.73
+=== E2
+  98.9%  nuvem_pontos (nuvem_pontos)
+  35.5%  fastlio_mapping
+  28.9%  livox_lidar_publisher (livox_ros_driver2_node)
+  14.5%  gnome-shell
+   4.8%  systemd-logind
+   2.3%  tf_odom (tf_odom)
+   1.9%  mega_bridge (mega_bridge)
+   1.5%  2
+   1.4%  pidstat
+   1.4%  joy_node (joy_node)
+   0.8%  ros2 bag record
+   0.8%  rustdesk
+soma 196% de 400% (60 s)
+Average:     all   46.53    0.00    9.50    0.03    0.00    0.84    0.00    0.00    0.00   43.10
+=== E3
+  91.9%  nuvem_pontos (nuvem_pontos)
+  36.6%  fastlio_mapping
+  28.9%  livox_lidar_publisher (livox_ros_driver2_node)
+  14.7%  gnome-shell
+  11.8%  freeze_capture (freeze_capture)
+   7.9%  path_follower (path_follower)
+   5.8%  lifecycle_manager_pilha (lifecycle_manager)
+   5.5%  controller_server (controller_server)
+   5.0%  systemd-logind
+   4.3%  planner_server (planner_server)
+   3.7%  bt_navigator (bt_navigator)
+   3.6%  amcl (amcl)
+soma 254% de 400% (60 s)
+Average:     all   59.11    0.00   11.56    0.02    0.00    1.01    0.00    0.00    0.00   28.30
