@@ -1,0 +1,8 @@
+[nuvem_pontos-4] [WARN] [1790802544.780294145] [nuvem_pontos]: primeira nuvem convertida: 15678 pontos (4386 inválidos descartados), frame "livox_frame". Se o frame não for `livox_frame`, a nuvem inteira sai deslocada e a TF não conserta.
+[tf_odom-3] [ERROR] [1790802545.151348841] [tf_odom]: NÃO EXISTE TF livox_frame -> base_link: "livox_frame" passed to lookupTransform argument target_frame does not exist. 
+== hz /livox/pontos: average rate: 10.001
+== hz /Odometry: average rate: 10.000
+== atraso /livox/pontos: average delay: 0.116
+== atraso /Odometry: average delay: 0.038
+ 18:11:18 up 8 days, 7 min,  4 users,  load average: 4.01, 2.48, 3.79
+Average:     all   23.88    0.00    8.87    0.04    0.00    0.81    0.00    0.00    0.00   66.40

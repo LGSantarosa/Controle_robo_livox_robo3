@@ -50,7 +50,13 @@ gráfica gasta ~45 % parada. Conserto aprovado: vetorizar o nó com numpy.
 desserializando (83,5 ms/nuvem), não o laço (11,7 ms). O nó passou a assinar
 cru (`raw=True`) e ler o CDR com numpy. Contra o CDR real do rclpy no
 notebook: saída idêntica byte a byte, **92,3 → 1,0 ms por nuvem**. Implantado
-e compilado no notebook; **não medido com o lidar ainda**.
+e compilado no notebook.
+
+**Medido no robô (mesa, 18h10)**: `/livox/pontos` 10,0 Hz com 0,12 s de
+atraso; `nuvem_pontos` 4 %; a E3 caiu de 254 % para 186 % de 400. **O gargalo
+de CPU acabou.** Sobraram dois problemas que não são CPU (066 §7): o
+`collision_monitor` perdeu o heartbeat de novo com a máquina ociosa (a pilha se
+reergueu sozinha), e o STOP dele piscou 220 vezes com o robô parado na mesa.
 
 **Método**: o dono não relatou console nenhum; tudo saiu de log e de
 `pidstat`/`topic hz` puxados por ssh.

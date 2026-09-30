@@ -2,7 +2,8 @@
 
 **Data**: 2026-09-30 (noite; lab, robô na mesa, só o lidar ligado)
 **Status**: causa **medida e confirmada** no robô; conserto **escrito e
-provado offline** (§6). Falta repetir a medição no robô.
+provado offline** (§6) e **no robô** (§7): gargalo resolvido. Abertos: o
+heartbeat do `collision_monitor` e o STOP piscando (§7), que NÃO são CPU.
 **Toca**: `ros2_packages/robot_base/robot_base/nuvem_pontos.py` (só o laço de
 conversão) e o teste dele.
 **Não toca**: tópicos, campos, frame, raio cego (decisão 027), launch.
@@ -92,3 +93,26 @@ CDR direto num array estruturado do numpy) e `empacota_np`.
   antiga com raio 0 e 0,15; `sec`, `nanosec` e `frame_id` iguais.
 - Tempo por nuvem, mesmo notebook: **92,3 ms → 1,0 ms** (92×).
   (`docs/dados/2026-09-30-robo3-cpu/nuvem_pontos_066_offline.txt`)
+
+## 7. Medido no robô depois do conserto (30-09, 18h10; mesa, placa desligada)
+
+`docs/dados/2026-09-30-robo3-cpu/depois_066/`.
+
+| | antes | depois |
+|---|---|---|
+| `/livox/pontos` | 7,2 Hz, atraso 0,69 s | **10,0 Hz, atraso 0,12 s** (o carimbo é o início da varredura de 100 ms) |
+| `nuvem_pontos` | 92–99 % | **4 %** |
+| E1 (localização), uso total | 56 % | **34 %** |
+| E3 (+ controle + pilha), soma por processo | 254 % de 400 | **186 % de 400**, 45 % ocioso |
+
+**O gargalo de CPU acabou. Dois problemas sobraram, e não são CPU:**
+
+1. O `lifecycle_manager` **ainda** declarou o `collision_monitor` fora do ar
+   (4 s sem heartbeat) 14 s depois de ativar — com a máquina 45 % ociosa e o
+   processo vivo, publicando. A pilha se reergueu sozinha 7 s depois. Causa
+   não investigada.
+2. Parado na mesa, o `collision_monitor` alternou **"stop due to PolygonStop"
+   / "continue" 220 vezes** em ~100 s. Na mesa pode ser o entorno (gente,
+   objetos a menos de 0,5 m), mas é o mesmo padrão do defeito de 12-08 que
+   deu origem à 027 (peça do robô piscando dentro do polígono). Precisa ser
+   olhado no chão, com a nuvem gravada.

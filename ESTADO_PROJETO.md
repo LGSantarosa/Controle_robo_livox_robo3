@@ -63,9 +63,10 @@ Tudo desligado no fim. Detalhe no `DIARIO.md` (entrada do topo).
 | causa | ✅ medida: **`nuvem_pontos` satura 1 thread** (99 %), `/livox/pontos` 7,2 Hz com 0,69 s de atraso |
 
 **Próximo (066):** ✅ `nuvem_pontos` lendo o CDR cru com numpy (`ec88d29`:
-saída idêntica, 92 → 1 ms/nuvem, **já implantado no notebook**) → ⏭️ **robô na
-mesa, só lidar: repetir a medição** (`/livox/pontos` 10 Hz, atraso ~0,02 s,
-e a E3 sem o `lifecycle_manager` derrubar nada) → Nav2 no chão. Depois,
+saída idêntica, 92 → 1 ms/nuvem) → ✅ **medido no robô**: 10 Hz, 0,12 s,
+`nuvem_pontos` 4 %, E3 186 % de 400 → 🔴 **abertos, não-CPU** (066 §7): heartbeat
+do `collision_monitor` cai com a máquina ociosa, e o STOP pisca 220× parado na
+mesa → ⏭️ olhar os dois (no chão, com a nuvem gravada) antes de confiar no Nav2. Depois,
 um por vez: sessão gráfica (~45 % parada) e o `bag --all-topics` da pilha.
 
 **Como subir no robô real hoje** (o `sobe-robo3-web` é SÓ Gazebo): quatro
