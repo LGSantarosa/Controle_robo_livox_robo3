@@ -84,12 +84,31 @@ ponto** tira um só. Fora de propósito: LED, passagem, yaw ignorado, pré-porta
 o `d2e9eec` (runner que não desiste de ponto), que fica para decidir depois.
 🟡 Uma falha intermitente da suíte, não identificada (DIARIO 30-09).
 
+🟢 **Loop de 3 pontos pelo web** (`20260930_144318-web`, rota `testedeerro`:
+(11,00; 1,43) → (2,04; 4,93) → (7,28; 6,31)): **9/9 pernas** com `Goal
+succeeded`, uma volta sem loop e duas com loop. As pernas levaram 55–65 s,
+47–48 s e ~55 s, estáveis entre as voltas. Teardown inteiramente automático
+pelo launcher, e SHM recuperado pela 061 sem ajuda.
+
+🔴 **Dois achados do loop, abertos:**
+- **EMPERRADO falso em 8 de 9 pernas** (15 escapes de 0,20 m), com "frente
+  livre" de 0,30 a 4,73 m. Não é só depois da meia-volta: aparece no meio das
+  pernas também. Já não é detalhe.
+- **O gatilho rápido NÃO apareceu na porta 2:** dois STOPs sustentados no mesmo
+  lugar, (9,1; 3,49) e (9,0; 3,51), com a manobra em **5,48 s e 5,05 s**,
+  contra os 1,71 s de manhã. Nos dois houve um escape falso na mesma perna,
+  15–21 s antes. **Hipótese a conferir:** o escape falso deixa
+  `res_seguidas > 0` e o teto volta aos 4 s (063 §3). Mas a medida de 1,71 s
+  também teve um escape antes, então a hipótese pode estar errada.
+
+🟢 **O web desenha o contorno real do robô 3** (`ac8e2c3`), lido da
+`geometria_robo3.yaml`, e não mais o quadrado de 0,5 m do robô 1.
+
 ⬜ **Próximo, na ordem do dono:**
-1. subir pelo `bin/sobe-robo3-web` (a 1ª subida real já funcionou, sessão
-   `20260930_140735-web`), conferir a edição de rota nova e criar rotas mais difíceis;
+1. subir pelo `bin/sobe-robo3-web` e conferir o desenho novo;
 2. o desenho do robô no `map.js`: hoje é um quadrado de 0,5 m centrado; o robô 3
    tem 0,374 × 0,380 m e vai de +0,0825 a −0,2913 em x (`geometria_robo3.yaml`);
-3. investigar o EMPERRADO falso;
+3. investigar o EMPERRADO falso (agora 15 em 9 pernas) e o gatilho de 5 s na porta 2;
 4. o escalonamento para o giro depois de duas rés (063 §7, pedido do dono).
 
 Evidência: `~/sessao-robo3/20260930_gatilho-2a-leva/` e

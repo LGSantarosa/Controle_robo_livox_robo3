@@ -100,6 +100,16 @@ processo meu, uma shell cuja linha de comando citava padrões ROS no `grep`, e
 não descende do wrapper. O launcher fez certo. Concluí à mão pela 061, com
 recontagem zero.
 
+### O loop do dono, e o que ele mostrou
+
+Rota `testedeerro`, 3 pontos, uma volta sem loop e duas com: 9/9 objetivos.
+Os números estão no `ESTADO_PROJETO.md`. O que importa: o EMPERRADO falso
+deixou de ser "logo depois da meia-volta" e apareceu em 8 de 9 pernas. E, na
+porta 2, o gatilho que de manhã deu 1,71 s deu 5,48 e 5,05 s. Eu tinha uma
+explicação pronta, que o escape falso rearma o teto de 4 s, e ela não fecha com
+a medida da manhã, que também teve escape antes. Fica como hipótese, não como
+causa. O primeiro teardown inteiramente automático do launcher saiu limpo.
+
 ### O desenho do robô no web passa a ser o robô 3
 
 Queixa do dono: *"o 3 é estreito, ele está com o desenho do robô 1"*. O `map.js`
