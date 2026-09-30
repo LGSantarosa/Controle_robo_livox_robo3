@@ -103,6 +103,22 @@ processo meu, uma shell cuja linha de comando citava padrões ROS no `grep`, e
 não descende do wrapper. O launcher fez certo. Concluí à mão pela 061, com
 recontagem zero.
 
+### O conserto da dívida, medido: 8 de 8 no teto rápido
+
+Loop grande do dono com o `bcf16c9` (`20260930_153636-web`). Cruzei cada STOP
+sustentado com a manobra seguinte, a pose e o relógio reconstruído do CSV
+(`/tmp/.../stops.py`, o mesmo cálculo do dia; os 45 gatilhos do log e do CSV
+casaram um a um). **Os 8 dispararam com 2,05–2,10 s sem progresso.** Na porta
+2 a manobra passou de ~5,3 s para ~3,0 s depois do STOP (2,77 a 3,31 s, 5
+casos). Não vai a 2,00 s porque o relógio mede falta de PROGRESSO, e ela às
+vezes começa depois do STOP. O dono: *"otimo, funcionou então?"*. Funcionou. A
+primeira resposta que dei foi "uma vez só", e esperei a porta 2 repetir antes
+de dizer que sim.
+
+Dois achados para a fila: um STOP de 9,8 s no canto do ponto 1, em que a
+manobra veio a tempo e não soltou de primeira; e a 057 em duas sessões
+seguidas.
+
 ### A 057 apareceu no teardown (sessão `20260930_150543-web`)
 
 `collision_monitor` com **SIGSEGV depois do SIGINT**, destruindo a fonte

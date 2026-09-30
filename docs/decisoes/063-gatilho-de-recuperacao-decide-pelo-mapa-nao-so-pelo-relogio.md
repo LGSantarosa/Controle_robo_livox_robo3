@@ -166,7 +166,9 @@ deixava `res_seguidas = 1` até o fim da perna, e o §3 manda o teto cheio nesse
 caso. Reconstruído do CSV: os 15 gatilhos do loop de 30-09
 (`20260930_144318-web`) e o "1,71 s" da manhã dispararam com 4,10 s sem
 progresso. Conserto: zerar os dois no `if not mesmo_objetivo` do `cb_plano`
-(`test_divida_por_objetivo.py`). **Ainda não corrido.**
+(`test_divida_por_objetivo.py`). **Medido em 30-09 (`20260930_153636-web`):**
+8 de 8 STOPs sustentados com o teto rápido. Na porta 2, do STOP à manobra
+2,77–3,31 s (antes: 5,05–5,48 s).
 
 ## 7. O que NÃO entrou, e é dívida declarada
 

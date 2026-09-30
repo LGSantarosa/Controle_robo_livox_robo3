@@ -114,6 +114,17 @@ pelo launcher, e SHM recuperado pela 061 sem ajuda.
   responde "parede". O conserto zera os dois ao trocar de objetivo, no mesmo
   `if not mesmo_objetivo` do `cb_plano`. Falta uma corrida pela porta 2 para
   medir.
+  ✅ **MEDIDO (`20260930_153636-web`, `bcf16c9`):** 8 STOPs sustentados, **8
+  com o teto rápido** (2,05–2,10 s sem progresso, reconstruído do CSV), nenhum
+  com 4 s. Na porta 2 (5 casos), do STOP à manobra: **2,77–3,31 s**, contra
+  5,05–5,48 s antes. No canto do ponto 1 (3 casos): 2,52–3,09 s. A diferença
+  para os 2 s é o relógio começar depois do STOP, mais o tempo de o escape
+  pegar. Loop `testedeerro`: 21 objetivos bem-sucedidos, 0 falhos (1 cancelado
+  pelo web, 1 abortado pelo próprio teardown, 40 ms depois do SIGINT).
+  ⚠️ Um STOP no canto do ponto 1 durou 9,8 s: a manobra veio a +3,1 s, mas não
+  soltou de primeira.
+  🔴 **A 057 voltou:** SIGSEGV do `collision_monitor` no teardown em DUAS
+  sessões seguidas (`150543` e `153636`), sempre depois do SIGINT.
 
 🟢 **O web desenha o contorno real do robô 3** (`ac8e2c3`), lido da
 `geometria_robo3.yaml`, e não mais o quadrado de 0,5 m do robô 1.
