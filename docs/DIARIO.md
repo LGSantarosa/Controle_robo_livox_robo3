@@ -47,6 +47,9 @@ soltou sozinho, isso tmb é vitória"*.
 **Corrida pelo web.** A pilha subiu com `rviz:=false` e o `app.py` num venv novo.
 O dono criou a rota no navegador, ida e volta. Na ombreira da porta, o STOP
 sustentado virou escape em **1,71 s**, a primeira medida do critério da 063.
+> 🔴 **ERRATA (30-09, mesma tarde):** não foi. Reconstruído do CSV, aquele
+> gatilho disparou com 4,10 s sem progresso: o relógio corria desde o
+> `APPROACH`, antes do STOP de onde medi. Ver a entrada "A dívida das rés".
 Nas duas corridas apareceu o mesmo escape falso logo depois da meia-volta, e ele
 ficou como achado aberto no `ESTADO_PROJETO.md`.
 
@@ -99,6 +102,34 @@ Teardown da sessão do launcher: o `confere` do SHM recusou por causa de UM
 processo meu, uma shell cuja linha de comando citava padrões ROS no `grep`, e
 não descende do wrapper. O launcher fez certo. Concluí à mão pela 061, com
 recontagem zero.
+
+### A dívida das rés: por que o gatilho de 2 s nunca disparou
+
+Pedido do dono depois do loop: *"tenta encontrar uma maneira de saber o pq ele
+n está indo em 2s ... mas assim, cuidado, ele ta muito bom já"*.
+
+Causa antes de solução. Eu tinha uma hipótese que não fechava com a medida da
+manhã, então parei de argumentar com ela e reconstruí o relógio do progresso a
+partir do CSV do seguidor: melhor distância, avanço mínimo de 0,05 m, e o
+instante de cada entrada em `re`. **Os 15 gatilhos do loop: 4,10 s. O "1,71 s"
+da manhã: 4,10 s também.** O gatilho rápido nunca disparou, e eu tinha escrito
+que sim. Errata no ESTADO e na entrada da manhã.
+
+O mecanismo estava no código: `res_seguidas` e `dist_antes_da_re` só zeram no
+`__init__`. Chegando num objetivo, `dist_antes_da_re` encolhe até poucos
+centímetros. Na perna seguinte, o primeiro escape (o falso, em campo aberto)
+põe a dívida em 1, e ela só pagaria chegando mais perto daqueles centímetros,
+agora do objetivo NOVO. Com a dívida, `teto_de_emperramento` devolve 4 s sem
+nem olhar o mapa. Para não consertar às cegas, rodei a `mapa_ocupado` real
+contra a `pista_obstaculos` nas duas poses dos STOPs: "parede", com raio de
+0,6 e também de 0,4.
+
+Conserto de duas linhas, no ramo do `cb_plano` que já separava missões
+(`mesmo_objetivo`). Teste escrito antes, e reprovou nos dois pontos certos. A
+proteção de 12-08 continua valendo dentro de cada objetivo (teste de replano
+preservando). **Nada medido ainda:** o que se espera é um teto interno de 2 s
+na porta, não 2,00 s exatos do STOP à manobra, porque o relógio pode ter
+começado antes do STOP.
 
 ### O loop do dono, e o que ele mostrou
 

@@ -1260,6 +1260,15 @@ class PathFollower(Node):
         if not mesmo_objetivo:
             self.passagem_ativa = None
             self.passagem_fase = ''
+            # A dívida das rés também é da missão (30-09): `dist_antes_da_re` é
+            # distância até o objetivo ANTIGO, e compará-la com a do novo não
+            # tem significado. Herdada, ela deixava `res_seguidas > 0` a perna
+            # inteira e o teto preso nos 4 s — o gatilho rápido da 063 nunca
+            # disparou em corrida por isso (loop de 30-09: 15 de 15 com ~4,1 s).
+            # Replano do MESMO objetivo não passa aqui: a proteção de 12-08
+            # continua inteira dentro de cada objetivo.
+            self.res_seguidas = 0
+            self.dist_antes_da_re = None
         self.plano = novo
         self.aceita_replano = False
         if hasattr(self, 'pub_plano_aceito'):

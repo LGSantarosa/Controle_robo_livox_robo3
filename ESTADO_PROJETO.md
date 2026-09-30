@@ -47,7 +47,7 @@
 
 ---
 
-## 🟢 30-09 — O ROBÔ 3 SOBE PELO WEB; O GATILHO DA 063 MEDIU 1,71 s
+## 🟢 30-09 — O ROBÔ 3 SOBE PELO WEB; O GATILHO RÁPIDO DA 063 NUNCA DISPAROU (DÍVIDA HERDADA ENTRE OBJETIVOS)
 
 📌 **REGRA DO DONO (30-09): o robô 3 sobe SEMPRE com o web, sem RViz.**
 *"agora sempre iremos subir usando a web, sem mais rviz nesse robô"*. O
@@ -70,6 +70,11 @@ sustentado à manobra, **1,71 s** (em 29-09, na mesma porta: 6,84 s). O log diz
 "frente livre (5,65 m)": quem prendia o robô era a ombreira ao lado, que é o
 caso do `near_mapped`. Ressalva: é tempo de parede, sem o `/clock` gravado nessa
 corrida.
+> 🔴 **ERRATA (30-09, mesma tarde): os 1,71 s NÃO foram o gatilho rápido.**
+> Reconstruído do CSV do seguidor (avanço mínimo 0,05 m), aquele gatilho disparou
+> com **4,10 s sem progresso**: o relógio já corria desde o `APPROACH`, antes do
+> STOP sustentado de onde eu medi. Foi o teto de 4 s de sempre. Causa em
+> "a dívida das rés" abaixo.
 
 🔴 **Achado aberto: "EMPERRADO" falso depois da meia-volta, 2 de 2 corridas.**
 Logo depois do giro de ~172° no começo da volta, com o robô já andando a
@@ -100,6 +105,15 @@ pelo launcher, e SHM recuperado pela 061 sem ajuda.
   15–21 s antes. **Hipótese a conferir:** o escape falso deixa
   `res_seguidas > 0` e o teto volta aos 4 s (063 §3). Mas a medida de 1,71 s
   também teve um escape antes, então a hipótese pode estar errada.
+  ➡️ **Causa confirmada, conserto escrito, AINDA NÃO CORRIDO.** Os 15 gatilhos
+  do loop dispararam com ~4,1 s sem progresso, nenhum com 2 s (a errata acima
+  explica os 1,71 s). O mecanismo: `res_seguidas` e `dist_antes_da_re` só
+  zeravam no `__init__` do nó (`path_follower.py:857`). A distância "de antes
+  da ré" era do objetivo ANTERIOR, e a perna nova ficava endividada até o fim.
+  O portão de mapa, rodado offline contra a `pista_obstaculos` nas duas poses,
+  responde "parede". O conserto zera os dois ao trocar de objetivo, no mesmo
+  `if not mesmo_objetivo` do `cb_plano`. Falta uma corrida pela porta 2 para
+  medir.
 
 🟢 **O web desenha o contorno real do robô 3** (`ac8e2c3`), lido da
 `geometria_robo3.yaml`, e não mais o quadrado de 0,5 m do robô 1.

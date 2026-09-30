@@ -158,6 +158,16 @@ frente do robô, está do lado dele.**
 o teto da chamada, inverter a semântica do desconhecido, remover o portão
 `near_mapped` e deixar o rearme encurtar — cada uma reprova testes específicos.
 
+## 6.1 Errata de 30-09: o gatilho rápido nunca tinha disparado
+
+A dívida das rés (`res_seguidas`, `dist_antes_da_re`) atravessava objetivos: só
+zerava no `__init__` do nó. Na perna seguinte a uma chegada, o primeiro escape
+deixava `res_seguidas = 1` até o fim da perna, e o §3 manda o teto cheio nesse
+caso. Reconstruído do CSV: os 15 gatilhos do loop de 30-09
+(`20260930_144318-web`) e o "1,71 s" da manhã dispararam com 4,10 s sem
+progresso. Conserto: zerar os dois no `if not mesmo_objetivo` do `cb_plano`
+(`test_divida_por_objetivo.py`). **Ainda não corrido.**
+
 ## 7. O que NÃO entrou, e é dívida declarada
 
 - **O escalonamento para o giro.** É o pedido literal do dono (*"duas rés, giro
