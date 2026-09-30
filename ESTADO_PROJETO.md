@@ -52,8 +52,8 @@
 O dono vai ao lab querendo pôr o código no robô 3 real. O que está escrito aqui
 e decide o que dá para fazer:
 
-1. 🔴 **A pilha RECUSA `robo:=3 sim:=false`** (`pilha.launch.py`, `_recusa_robo`,
-   trava da etapa 6). Tudo de 30-09 foi Gazebo. Nunca subiram juntos no robô 3:
+1. 🟡 **A pilha RECUSAVA `robo:=3 sim:=false`** (`pilha.launch.py`, `_recusa_robo`,
+   trava da etapa 6). Desde a 065, sobe só com `libera_real:=true`. Tudo de 30-09 foi Gazebo. Nunca subiram juntos no robô 3:
    Livox, FAST-LIO, `/scan`, hoverboard e a pilha.
 2. 🔴 **A 057 bloqueia hardware** (061 §2.3.2, regra do dono de 28-09). O SIGSEGV
    do `collision_monitor` no teardown apareceu em DUAS sessões em 30-09
@@ -63,35 +63,72 @@ e decide o que dá para fazer:
    git@github.com:LGSantarosa/Controle_robo_livox_robo3.git`, e só então
    `git fetch && git reset --hard origin/main` e `colcon build`.
 
-**Decisão do dono (30-09, fim do dia): hoje NÃO há navegação autônoma no real.**
-O lab é Xbox + LIO. A ligação pilha → MEGA/FAST-LIO (as "duas pontas" do
-`_recusa_robo`) se escreve no dev, numa sessão própria. **Não existe parada
-física independente do Xbox** (resposta do dono), e o `PLANO_NAV2_ROBO3.md` §8
-a exige para toda etapa com rodas no chão (2, 8, 9, 10).
+**Decisão do dono (30-09, fim do dia), que substitui a de minutos antes:**
+*"quero testar ele se movendo no nav2 hoje ... fazer o mapa com slam e depois
+usar o mapa pra usar o nav2"*. **Travas 1 e 2 liberadas por ele, sem parada
+física** → decisão **065**. Código pronto e testado offline; nada medido no robô.
 
-### Roteiro do lab (30-09)
+### Roteiro do lab (30-09) — SLAM e depois Nav2
 
-**Parte A — sem risco, com a placa/motores DESLIGADOS:**
-1. No notebook, no clone que JÁ existe (preserva `livox_ros_driver2`/`FAST_LIO`,
-   que o git ignora): trocar o remoto (item 3 acima), `git fetch && git reset
-   --hard origin/main`, `colcon build --base-paths ros2_packages --symlink-install`.
-2. Provar a 058 em hardware: `./setup_livox.sh --perfil notebook` (host
-   `.5`; o sensor é achado por varredura).
-3. Subir a localização + RSP do robô 3 como em 24-09 e conferir as taxas
-   (`/livox/lidar` ~10 Hz, `/Odometry` ~10 Hz, `/scan` ~7 Hz).
-4. **Validação do LIO, etapa 7, com o robô EMPURRADO À MÃO:** marcar a largada
-   no chão, dar uma volta fechada e voltar à marca, medir o erro de retorno do
-   `/Odometry`. Gravar bag leve (`/Odometry`, `/livox/imu`, `/scan`, `/tf`,
-   `/tf_static`), SEM a nuvem (passa de 600 MB/min).
+**Em TODO terminal do notebook** (o mesmo domínio para tudo):
+```bash
+cd ~/Workspace/Controle_robo_livox      # o clone que já existe
+source /opt/ros/jazzy/setup.bash && source install/setup.bash
+export ROS_DOMAIN_ID=30 ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
+```
 
-**Parte B — Xbox (`bin/sobe-robo3`), só depois da A e com decisão do dono:**
-sem parada física, a recomendação é conferir o controle com as **rodas no ar**
-(robô sobre calços). A decisão 048 registrou a placa girando sozinha com a MEGA
-mandando zero. No chão, só com alguém com a mão no conector da bateria dos
-motores.
+**0. Deploy (robô e lidar podem estar desligados):**
+```bash
+git remote set-url origin git@github.com:LGSantarosa/Controle_robo_livox_robo3.git
+git fetch && git reset --hard origin/main
+colcon build --base-paths ros2_packages --symlink-install && source install/setup.bash
+ros2 pkg prefix slam_toolbox || sudo apt install ros-jazzy-slam-toolbox
+./setup_livox.sh --perfil notebook          # decisão 058, 1ª vez em hardware
+```
 
-Tudo que roda deixa CSV/bag numa pasta de sessão; o assistente lê e diagnostica.
-Avisar antes de ligar e ao desligar o lidar e a placa.
+**1. SLAM: dirigir no Xbox e montar o mapa.** Fita no chão marcando a largada
+e a direção da frente do robô. **O Nav2 depois vai nascer nessa marca.**
+```bash
+bash bin/sobe-robo3                               # T1: RSP + Xbox + MEGA (com mux)
+ros2 launch robot_base localizacao.launch.py      # T2: Livox + FAST-LIO + tf_odom + /scan
+ros2 launch robot_nav slam.launch.py              # T3: slam_toolbox (map→odom, /map)
+```
+Devagar. Passe duas vezes pelos lugares e feche a volta na marca. Salve:
+`mkdir -p maps/lab && ros2 run nav2_map_server map_saver_cli -f maps/lab/lab
+--ros-args -p save_map_timeout:=30.0`. Derrube: Ctrl+C em T3 e T2,
+`bash bin/sobe-robo3 --mata` em T1.
+
+**2. Nav2 no mapa.** Robô de volta na marca, mesma direção (pose 0, 0, 0).
+```bash
+bash bin/sobe-robo3 mux:=false                    # T1: Xbox + MEGA, SEM mux (a pilha arbitra)
+ros2 launch robot_base localizacao.launch.py      # T2
+ros2 launch robot_motion pilha.launch.py robo:=3 sim:=false libera_real:=true \
+  mapa:=$PWD/maps/lab/lab.yaml localizacao:=amcl pose_x:=0.0 pose_y:=0.0 pose_yaw:=0.0 \
+  v_max:=0.25 curv_frente:=0.0 curv_re:=0.0 rviz:=false \
+  log_dir:=$HOME/sessao-robo3/lab_$(date +%Y%m%d_%H%M)   # T3
+```
+Objetivo pelo web (T4). Na 1ª vez nesta máquina:
+`python3 -m venv --system-site-packages controle_web/.venv &&
+controle_web/.venv/bin/pip install -r controle_web/requirements.txt`. Depois:
+`cd controle_web && ROBOT_MODE=nav2 WEB_TELEOP=off ROBOT_MAPS_DIR=$PWD/../maps
+.venv/bin/python app.py` → `http://localhost:5000`.
+
+🔴 **FREIO, porque não há parada física:**
+- **Soltar o LB NÃO para a autonomia.** Para frear: **segure o LB com o
+  analógico solto** (o Xbox manda zero com prioridade 100), ou cancele no web.
+- Derrubar a pilha (Ctrl+C em T3) deve parar as rodas em ~0,5 s: é o watchdog
+  da MEGA (`SETPOINT_TIMEOUT_MS`). Lido no código, **não medido**.
+
+**Ordem obrigatória no Nav2:**
+1. **Rodas no ar** (robô sobre calços): objetivo a ~1 m à frente. Confira se
+   as rodas giram no sentido da FRENTE, se segurar o LB com o analógico solto
+   freia, e se Ctrl+C em T3 para as rodas.
+2. Só depois, **no chão**: objetivo de 1–2 m em espaço livre, com alguém com a
+   mão no conector da bateria dos motores.
+
+Tudo fica gravado em `log_dir` (CSV do seguidor, `freeze_capture.csv`) e no bag
+do `sobe-robo3`. **Não precisa relatar console:** traga as pastas e eu leio.
+Avise antes de ligar e ao desligar o lidar e a placa.
 
 Pendente no dev: a `arena_galpao` do robô 1 (proposta feita, não autorizada) e o
 EMPERRADO falso (próximo alvo de código).

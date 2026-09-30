@@ -70,10 +70,23 @@ def _monta(contexto, *_a, **_k):
     ).toxml()
     sinal = ParameterValue(LaunchConfiguration('sinal'), value_type=float)
     frente = ParameterValue(LaunchConfiguration('frente'), value_type=float)
+    # `mux:=false` (decisão 065, 30-09): a pilha do Nav2 manda. O árbitro passa
+    # a ser o `twist_mux` DELA (Xbox 100/110 acima da autonomia 10), e o
+    # atuador ouve a saída dela, `/hoverboard_base_controller/cmd_vel`. Dois
+    # muxes publicando no atuador seria dois donos do comando.
+    mux = LaunchConfiguration('mux').perform(contexto)
+    if mux not in ('true', 'false'):
+        raise RuntimeError(f'mux:={mux!r} não existe. Use "true" ou "false".')
+    com_mux = mux == 'true'
+    entrada_atuador = 'cmd_vel' if com_mux else '/hoverboard_base_controller/cmd_vel'
 
     return [
         LogInfo(msg=f'[robo3] controle em js{dev_id} — {motivo}'),
         LogInfo(msg='[robo3] LB = homem-morto · RB = turbo · analógico esquerdo dirige'),
+        *([] if com_mux else [LogInfo(msg=(
+            '[robo3] mux:=false — SEM twist_mux aqui: o atuador ouve '
+            '/hoverboard_base_controller/cmd_vel (a pilha). Soltar o LB NÃO '
+            'para a autonomia; LB segurado com o analógico solto freia.'))]),
         Node(
             package='robot_nav', executable='mega_bridge', name='mega_bridge',
             output='screen',
@@ -98,7 +111,7 @@ def _monta(contexto, *_a, **_k):
                 # linear troca de sinal, o giro continua igual para quem
                 # dirige). O `sinal` acima é espelho, este é rotação.
                 'linear_sign': frente,
-                'cmd_vel_topic': 'cmd_vel',
+                'cmd_vel_topic': entrada_atuador,
                 # Etapa 5: a cadeia do robô 3 é TwistStamped de ponta a ponta.
                 # O default do nó continua cru para o `robot.launch.py`.
                 'use_stamped': True,
@@ -143,12 +156,12 @@ def _monta(contexto, *_a, **_k):
             name='robot_state_publisher', output='screen',
             parameters=[{'robot_description': urdf}],
         ),
-        Node(
+        *([Node(
             package='twist_mux', executable='twist_mux', name='twist_mux',
             output='screen',
             parameters=[os.path.join(pkg, 'config', 'twist_mux_robo3.yaml')],
             remappings=[('cmd_vel_out', 'cmd_vel')],
-        ),
+        )] if com_mux else []),
     ]
 
 
@@ -175,5 +188,10 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'escala', default_value='400.0',
             description='[unidades da placa por m/s] de partida, não calibrada'),
+        DeclareLaunchArgument(
+            'mux', default_value='true',
+            description='true: dirigir no Xbox (este launch arbitra). false '
+                        '(decisão 065): a pilha do Nav2 arbitra, e o atuador '
+                        'ouve /hoverboard_base_controller/cmd_vel'),
         OpaqueFunction(function=_monta),
     ])

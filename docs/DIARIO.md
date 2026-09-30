@@ -103,6 +103,29 @@ processo meu, uma shell cuja linha de comando citava padrões ROS no `grep`, e
 não descende do wrapper. O launcher fez certo. Concluí à mão pela 061, com
 recontagem zero.
 
+### Fim do dia: o dono libera o robô 3 real (decisão 065)
+
+Primeiro o dono escolheu "Xbox + LIO hoje", depois de ver as três travas
+(pilha recusando o real, 057 bloqueando hardware, notebook no repo antigo) e a
+falta de parada física. Minutos depois mudou: *"quero testar ele se movendo no
+nav2 hoje, se foda ... bora"*. A decisão é dele. A minha parte foi deixar a
+liberação deliberada (`libera_real:=true`, sem troca de default), estreita (um
+`mux:=false` no `controle_robo3`, reaproveitando o atuador aprovado no Xbox) e
+com um roteiro que começa com as rodas no ar.
+
+O que evitou erro: ler o código antes de propor. A trava dizia exatamente o
+que faltava ("as duas pontas da cadeia"). O `cmd_vel_to_wheels` já tinha o
+parâmetro do tópico. O mux da pilha do robô 3 já escutava os nomes que o Xbox
+publica. E a trava de argumentos (`argumentos_launch.py`) pegou os três
+argumentos novos, como devia. A fumaça sem hardware fechou a cadeia por
+descoberta. A primeira medida mentiu (`--no-daemon` só escuta a descoberta por
+um instante e mostrou "0 publicadores"), e repeti com o daemon antes de
+concluir qualquer coisa.
+
+Achado no caminho: o watchdog da MEGA zera os motores 500 ms depois do último
+setpoint, e a cadeia só escreve quando chega comando. Soltar o LB, porém, NÃO
+para a autonomia: o mux volta para ela. Isso está em vermelho no roteiro.
+
 ### O conserto da dívida, medido: 8 de 8 no teto rápido
 
 Loop grande do dono com o `bcf16c9` (`20260930_153636-web`). Cruzei cada STOP

@@ -140,14 +140,18 @@ def _recusa_robo(contexto, *_args, **_kwargs):
             'está sendo incluída por outra, o `robo:=` tem de aparecer na '
             'linha de comando: a seleção por argv é ponte deliberada (decisão '
             '056), não API de include.')
-    if robo == '3' and LaunchConfiguration('sim').perform(contexto) != 'true':
+    if (robo == '3' and LaunchConfiguration('sim').perform(contexto) != 'true'
+            and LaunchConfiguration('libera_real').perform(contexto) != 'true'):
         raise RuntimeError(
             'robo:=3 sobe SÓ com sim:=true, e a recusa aqui é trava, não '
             'pendência: no robô 3 de verdade faltam as duas pontas da cadeia. '
             'A fronteira do atuador real (o nó que entrega WheelSpeeds à MEGA, '
             'decisão 054) não está nesta árvore, e a localização não existe — '
             'o FAST-LIO do Mid-360 é a etapa 7. Subir assim seria mandar '
-            'comando para uma cadeia sem fim, com pose que ninguém estima.')
+            'comando para uma cadeia sem fim, com pose que ninguém estima. '
+            'Liberação deliberada: libera_real:=true (decisão 065), com o '
+            'atuador pelo `bin/sobe-robo3 mux:=false` e a localização pelo '
+            '`localizacao.launch.py` de pé ANTES — e sem parada física.')
     return []
 
 
@@ -588,9 +592,18 @@ def generate_launch_description():
             'robo', default_value='2',
             description='"2" (o robô que funciona) ou "3" — este só com '
                         'sim:=true, porque no robô 3 faltam a fronteira do '
-                        'atuador real e a localização (etapa 7)'),
+                        'atuador real e a localização (etapa 7); no real só '
+                        'com libera_real:=true (decisão 065)'),
         DeclareLaunchArgument('sim', default_value='false',
                               description='true sobe o Gazebo junto'),
+        # 🔴 Decisão 065 (30-09): liberação DELIBERADA do robô 3 real, pedida
+        # pelo dono sem parada física e com a 057 aberta. É argumento, e não
+        # mudança de default, para que ninguém suba o robô real por acidente.
+        DeclareLaunchArgument(
+            'libera_real', default_value='false',
+            description='true libera robo:=3 sim:=false (decisão 065): o '
+                        'atuador vem do `bin/sobe-robo3 mux:=false` e a '
+                        'localização do `localizacao.launch.py`, já de pé'),
         # 🔴 A RECUSA LÊ O `sim`, e por isso vem depois de ele ser declarado —
         # mas continua ANTES de qualquer ação operacional, que é o que o
         # contrato pede: `robo:=3 sim:=false` é trava desta etapa, e trava que
@@ -782,6 +795,11 @@ def generate_launch_description():
                         'depois da chegada (29-09). Mudança experimental — '
                         'o A/B tem de cobrir a passagem da porta, onde o '
                         'reflexo também corta o comando'),
+        DeclareLaunchArgument(
+            'v_max', default_value='',
+            description='[m/s] teto de velocidade do seguidor. Vazio = o do '
+                        'perfil (0,5). Decisão 065: a primeira subida do robô '
+                        '3 real vai mansa'),
         DeclareLaunchArgument(
             'tolerancia_entra_rumo', default_value='',
             description='[rad] limiar de ENTRADA do giro (histerese). Vazio = '
@@ -1016,7 +1034,11 @@ def generate_launch_description():
              # a lista fica exatamente a de antes do perfil.
              parameters=[*olhar, {'use_sim_time': sim},
                          *([perfil_robo['path_follower']]
-                           if perfil_robo['path_follower'] else [])],
+                           if perfil_robo['path_follower'] else []),
+                         # Por ÚLTIMO e só se passado: ganha do YAML e do perfil.
+                         *([{'v_max': ParameterValue(
+                             LaunchConfiguration('v_max'), value_type=float)}]
+                           if _passou('v_max') else [])],
              remappings=[('/path_follower/rumo_alvo',
                           '/heading_controller/rumo_alvo'),
                          ('/path_follower/velocidade_alvo',

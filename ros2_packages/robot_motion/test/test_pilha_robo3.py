@@ -647,3 +647,48 @@ def test_o_freio_chega_como_bool_e_nao_como_texto(monkeypatch):
             (['robo:=3', 'sim:=true'], {'robo': '3', 'sim': 'true'})):
         freio = _freio_do_compensador(monkeypatch, argv, ctx_args)
         assert isinstance(freio, bool), f'{argv}: {type(freio)} em vez de bool'
+
+
+# ─── decisão 065 (30-09): a liberação DELIBERADA do robô 3 real ──────────────
+
+def test_robo3_real_com_libera_real_sobe(monkeypatch):
+    """O dono liberou o robô 3 real sem parada física e com a 057 aberta. A
+    liberação é argumento explícito: sem ele, o teste de cima segue vermelho
+    de propósito (recusa)."""
+    _argv(monkeypatch, 'robo:=3', 'sim:=false', 'libera_real:=true')
+    alcancadas, erro = _percorre(_descricao(), {'robo': '3', 'sim': 'false',
+                                                'libera_real': 'true'})
+    assert erro is None, erro
+    assert alcancadas
+
+
+def test_a_recusa_do_real_aponta_a_liberacao(monkeypatch):
+    _argv(monkeypatch, 'robo:=3', 'sim:=false')
+    _, erro = _percorre(_descricao(), {'robo': '3', 'sim': 'false'})
+    assert 'libera_real:=true' in str(erro)
+
+
+def test_libera_real_nao_mexe_no_robo2(monkeypatch):
+    _argv(monkeypatch, 'sim:=false', 'libera_real:=true')
+    alcancadas, erro = _percorre(_descricao(), {'sim': 'false',
+                                                'libera_real': 'true'})
+    assert erro is None, erro
+    assert alcancadas
+
+
+def _v_max_do_seguidor(monkeypatch, *args):
+    _argv(monkeypatch, 'robo:=3', 'sim:=true', *args)
+    ld = _descricao()
+    ctx = _contexto(ld, robo='3', sim='true',
+                    **dict(a.split(':=', 1) for a in args))
+    (no,) = _nos(ld, 'path_follower')
+    return [p['v_max'] for p in _params(ctx, no)
+            if isinstance(p, dict) and 'v_max' in p]
+
+
+def test_v_max_passado_ganha_por_ultimo(monkeypatch):
+    assert _v_max_do_seguidor(monkeypatch, 'v_max:=0.25')[-1] == 0.25
+
+
+def test_sem_v_max_nada_muda(monkeypatch):
+    assert _v_max_do_seguidor(monkeypatch) == []

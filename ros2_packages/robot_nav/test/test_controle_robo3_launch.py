@@ -36,18 +36,17 @@ PACKAGE_XML = os.path.join(PKG, 'package.xml')
 SEIS = ('mega_bridge', 'cmd_vel_to_wheels', 'joy_node', 'teleop_twist_joy_node',
         'dpad_reto', 'twist_mux')
 ARGUMENTOS = {'porta': '/dev/ttyACM0', 'sinal': '1.0', 'frente': '-1.0',
-              'bitola': '0.320', 'escala': '400.0'}
+              'bitola': '0.320', 'escala': '400.0', 'mux': 'true'}
 
 
-@pytest.fixture
-def montado(monkeypatch):
-    """(contexto, nós) — os argumentos com default e o `OpaqueFunction` rodado."""
+def _monta(monkeypatch, **args):
     ld = get_launch_description_from_python_launch_file(LAUNCH)
     ctx = LaunchContext()
     acoes = []
     for e in ld.entities:
         if isinstance(e, DeclareLaunchArgument):
             e.visit(ctx)
+            ctx.launch_configurations.update(args)
         elif isinstance(e, OpaqueFunction):
             monkeypatch.setitem(e._OpaqueFunction__function.__globals__,
                                 'escolhe_joystick', lambda: (0, 'fingido (teste)'))
@@ -55,6 +54,12 @@ def montado(monkeypatch):
         else:
             acoes.append(e)
     return ctx, [a for a in acoes if isinstance(a, Node)]
+
+
+@pytest.fixture
+def montado(monkeypatch):
+    """(contexto, nós) — os argumentos com default e o `OpaqueFunction` rodado."""
+    return _monta(monkeypatch)
 
 
 def _nome(no):
@@ -134,7 +139,7 @@ def test_nenhum_no_alem_dos_seis_e_do_rsp(montado):
     assert sorted(_nome(n) for n in nos) == sorted(SEIS + ('robot_state_publisher',))
 
 
-def test_os_cinco_argumentos_e_defaults_intactos():
+def test_os_argumentos_e_defaults_intactos():
     ld = get_launch_description_from_python_launch_file(LAUNCH)
     ctx = LaunchContext()
     declarados = {e.name: perform_substitutions(ctx, e.default_value)
@@ -149,3 +154,37 @@ def test_robot_nav_declara_robot_base_para_execucao():
     execucao = {d.text.strip() for tag in ('exec_depend', 'depend')
                 for d in raiz.findall(tag)}
     assert 'robot_base' in execucao, 'o launch lê o share/ do robot_base'
+
+
+# ─── mux:=false — a pilha do Nav2 arbitra (decisão 065, 30-09) ───────────────
+
+def _param_do(ctx, no, chave):
+    for p in evaluate_parameters(ctx, no._Node__parameters):
+        if chave in p:
+            return p[chave]
+    raise AssertionError(f'{chave} ausente')
+
+
+def test_por_padrao_o_atuador_ouve_o_mux_daqui(montado):
+    ctx, nos = montado
+    (atuador,) = _por_nome(nos, 'cmd_vel_to_wheels')
+    assert _param_do(ctx, atuador, 'cmd_vel_topic') == 'cmd_vel'
+
+
+def test_sem_mux_nao_sobe_twist_mux_e_o_atuador_ouve_a_pilha(monkeypatch):
+    """Dois muxes no atuador seriam dois donos do comando. Com a pilha de pé,
+    quem arbitra é o dela, e o atuador ouve a saída do `compensador_rumo`."""
+    ctx, nos = _monta(monkeypatch, mux='false')
+    assert not _por_nome(nos, 'twist_mux')
+    (atuador,) = _por_nome(nos, 'cmd_vel_to_wheels')
+    assert _param_do(ctx, atuador, 'cmd_vel_topic') == \
+        '/hoverboard_base_controller/cmd_vel'
+    # o Xbox continua de pé: é ele que entra no mux da pilha (joy_vel, dpad_vel)
+    for nome in ('joy_node', 'teleop_twist_joy_node', 'dpad_reto',
+                 'mega_bridge', 'robot_state_publisher'):
+        assert len(_por_nome(nos, nome)) == 1, nome
+
+
+def test_mux_invalido_morre(monkeypatch):
+    with pytest.raises(RuntimeError, match='mux'):
+        _monta(monkeypatch, mux='nao')

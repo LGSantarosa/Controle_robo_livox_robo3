@@ -72,6 +72,16 @@ NOVOS_PERMITIDOS = {
     'ros2_packages/robot_motion/launch/pilha.launch.py': {
         'robo': '2',
         'freio_linear': 'true',
+        # Decisão 065 (30-09): liberação deliberada do robô 3 real, e o teto de
+        # velocidade para a primeira subida. Defaults NEUTROS: 'false' recusa
+        # como antes, e '' não sobrescreve nada.
+        'libera_real': 'false',
+        'v_max': '',
+    },
+    # Decisão 065: 'true' é o controle no Xbox de sempre; 'false' entrega o
+    # arbítrio à pilha. O comando antigo não muda.
+    'ros2_packages/robot_nav/launch/controle_robo3.launch.py': {
+        'mux': 'true',
     },
 }
 
