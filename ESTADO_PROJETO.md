@@ -63,10 +63,35 @@ e decide o que dá para fazer:
    git@github.com:LGSantarosa/Controle_robo_livox_robo3.git`, e só então
    `git fetch && git reset --hard origin/main` e `colcon build`.
 
-Seguro sem decisão nova: trocar o remoto e compilar; subir pelo `bin/sobe-robo3`
-(robô físico, Xbox/MEGA) e dirigir no controle, conferindo motores, Livox e
-`/scan`. **Navegação autônoma no real exige que o dono libere EXPLICITAMENTE as
-travas 1 e 2, com plano mínimo escrito antes.**
+**Decisão do dono (30-09, fim do dia): hoje NÃO há navegação autônoma no real.**
+O lab é Xbox + LIO. A ligação pilha → MEGA/FAST-LIO (as "duas pontas" do
+`_recusa_robo`) se escreve no dev, numa sessão própria. **Não existe parada
+física independente do Xbox** (resposta do dono), e o `PLANO_NAV2_ROBO3.md` §8
+a exige para toda etapa com rodas no chão (2, 8, 9, 10).
+
+### Roteiro do lab (30-09)
+
+**Parte A — sem risco, com a placa/motores DESLIGADOS:**
+1. No notebook, no clone que JÁ existe (preserva `livox_ros_driver2`/`FAST_LIO`,
+   que o git ignora): trocar o remoto (item 3 acima), `git fetch && git reset
+   --hard origin/main`, `colcon build --base-paths ros2_packages --symlink-install`.
+2. Provar a 058 em hardware: `./setup_livox.sh --perfil notebook` (host
+   `.5`; o sensor é achado por varredura).
+3. Subir a localização + RSP do robô 3 como em 24-09 e conferir as taxas
+   (`/livox/lidar` ~10 Hz, `/Odometry` ~10 Hz, `/scan` ~7 Hz).
+4. **Validação do LIO, etapa 7, com o robô EMPURRADO À MÃO:** marcar a largada
+   no chão, dar uma volta fechada e voltar à marca, medir o erro de retorno do
+   `/Odometry`. Gravar bag leve (`/Odometry`, `/livox/imu`, `/scan`, `/tf`,
+   `/tf_static`), SEM a nuvem (passa de 600 MB/min).
+
+**Parte B — Xbox (`bin/sobe-robo3`), só depois da A e com decisão do dono:**
+sem parada física, a recomendação é conferir o controle com as **rodas no ar**
+(robô sobre calços). A decisão 048 registrou a placa girando sozinha com a MEGA
+mandando zero. No chão, só com alguém com a mão no conector da bateria dos
+motores.
+
+Tudo que roda deixa CSV/bag numa pasta de sessão; o assistente lê e diagnostica.
+Avisar antes de ligar e ao desligar o lidar e a placa.
 
 Pendente no dev: a `arena_galpao` do robô 1 (proposta feita, não autorizada) e o
 EMPERRADO falso (próximo alvo de código).
