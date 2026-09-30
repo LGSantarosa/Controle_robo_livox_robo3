@@ -2,6 +2,7 @@
 from flask import Flask, Response, render_template, request
 from flask_socketio import SocketIO, emit
 from controllers.robot_controller import RobotController, ROS2Controller
+import footprint
 import logging
 import math
 import os
@@ -27,6 +28,11 @@ MAPS_DIR = os.environ.get('ROBOT_MAPS_DIR', os.path.abspath(
 # bug futuro que reintroduzisse publish() sem checagem (achado B20 anterior).
 # Reative com WEB_TELEOP=on (flag --web-teleop do launch.sh) p/ dirigir pelo web.
 WEB_TELEOP = os.environ.get('WEB_TELEOP', 'off').lower() == 'on'
+
+# Contorno do robô para o desenho no mapa (30-09): o polígono da
+# `geometria_robo3.yaml` instalada, a mesma fonte do Nav2 e do reflexo. `None`
+# (sem install/, outro robô) = o map.js desenha o quadrado antigo.
+ROBOT_FOOTPRINT = footprint.carrega()
 
 # Controlador ROS2 — publica em /web_vel (geometry_msgs/Twist, mux prio 50).
 # Pré-requisito: source install/setup.bash antes de iniciar o servidor.
@@ -340,6 +346,8 @@ def handle_connect():
     })
     if camera_service is not None:
         emit('camera_status', camera_service.status())
+    if ROBOT_FOOTPRINT is not None:
+        emit('robot_footprint', {'poligono': ROBOT_FOOTPRINT})
     # Reemite o último map_update cacheado — o /map do map_server é latched
     # (publicado 1x no activate), então clientes que conectam depois dessa
     # primeira emissão ficariam em "aguardando /map" sem isto.

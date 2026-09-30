@@ -20,6 +20,9 @@
   let mapInfo = null;      // { width, height, resolution, origin_x, origin_y, ... }
   let mapImage = null;     // Image carregada do PNG base64
   let robotPose = null;    // { x, y, yaw }
+  // Contorno do robô em metros no `base_link`, vindo do servidor
+  // (`robot_footprint`, a geometria_robo3.yaml). null = quadrado antigo.
+  let robotFootprint = null;
   let plan = [];           // [{ x, y }]
   let lastGoal = null;     // { x, y }
   let scan = null;         // { xs:[], ys:[] } — /scan ao vivo em coords do mapa
@@ -123,6 +126,16 @@
         `selecionado ${wpSelectedIdx + 1}/${waypoints.length} — use ← Antes / Depois →`;
     }
     render();
+  }
+
+  // 2026-09-30: o polígono que o mapa desenha como corpo do robô. Válido (>=3
+  // vértices [x, y] finitos) = o do servidor; senão, o quadrado de ±0,25 m do
+  // robô 1, que era o desenho fixo. Pura, para o teste rodar no node.
+  function poligonoDoRobo(fp) {
+    const ok = Array.isArray(fp) && fp.length >= 3 && fp.every(v =>
+      Array.isArray(v) && v.length === 2 &&
+      v.every(c => typeof c === 'number' && Number.isFinite(c)));
+    return ok ? fp : [[0.25, 0.25], [0.25, -0.25], [-0.25, -0.25], [-0.25, 0.25]];
   }
 
   function moveSelectedWaypoint(delta) {
@@ -265,6 +278,11 @@
       const img = new Image();
       img.onload = () => { costmapGlobal = { img, info }; render(); };
       img.src = 'data:image/png;base64,' + data.png_b64;
+    });
+
+    socket.on('robot_footprint', (data) => {
+      robotFootprint = data && data.poligono;
+      render();
     });
 
     socket.on('robot_pose', (data) => {
@@ -1038,32 +1056,43 @@
       ctx.stroke();
     }
 
-    // Robô — QUADRADO no tamanho real (footprint 0.5×0.5 m) na escala do mapa,
-    // com risco de direção (yaw). Antes era uma seta fixa de 10 px, FORA de
-    // escala, então parecia longe dos obstáculos que ele já encostava.
+    // Robô — o CONTORNO real na escala do mapa (30-09: antes era um quadrado
+    // fixo de 0,5 m centrado, o robô 1). O robô 3 é estreito e não é centrado:
+    // o `base_link` fica no eixo das motrizes, perto da frente, e o corpo vai
+    // quase todo para trás. Ponto = o `base_link`; risco = do meio do corpo
+    // até a frente (a direção).
     if (robotPose) {
       const c = worldToCanvas(robotPose.x, robotPose.y);
       const dr = getDrawRect();
       if (c && dr) {
-        const ROBOT_SIZE_M = 0.5;   // lado do footprint (base_link ±0.25 m)
-        const half = (ROBOT_SIZE_M / mapInfo.resolution) * dr.scale / 2;
+        const k = dr.scale / mapInfo.resolution;   // px por metro
+        const poli = poligonoDoRobo(robotFootprint);
+        const xs = poli.map(v => v[0]);
+        const frente = Math.max(...xs), meio = (frente + Math.min(...xs)) / 2;
         ctx.save();
         ctx.translate(c.x, c.y);
-        // No PNG y cresce pra baixo, então yaw (CCW positivo) é negativo visualmente.
+        // No PNG y cresce pra baixo, então yaw (CCW positivo) é negativo
+        // visualmente, e o +y do robô (esquerda) vira -y no canvas.
         ctx.rotate(-robotPose.yaw);
-        // Corpo: quadrado translúcido do tamanho real do robô
+        ctx.beginPath();
+        poli.forEach(([x, y], i) => {
+          if (i === 0) ctx.moveTo(x * k, -y * k); else ctx.lineTo(x * k, -y * k);
+        });
+        ctx.closePath();
         ctx.fillStyle = 'rgba(255,153,0,0.35)';
-        ctx.fillRect(-half, -half, half * 2, half * 2);
+        ctx.fill();
         ctx.strokeStyle = '#f90';
         ctx.lineWidth = 2;
-        ctx.strokeRect(-half, -half, half * 2, half * 2);
-        // Direção: risco do centro até a frente (+x do robô)
-        ctx.strokeStyle = '#000';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(0, 0);
-        ctx.lineTo(half, 0);
         ctx.stroke();
+        ctx.strokeStyle = '#000';
+        ctx.beginPath();
+        ctx.moveTo(meio * k, 0);
+        ctx.lineTo(frente * k, 0);
+        ctx.stroke();
+        ctx.fillStyle = '#000';
+        ctx.beginPath();
+        ctx.arc(0, 0, 2.5, 0, Math.PI * 2);
+        ctx.fill();
         ctx.restore();
       }
     }

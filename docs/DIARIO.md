@@ -100,6 +100,23 @@ processo meu, uma shell cuja linha de comando citava padrões ROS no `grep`, e
 não descende do wrapper. O launcher fez certo. Concluí à mão pela 061, com
 recontagem zero.
 
+### O desenho do robô no web passa a ser o robô 3
+
+Queixa do dono: *"o 3 é estreito, ele está com o desenho do robô 1"*. O `map.js`
+desenhava um quadrado fixo de 0,5 m centrado no `base_link`. O robô 3 tem
+0,374 × 0,380 m e não é centrado: o `base_link` fica no eixo das motrizes, a
+8 cm da frente, e o corpo vai 29 cm para trás. O quadrado punha metade do robô
+à frente do eixo, onde não há robô.
+
+O web passou a ler o polígono da `geometria_robo3.yaml` instalada, que é a mesma
+fonte do Nav2 e do reflexo, cujo cabeçalho proíbe redigitar os vértices. O
+polígono segue ao navegador na conexão (`robot_footprint`) e é desenhado como
+é. O risco de direção vai do meio do corpo à frente, e um ponto marca o
+`base_link`. Sem o arquivo, o desenho cai no quadrado antigo. Feito numa cópia
+separada do repositório (worktree), com o loop do dono rodando no web: nada do
+que ele via mudou até a próxima subida. Testes: 21 novos, e a função de desenho
+roda no `node`. A mutação "sempre o quadrado" reprova.
+
 ## 2026-09-29, tarde (dev, robô e lidar DESLIGADOS) — O GATILHO DA RETOMADA, EM DUAS LEVAS: UMA CORRIDA E UM DEFEITO ACHADO NELA
 
 Pedido do dono: fazer o robô 3 decidir mais rápido depois de ser parado pelo
