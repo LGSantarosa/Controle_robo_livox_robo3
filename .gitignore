@@ -51,6 +51,11 @@ maps/*
 # é essa medida — não o tamanho — que reprovou o mapa limpo do estágio (13-08).
 !maps/andar3todo/
 !maps/andar3todo/*
+# ...e menos o andar 3 desenhado pelo ROBÔ 3 (30-09), no 1º SLAM dele em
+# hardware (slam_toolbox + FAST-LIO, salvo pelo botão da web). Mesmo motivo:
+# é o mapa que o Nav2 do robô 3 carrega. Guardado, ainda não validado com AMCL.
+!maps/andar3_robo3/
+!maps/andar3_robo3/*
 
 # Colcon workspace (build artifacts deste repo)
 build/
