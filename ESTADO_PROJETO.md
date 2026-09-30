@@ -84,13 +84,17 @@ e a sonda portada olhava só para a frente — a recuperação veio 6,84 s depoi
 **R1** — o gatilho de 2 s **também entrou no robô 2**: nasceu como default do nó
 e o perfil do robô 2 não sobrescreve `path_follower` (`perfil.py:59`). A frase
 "não toca o robô 2" na 063 era falsa.
+⚪ **30-09: R1 DISPENSADO, defeito ainda existente para `robo:=2`** — este repo
+passou a ser só do robô 3 e não protege mais o robô 2; para o robô 3 o valor
+efetivo (2,0 s) é o mesmo. Risco aceito neste fork, não correção.
 **R2** — a mudança do `/scan` (não zerar o relógio ao perder a medida) **não foi
 autorizada e não tem teste**, e o racional dela não vale com `res_seguidas > 0`.
 A revisão confirmou o que presta: no mapa real, nas poses (8,582; 3,481) e
 (8,724; 3,475), o portão novo acha a ombreira dentro dos 0,6 m.
 
 ⬜ **Próximo desta frente, na ordem:**
-0. **os dois consertos da revisão (R1 e R2), antes de qualquer corrida**;
+0. **o conserto R2 da revisão (reverter com teste), antes de qualquer corrida**
+   — o R1 foi dispensado em 30-09 (ver acima);
 1. **correr a 2ª leva** — a volta pela porta 2, medindo no log o tempo entre
    `STOP:PolygonStop` e a manobra (critério na 063 §4);
 2. **o escalonamento para o giro** depois de duas rés — pedido literal do dono

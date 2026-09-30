@@ -18,6 +18,14 @@ robô 2 não sobrescreve `path_follower` — o robô 2 passou a decidir em 2,0 s
 junto. Achado R1 em `docs/ROBO3_REVISAO_CRUZADA.md`, **aberto**, e bloqueador da
 corrida da 2ª leva junto com o R2 (a mudança do `/scan`, sem teste e sem
 autorização).
+⚪ **R1 DISPENSADO em 30-09 — defeito AINDA EXISTENTE para `robo:=2`, risco
+aceito neste fork.** Desde 30-09 o robô 3 vive no repositório dedicado
+`Controle_robo_livox_robo3`, que não roda nem protege o robô 2. O conserto
+(default 0,0 no nó + 2,0 pelo perfil do robô 3) dava ao robô 3 exatamente o
+mesmo valor efetivo, e foi descartado sem commit (patch preservado em
+`~/sessao-robo3/r1-robo3.patch`, SHA-256 `761b80ef…c41`). A errata acima fica
+como registro histórico: quem voltar a rodar `robo:=2` a partir deste código
+herda o gatilho de 2 s.
 
 ---
 

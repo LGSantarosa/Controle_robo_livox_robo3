@@ -1213,6 +1213,14 @@ o tipo de afirmação que esta folha existe para pegar.
 
 **Conserto pedido:** restringir o gatilho de 2 s ao robô 3.
 
+⚪ **DISPENSADO em 30-09 — o defeito continua existindo para `robo:=2`; risco
+aceito neste fork.** O robô 3 passou a viver no repositório dedicado
+`Controle_robo_livox_robo3`, que não protege mais o robô 2 (decisão do dono).
+O conserto chegou a ser escrito (default 0,0 no nó, 2,0 pelo perfil do robô 3),
+mas para o robô 3 o valor efetivo era idêntico; foi descartado sem commit e
+preservado em `~/sessao-robo3/r1-robo3.patch` (SHA-256 `761b80ef…c41`, idêntico
+ao diff descartado). Não é "corrigido": é "não bloqueia aqui".
+
 ### Achado R2 — a mudança do `/scan` não foi autorizada e não tem teste (ABERTO)
 
 Perder a medida do `/scan` deixou de reiniciar o relógio
@@ -1244,3 +1252,7 @@ contra isso, e foi violada de novo na mesma sessão em que ele a escreveu.
 
 ⬜ **Estado:** nada corrigido. Os dois consertos são o primeiro item da próxima
 sessão, **antes** de correr a 2ª leva.
+
+⬜ **Estado em 30-09:** R1 **dispensado** (defeito ainda existente para
+`robo:=2`, risco aceito neste fork do robô 3); R2 **ainda aberto** — reverter
+com teste antes da corrida.
