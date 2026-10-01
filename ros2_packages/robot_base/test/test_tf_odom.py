@@ -279,3 +279,16 @@ def test_o_default_da_launch_e_um_frame_que_o_URDF_TEM():
     with open(urdf) as f:
         assert 'livox_frame' in f.read(), (
             'o default da launch tem de existir no URDF')
+
+
+def test_a_launch_liga_odom_a_camera_init():
+    """O `/Odometry` do FAST-LIO vem em `camera_init`, e o `path_follower`
+    recusa todo plano sem uma TF até esse nome ("sem TF camera_init<-map"):
+    robô 2 em 14-08, robô 3 no chão em 30-09. Decisão 067."""
+    texto = ' '.join(_texto_da_launch().split())
+    assert "executable='static_transform_publisher'" in texto, (
+        'a launch precisa subir a TF estática odom → camera_init')
+    assert ("arguments=['--frame-id', 'odom', "
+            "'--child-frame-id', 'camera_init']") in texto, (
+        'odom é o PAI e camera_init o FILHO; invertido, o camera_init fica '
+        'com o odom pendurado e a árvore continua partida')

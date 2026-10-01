@@ -5,7 +5,7 @@
 > (cópia de `d54d05a`); R1 dispensado e R2 revertido com teste (ver 063).
 > **Sobe SEMPRE pelo web, sem RViz: `bin/sobe-robo3-web` (decisão 064).**
 >
-> Atualizado em **2026-09-30, noite** (lab, robô 3 real; ver o bloco 🟡 do topo). Antes: **2026-09-29, tarde** (PC de dev, robô e lidar desligados; duas
+> Atualizado em **2026-10-01** (dev, fora do lab: decisão 067). Antes: **2026-09-30, noite** (lab, robô 3 real; ver o bloco 🟡 do topo). Antes: **2026-09-29, tarde** (PC de dev, robô e lidar desligados; duas
 > pilhas de Gazebo subidas e derrubadas na sessão — a 2ª deixou 22 órfãos que
 > foram mortos por PID). Esta é a
 > cópia da branch **`etapa6-pilha-robo3`**, que desde 25-09 reúne três frentes
@@ -49,7 +49,8 @@
 
 ## ⏭️ 01-10 — POR ONDE RECOMEÇAR (o dono parou 30-09 às 18h45)
 
-Robô e lidar desligados; notebook limpo, em `origin/main`. Nav2 real **ainda
+Robô e lidar desligados; notebook limpo, em `origin/main` **de 30-09 — o
+`localizacao.launch.py` da 067 ainda não foi implantado lá** (deploy + `colcon build`). Nav2 real **ainda
 não moveu o robô**. Em ordem, uma coisa por vez (066 §8):
 
 1. **Reiniciar o notebook** e medir de novo só a localização, com o robô
@@ -57,9 +58,10 @@ não moveu o robô**. Em ordem, uma coisa por vez (066 §8):
    snap/docker. Se não, separar cenário (chão × mesa) de sessão gráfica.
 2. **Travar o snap**: `sudo snap refresh --hold` (o dono roda; ontem ele se
    auto-atualizou no meio do teste e derrubou o FAST-LIO).
-3. **TF `odom→camera_init`** no roteiro do robô 3 (é o remendo do robô 2,
-   `static_transform_publisher --frame-id odom --child-frame-id camera_init`):
-   sem ela o `path_follower` recusa todo plano. Depois, conserto de verdade
+3. 🟡 **TF `odom→camera_init`** — **no `localizacao.launch.py` desde 01-10
+   (decisão 067)**: implementado e coberto por teste estrutural de launch;
+   ainda sem prova funcional no Gazebo nem no robô. Basta subir a localização,
+   sem `static_transform_publisher` na mão. Depois, conserto de verdade
    (seguidor lê a pose por TF; o sensor está 9,3 cm atrás do `base_link`).
 4. **Heartbeat** do `lifecycle_manager` (3 quedas: `collision_monitor` ×2,
    `planner_server` ×1) e o **STOP piscando** do `collision_monitor`.

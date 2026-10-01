@@ -4,6 +4,27 @@
 > o que falhou E POR QUÊ. Fracasso documentado é resultado — vai pro artigo.
 > Decisões formais têm registro próprio em `docs/decisoes/`.
 
+## 🔧 2026-10-01 (dev, FORA DO LAB; robô e lidar DESLIGADOS) — A TF `odom → camera_init` ENTRA NA LOCALIZAÇÃO (067)
+
+Sem robô, a medição de CPU do roteiro de 01-10 (itens 1 e 2) espera o lab.
+Adiantei o item 3: o seguidor que recusou todo plano no chão em 30-09
+(*"sem TF camera_init<-map"*, 066 §8.1).
+
+- O remendo do robô 2 (`ffaa2f0`, no `bin/sobe-robo`; o `4467f9f` é só o
+  diagnóstico) foi portado, mas **não** para o `bin/sobe-robo3`: uma revisão
+  externa propôs o diff lá, e a análise de dono e ciclo de vida o mudou de
+  lugar. O `sobe-robo3` não sobe o FAST-LIO; quem nomeia o `camera_init` é o
+  `localizacao.launch.py`, e a TF agora sobe e morre com ele (decisão 067).
+- Efeito colateral aceito: o robô 2 (`sobe-robo` → `base.launch.py` → este
+  launch) passa a publicar a mesma identidade estática duas vezes. Inofensivo.
+- Prova: teste estrutural novo no `test_tf_odom.py` (falha sem a mudança,
+  passa com ela); suíte do `robot_base` 133/0; o launch montado com stub dos
+  pacotes Livox (ausentes neste PC) lista o `static_transform_publisher` com
+  `--frame-id odom --child-frame-id camera_init`.
+- **Ainda sem prova funcional.** No Gazebo, só com injeção de falha
+  (`/Odometry` em `camera_init` na corrida, sem commit); no robô, objetivo
+  curto no chão. O desvio de 9,3 cm do sensor para o `base_link` continua.
+
 ## 🟡 2026-09-30, noite (LAB, robô 3 REAL) — 1º SLAM EM HARDWARE DEU MAPA BOM; O NAV2 ENGASGOU NO `nuvem_pontos`
 
 Primeira vez do robô 3 real com a pilha inteira. Deploy e tudo por ssh, do PC

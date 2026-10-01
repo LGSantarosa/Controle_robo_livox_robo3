@@ -128,6 +128,16 @@ def generate_launch_description():
                  'congela_parado': ParameterValue(
                      LaunchConfiguration('congela_parado'), value_type=bool),
              }]),
+        # O nome que o FAST-LIO dá à origem dele (`camera_init`, o frame do
+        # `/Odometry`) ligado ao `odom` do resto da pilha. É o MESMO lugar: o
+        # `tf_odom` monta o `odom` a partir dessa pose. Sem isto o
+        # `path_follower` recusa todo plano com "sem TF camera_init<-map" — foi
+        # o robô 2 em 14-08 e o robô 3 no chão em 30-09. Decisão 067.
+        # ⚠️ Não conserta os 9,3 cm entre o sensor e o `base_link`.
+        Node(package='tf2_ros', executable='static_transform_publisher',
+             name='tf_camera_init', output='both',
+             arguments=['--frame-id', 'odom',
+                        '--child-frame-id', 'camera_init']),
         # A nuvem que a percepção consegue ler. O driver publica `CustomMsg`
         # (é o que o FAST-LIO come); costmaps e `collision_monitor` falam
         # `PointCloud2`, e em 10-08 isso significou os dois costmaps com ZERO
