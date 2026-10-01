@@ -81,9 +81,16 @@ não moveu o robô**. Em ordem, uma coisa por vez (066 §8):
    registrado).
    - T2 salvo em arquivo **sempre**;
    - carimbos dos dois lados do sincronismo: `/livox/imu` e `/Odometry` em bag
-     leve, e o `header.stamp` de `/livox/lidar` ou `/livox/pontos` por coletor
-     leve (`raw=True`, só cabeçalho; mudança separada). Não usar `ros2 topic`
-     na nuvem achando que `--field header.stamp` evita a desserialização;
+     leve, e o `header.stamp` de `/livox/lidar` ou `/livox/pontos` pelo
+     coletor `carimbos_topicos` (01-10; `raw=True`, só o `Header`): `ros2 run
+     robot_base carimbos_topicos --ros-args -p saida:=$HOME/sessao-robo3/diag_$(date +%Y%m%d_%H%M)_carimbos.csv`. Ele
+     grava os quatro tópicos (callback, recepção e publicação no DDS,
+     `header.stamp`, `frame_id`, bytes), separando `atraso_dds_s` (carimbo →
+     DDS) de `espera_s` (DDS → callback), e esvazia o buffer a cada 5 s e no
+     Ctrl+C.
+     **Não entra no bringup nem na rodada de CPU**: o DDS ainda copia cada
+     nuvem. Não usar `ros2 topic` na nuvem achando que `--field header.stamp`
+     evita a desserialização;
    - **pose parada**: com o robô imóvel, a pose do `/Odometry` não pode saltar
      nem derivar de forma explosiva. Hoje a divergência só aparecia quando a
      janela do costmap "fugia";

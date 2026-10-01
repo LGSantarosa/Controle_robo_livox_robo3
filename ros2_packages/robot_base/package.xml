@@ -20,6 +20,9 @@
        funciona hoje por vir de carona no ambiente, e quebra em build limpo. -->
   <depend>std_msgs</depend>
   <depend>tf2_ros</depend>
+  <!-- `nuvem_pontos` e `carimbos_topicos` (PointCloud2, Imu). Faltava, como o
+       std_msgs acima: vinha de carona no ambiente. -->
+  <depend>sensor_msgs</depend>
   <!-- `nuvem_pontos` lê o CustomMsg cru e empacota com numpy (decisão 066). -->
   <exec_depend>python3-numpy</exec_depend>
 

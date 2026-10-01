@@ -30,6 +30,7 @@ setup(
             'placa_simulada = robot_base.placa_simulada:main',
             'tf_odom = robot_base.tf_odom:main',
             'nuvem_pontos = robot_base.nuvem_pontos:main',
+            'carimbos_topicos = robot_base.carimbos_topicos:main',
         ],
     },
 )

@@ -4,6 +4,42 @@
 > o que falhou E POR QUÊ. Fracasso documentado é resultado — vai pro artigo.
 > Decisões formais têm registro próprio em `docs/decisoes/`.
 
+## 🔧 2026-10-01 (dev, FORA DO LAB; robô e lidar DESLIGADOS) — COLETOR DE CARIMBOS PARA A RODADA DE DIAGNÓSTICO
+
+Para medir o desalinhamento LiDAR–IMU que derrubou o FAST-LIO em 30-09 (066
+§8.2), sem pagar a desserialização da nuvem (83,5 ms, 066):
+
+- `robot_base/carimbos.py`: `header_cru(raw)` lê `sec`, `nanosec` e `frame_id`
+  direto do CDR. Serve aos quatro tipos porque todos começam por `Header`.
+  Recusa big-endian, mensagem curta, string que não cabe, tamanho 0 e string
+  sem NUL.
+- `robot_base/carimbos_topicos.py`: nó **só de diagnóstico** (fora do
+  `localizacao.launch.py`), quatro assinaturas `raw=True` com QoS de sensor,
+  fila 5 nas nuvens e 100 na IMU e na odometria, buffer de 1 MB esvaziado a
+  cada 5 s e no fim. Sem o driver Livox, avisa e grava os outros três.
+- Revisão externa antes do commit, dois ajustes: (1) o instante do callback
+  sozinho mistura o atraso da publicação com a fila do próprio coletor. O
+  callback passou a receber o `message_info` (o rclpy decide pela ASSINATURA:
+  com um argumento só ele não entrega), e o CSV ganhou `recebido_dds_ns`,
+  `publicado_dds_ns`, `atraso_dds_s` (recepção − carimbo) e `espera_s`
+  (callback − recepção); instante 0 do RMW sai vazio. (2) Fila 100 nas duas
+  nuvens (~400 kB cada) reteria ~80 MB e esticaria o backlog; ficou 5.
+- `package.xml`: `sensor_msgs` declarado. O `nuvem_pontos` já o usava de
+  carona, como o `std_msgs` antes.
+
+Prova: 27 testes novos (frames de 0 a 64 bytes, CustomMsg montado à mão no
+layout da 066, recusas, e igualdade com o serializador do rclpy para `Imu`,
+`Odometry` e `PointCloud2`, e a linha do CSV com e sem os instantes do RMW). A
+suíte do `robot_base` deu 162/0. Fumaça no domínio 77, só localhost: 20
+mensagens de cada tipo com carimbo 2 s atrás viraram 60 linhas com
+`atraso_dds_s` de 2,000–2,003 s e `espera_s` de 0,3–2,8 ms, frames e tamanhos
+certos (400 057 bytes na nuvem). A profundidade da fila não aparece no grafo
+(o DDS não anuncia a do assinante): está conferida no código. Trinta mensagens publicadas logo antes do SIGINT,
+ainda no buffer, apareceram no CSV depois dele: o fechamento esvazia.
+
+Tropeço meu: o `setsid` bifurcou e o `$!` não era o nó; o `pgrep -f` casou
+com a própria linha de comando (de novo). Achei pelo `ps` e encerrei por PGID.
+
 ## 🔍 2026-10-01 (dev, FORA DO LAB; robô e lidar DESLIGADOS) — O HEARTBEAT DO `planner_server` CAIU NO MEIO DE UMA DIVERGÊNCIA DO FAST-LIO, ANTES DO INÍCIO REGISTRADO DO SNAP
 
 Leitura offline das três quedas de heartbeat de 30-09:
