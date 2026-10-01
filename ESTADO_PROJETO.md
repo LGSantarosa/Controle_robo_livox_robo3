@@ -53,19 +53,26 @@ Robô e lidar desligados; notebook limpo, em `origin/main` **de 30-09 — o
 `localizacao.launch.py` da 067 ainda não foi implantado lá** (deploy + `colcon build`). Nav2 real **ainda
 não moveu o robô**. Em ordem, uma coisa por vez (066 §8):
 
-1. **Reiniciar o notebook** e medir de novo só a localização, com o robô
-   parado (E1 da 066). Se voltar a 39/32/4 %, o pico de ontem era resíduo do
-   snap/docker. Se não, separar cenário (chão × mesa) de sessão gráfica.
-2. **Travar o snap**: `sudo snap refresh --hold` (o dono roda; ontem ele se
-   auto-atualizou no meio do teste e derrubou o FAST-LIO).
-3. 🟡 **TF `odom→camera_init`** — **no `localizacao.launch.py` desde 01-10
+1. **Medir a CPU de novo, com protocolo** (066 §8.4, nota de 01-10: o "2–3×"
+   de 30-09 não era regime permanente medido; causa ainda não atribuída):
+   1. reiniciar o notebook e travar o snap: `sudo snap refresh --hold` (o
+      dono roda; em 30-09 ele se auto-atualizou no meio do teste);
+   2. zero processo residual (`pgrep`, conferido por mim antes de subir);
+   3. subir RSP (`bin/sobe-robo3`) + `localizacao.launch.py` e esperar
+      **≥ 30 s** antes de medir. Só a localização, sem RSP, vale como
+      **ensaio isolado de CPU**, não como pilha saudável;
+   4. **60 s juntos**: `pidstat` (FAST-LIO, driver, `nuvem_pontos`,
+      gnome-shell), `mpstat` (kernel: `%sys`, `%soft`, `%irq`) e taxa/atraso
+      de `/livox/lidar`, `/livox/imu`, `/livox/pontos` e `/Odometry`;
+   5. só subir o Nav2 com os quatro tópicos atuais e sincronizados.
+2. 🟡 **TF `odom→camera_init`** — **no `localizacao.launch.py` desde 01-10
    (decisão 067)**: implementado e coberto por teste estrutural de launch;
    ainda sem prova funcional no Gazebo nem no robô. Basta subir a localização,
    sem `static_transform_publisher` na mão. Depois, conserto de verdade
    (seguidor lê a pose por TF; o sensor está 9,3 cm atrás do `base_link`).
-4. **Heartbeat** do `lifecycle_manager` (3 quedas: `collision_monitor` ×2,
+3. **Heartbeat** do `lifecycle_manager` (3 quedas: `collision_monitor` ×2,
    `planner_server` ×1) e o **STOP piscando** do `collision_monitor`.
-5. Só então Nav2 no chão: objetivo curto, LB pronto.
+4. Só então Nav2 no chão: objetivo curto, LB pronto.
 
 ⚠️ A checagem "placa responde" do `sobe-robo3` deu falso negativo sob carga
 (a placa estava ligada e andou no Xbox).

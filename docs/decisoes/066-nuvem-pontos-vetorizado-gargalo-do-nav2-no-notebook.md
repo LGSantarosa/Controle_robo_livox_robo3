@@ -4,7 +4,9 @@
 **Status**: causa **medida e confirmada** no robô; conserto **escrito e
 provado offline** (§6) e **no robô** (§7): gargalo resolvido. Abertos: o
 heartbeat do `collision_monitor` e o STOP piscando (§7), que NÃO são CPU; e
-no chão (§8) a CPU voltou a estourar por causa ainda desconhecida.
+no chão (§8) a CPU voltou a estourar por causa ainda desconhecida
+(01-10: o "só a localização" de §8.4 não era regime permanente medido; ver
+a nota lá).
 **Toca**: `ros2_packages/robot_base/robot_base/nuvem_pontos.py` (só o laço de
 conversão) e o teste dele.
 **Não toca**: tópicos, campos, frame, raio cego (decisão 027), launch.
@@ -153,3 +155,21 @@ Dados: `docs/dados/2026-09-30-robo3-nav2-chao/`.
    FAST-LIO depende do que vê); (b) resíduo da atualização do snap/docker
    (kernel em 19 % parado é anormal — medir de novo depois de reiniciar o
    notebook); (c) a sessão gráfica.
+
+   **Nota de 01-10 (releitura do `nav2d_T2_pidstat.txt`, segundo a segundo):**
+   as médias acima **misturam a subida**. A localização subiu às 18:40:20; de
+   18:40:35 a 18:40:49 FAST-LIO / driver / `nuvem_pontos` ficaram em
+   97–122 / 77–95 / 10–14 %; entre 18:40:50 e 18:40:54 caíram
+   progressivamente de 82 / 59 / 9 % para **35 / 28 / 3 %**, perto dos
+   39 / 32 / 4 da mesa. No mesmo intervalo o
+   gnome-shell caiu de 46 para 18 %. É um **transitório correlacionado**: os
+   dados não distinguem a partida do FAST-LIO do fim de uma contenção do
+   sistema (o resíduo do snap/docker). Limites da medida: o `pidstat` cobriu
+   só 20 s (a localização ficou de pé até 18:43:33), então o "depois" é uma
+   amostra; havia um `compensador_rumo` residual; e não havia RSP, de modo
+   que o `tf_odom` morreu (*"NÃO EXISTE TF livox_frame -> base_link"*) e a
+   pilha não estava completa. **Consequência:** nada sustenta tunar ou mexer
+   no FAST-LIO agora; o evento das 18:33 é compatível com sobrecarga
+   transitória do driver e do sistema durante o refresh do snap/docker,
+   seguida de atraso acumulado e perda de sincronismo. O protocolo para
+   separar as hipóteses está no roteiro de 01-10 do `ESTADO_PROJETO.md`.

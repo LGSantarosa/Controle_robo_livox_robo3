@@ -4,6 +4,26 @@
 > o que falhou E POR QUÊ. Fracasso documentado é resultado — vai pro artigo.
 > Decisões formais têm registro próprio em `docs/decisoes/`.
 
+## 🔍 2026-10-01 (dev, FORA DO LAB; robô e lidar DESLIGADOS) — O "2–3×" DA LOCALIZAÇÃO NO CHÃO NÃO ERA REGIME PERMANENTE MEDIDO
+
+Releitura segundo a segundo do `nav2d_T2_pidstat.txt` (30-09, 18:40), a
+partir de uma revisão externa. A conta de 30-09 tirou a média de uma janela
+de 20 s ainda em queda: FAST-LIO / driver / `nuvem_pontos` em 97–122 /
+77–95 / 10–14 % até 18:40:49 e **35 / 28 / 3 %** em 18:40:54, perto dos
+39 / 32 / 4 da mesa.
+
+Ressalvas que mantive: o "depois" é uma amostra (o `pidstat` parou em 20 s e
+a localização seguiu até 18:43:33); o gnome-shell caiu de 46 para 18 % no
+mesmo segundo, então é **transitório correlacionado**, sem causa atribuída
+(partida do FAST-LIO ou fim da contenção do snap/docker); havia
+`compensador_rumo` residual e não havia RSP (`tf_odom` morto).
+
+Correção aditiva na 066 §8.4 (nota), apontamento no diário de 30-09 e o
+item 1 do roteiro de 01-10 virou protocolo: reboot + snap travado, zero
+resíduo, RSP presente, ≥ 30 s de espera, 60 s de `pidstat` + `mpstat` + taxa
+e atraso dos quatro tópicos. Sem decisão nova: é releitura de evidência.
+Nada no FAST-LIO muda.
+
 ## 🔧 2026-10-01 (dev, FORA DO LAB; robô e lidar DESLIGADOS) — A TF `odom → camera_init` ENTRA NA LOCALIZAÇÃO (067)
 
 Sem robô, a medição de CPU do roteiro de 01-10 (itens 1 e 2) espera o lab.
@@ -89,6 +109,8 @@ reergueu sozinha), e o STOP dele piscou 220 vezes com o robô parado na mesa.
    FAST-LIO recebeu nuvem 11–15 s atrasada e divergiu. Depois de derrubar
    tudo, só a localização ainda gastava 2–3× o que gastava na mesa uma hora
    antes, sem estrangulamento térmico. Causa em aberto.
+   *(Corrigido em 01-10: não era regime permanente medido; a janela era
+   transitória e correlacionada com a queda do gnome-shell. Ver 066 §8.4.)*
 
 **Tropeços meus**: `grep`/`pgrep` casando com a própria linha de comando do
 ssh duas vezes (uma matou a sessão, outra impediu a TF de subir). Usar
