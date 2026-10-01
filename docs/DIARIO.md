@@ -4,6 +4,31 @@
 > o que falhou E POR QUÊ. Fracasso documentado é resultado — vai pro artigo.
 > Decisões formais têm registro próprio em `docs/decisoes/`.
 
+## 🔍 2026-10-01 (dev, FORA DO LAB; robô e lidar DESLIGADOS) — O HEARTBEAT DO `planner_server` CAIU NO MEIO DE UMA DIVERGÊNCIA DO FAST-LIO, ANTES DO INÍCIO REGISTRADO DO SNAP
+
+Leitura offline das três quedas de heartbeat de 30-09:
+
+- **`planner_server` (18:26:12, `nav2b`)**: linha do tempo no `t3_log.txt` (066
+  §8.2, nota). A localização começou a desabar às 18:25:21 (TF atrás da
+  nuvem), o `/Odometry` parou às 18:25:41 e de 18:25:44 em diante a pose
+  correu até 434 m com o robô parado. O heartbeat caiu 28 s depois, com o
+  processo vivo. Não iniciou o colapso; o mecanismo da perda não foi medido.
+- **`collision_monitor` ×2 (E3 antes e depois da 066)**: sem log nem horário,
+  só `pidstat`. No minuto medido depois da 066 o processo esteve vivo em todo
+  segundo (3–5 %) e a máquina nunca passou de 78 % de uso. **Não classificadas.**
+
+O que muda: o FAST-LIO divergiu no chão **antes do início registrado** do snap
+(18:28). O snap deixa de explicar sozinho a divergência, embora possa ter
+pesado na das 18:33. O furo de instrumentação é o T2 não salvo. O roteiro de
+01-10 passou a ter
+rodada de CPU (sem bag nem assinante diagnóstico de nuvem) separada da rodada
+de diagnóstico (T2 em arquivo, `/livox/imu` + `/Odometry` em bag leve e o
+carimbo da nuvem por coletor `raw=True`, a escrever separadamente), e o
+critério de pose parada sem salto nem deriva explosiva. Também entraram as
+cautelas de deploy (`git status --porcelain` antes do `reset`; `cmake-args` do
+Livox) e o Nav2 parado antes de qualquer objetivo. Condição registrada: o
+notebook estava ligado havia 8 dias sem reiniciar.
+
 ## 🔍 2026-10-01 (dev, FORA DO LAB; robô e lidar DESLIGADOS) — O "2–3×" DA LOCALIZAÇÃO NO CHÃO NÃO ERA REGIME PERMANENTE MEDIDO
 
 Releitura segundo a segundo do `nav2d_T2_pidstat.txt` (30-09, 18:40), a

@@ -53,25 +53,52 @@ Robô e lidar desligados; notebook limpo, em `origin/main` **de 30-09 — o
 `localizacao.launch.py` da 067 ainda não foi implantado lá** (deploy + `colcon build`). Nav2 real **ainda
 não moveu o robô**. Em ordem, uma coisa por vez (066 §8):
 
-1. **Medir a CPU de novo, com protocolo** (066 §8.4, nota de 01-10: o "2–3×"
-   de 30-09 não era regime permanente medido; causa ainda não atribuída):
+0. **Deploy no notebook** (robô e lidar podem estar desligados):
+   `git status --porcelain` **vazio** antes de `git fetch && git reset --hard
+   origin/main` (se não estiver, preservar as mudanças primeiro); build com
+   `--cmake-args -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble` (o Livox).
+   Condição do ensaio a registrar: em 30-09 o notebook estava ligado havia
+   **8 dias** sem reiniciar.
+1. **Rodada de CPU** (066 §8.4, nota de 01-10: o "2–3×" de 30-09 não era
+   regime permanente medido; causa não atribuída). **Sem bag de nuvem**: o bag
+   muda a carga que se quer medir.
    1. reiniciar o notebook e travar o snap: `sudo snap refresh --hold` (o
       dono roda; em 30-09 ele se auto-atualizou no meio do teste);
    2. zero processo residual (`pgrep`, conferido por mim antes de subir);
-   3. subir RSP (`bin/sobe-robo3`) + `localizacao.launch.py` e esperar
-      **≥ 30 s** antes de medir. Só a localização, sem RSP, vale como
-      **ensaio isolado de CPU**, não como pilha saudável;
-   4. **60 s juntos**: `pidstat` (FAST-LIO, driver, `nuvem_pontos`,
-      gnome-shell), `mpstat` (kernel: `%sys`, `%soft`, `%irq`) e taxa/atraso
-      de `/livox/lidar`, `/livox/imu`, `/livox/pontos` e `/Odometry`;
-   5. só subir o Nav2 com os quatro tópicos atuais e sincronizados.
-2. 🟡 **TF `odom→camera_init`** — **no `localizacao.launch.py` desde 01-10
-   (decisão 067)**: implementado e coberto por teste estrutural de launch;
-   ainda sem prova funcional no Gazebo nem no robô. Basta subir a localização,
-   sem `static_transform_publisher` na mão. Depois, conserto de verdade
-   (seguidor lê a pose por TF; o sensor está 9,3 cm atrás do `base_link`).
-3. **Heartbeat** do `lifecycle_manager` (3 quedas: `collision_monitor` ×2,
-   `planner_server` ×1) e o **STOP piscando** do `collision_monitor`.
+   3. subir RSP (`bin/sobe-robo3`) + `localizacao.launch.py`, **log do T2
+      salvo em arquivo**, e esperar **≥ 30 s** antes de medir. Só a
+      localização, sem RSP, vale como **ensaio isolado de CPU**, não como
+      pilha saudável;
+   4. **60 s juntos, sem assinante diagnóstico de nuvem**: `pidstat`
+      (FAST-LIO, driver, `nuvem_pontos`, gnome-shell) e `mpstat` (kernel:
+      `%sys`, `%soft`, `%irq`). `ros2 topic` em `/livox/lidar` ou
+      `/livox/pontos` desserializa a nuvem inteira e contaminaria esta janela;
+   5. veredito parcial de CPU, não por número rígido: CPU estabilizada, kernel
+      normal e folga global (39/32/4 % da mesa é referência, não limite). O
+      portão completo para o Nav2 inclui os tópicos da rodada 2.
+2. **Rodada de diagnóstico da localização**, separada da de CPU (066 §8.2,
+   nota de 01-10: o FAST-LIO divergiu às 18:25:44, antes do início do snap
+   registrado).
+   - T2 salvo em arquivo **sempre**;
+   - carimbos dos dois lados do sincronismo: `/livox/imu` e `/Odometry` em bag
+     leve, e o `header.stamp` de `/livox/lidar` ou `/livox/pontos` por coletor
+     leve (`raw=True`, só cabeçalho; mudança separada). Não usar `ros2 topic`
+     na nuvem achando que `--field header.stamp` evita a desserialização;
+   - **pose parada**: com o robô imóvel, a pose do `/Odometry` não pode saltar
+     nem derivar de forma explosiva. Hoje a divergência só aparecia quando a
+     janela do costmap "fugia";
+   - portão para o passo 3: CPU e kernel aprovados na rodada 1, folga global e
+     `/livox/lidar`, `/livox/imu`, `/livox/pontos` e `/Odometry` atuais e
+     sincronizados.
+3. **Nav2 parado, sem objetivo**: observar heartbeat do `lifecycle_manager` e
+   STOP do `collision_monitor` com a localização saudável. Provar a 067 em
+   runtime com `tf2_echo camera_init map` dando `Translation`; sem objetivo o
+   `path_follower` ainda não consulta essa TF, portanto a prova funcional do
+   seguidor fica para o passo 4. Quedas de heartbeat: `planner_server` ×1 (ocorreu
+   **durante** o colapso da localização, com o processo vivo; mecanismo não
+   medido) e `collision_monitor` ×2 (**não classificadas**: sem log).
+   Conserto de verdade da pose (seguidor lê o `base_link` por TF; o sensor
+   está 9,3 cm atrás) segue pendente.
 4. Só então Nav2 no chão: objetivo curto, LB pronto.
 
 ⚠️ A checagem "placa responde" do `sobe-robo3` deu falso negativo sob carga

@@ -138,6 +138,29 @@ Dados: `docs/dados/2026-09-30-robo3-nav2-chao/`.
    **O remendo foi subido às 18h29 mas não chegou a ser testado** (item 3).
 2. **Heartbeat perdido pela 3ª vez**, agora do `planner_server` (18:26:12), e
    desta vez a pilha **não** se reergueu. Causa desconhecida.
+
+   **Nota de 01-10 (releitura do `nav2b_20260930_182123/t3_log.txt`):** a
+   queda aconteceu **durante um colapso da localização que começou antes
+   dela**:
+   - 18:25:21 — o `collision_monitor` passa a falhar `livox_frame→base_link`
+     com *"extrapolation into the future"* (a nuvem mais nova que a pose);
+     18:25:23, *"Costmap timed out waiting for update"*;
+   - 18:25:41 — o `heading_controller` acusa *"/Odometry parou de chegar"*;
+   - 18:25:44 a 18:26:15 — a janela do `local_costmap`, que segue o
+     `base_link` no `odom`, corre de ~0 para **434 m**, acelerando, com o
+     robô parado: o FAST-LIO divergiu;
+   - 18:26:12 — o heartbeat do `planner_server` é dado como perdido.
+
+   O `planner_server` seguiu vivo: escreveu no log a cada segundo antes e
+   depois da queda, enquanto o `global_costmap` descartava nuvens cada vez
+   mais velhas (1,3 → 5,5 s em 10 s) e o planejador repetia uma consulta de
+   TF de 36 s antes. **O heartbeat não iniciou o colapso.** A perda é
+   compatível com starvation do executor durante o colapso, mas o mecanismo
+   causal **não foi medido**. A divergência das 18:25:44 é anterior ao início
+   do snap registrado (18:28): o snap **não é condição necessária** para o
+   FAST-LIO divergir no chão, embora possa ter pesado na ocorrência das 18:33
+   (item 3). O log da localização (T2) desta sessão **não foi guardado**, então
+   não se sabe o que o FAST-LIO disse às 18:25.
 3. **A CPU estourou de novo (load 40–48) e o FAST-LIO divergiu.** Às 18:28 o
    snapd começou uma auto-atualização (core24, docker, snap-store — reiniciou
    o serviço do docker às 18:31). Na subida seguinte (18:33) o load foi a 48,
